@@ -1,4 +1,4 @@
-# Título do Projeto
+# Abraço Peludo
 
 `CURSO: Sistemas de Informação`
 
@@ -6,7 +6,9 @@
 
 `SEMESTRE: 3º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Este projeto tem como objetivo o desenvolvimento de uma plataforma digital voltada para o processo de adoção de animais. A proposta busca organizar e centralizar informações sobre animais disponíveis para adoção, facilitando a conexão entre pessoas interessadas em adotar e organizações ou responsáveis pelos animais.
+
+O desenvolvimento da solução segue os princípios de **Design Centrado no Usuário**, priorizando a compreensão das necessidades, dificuldades e expectativas dos usuários durante o processo de adoção. A partir dessa abordagem, o projeto busca estruturar uma interface acessível, intuitiva e eficiente, contribuindo para melhorar a experiência de busca, visualização e contato no processo de adoção.
 
 ## Integrantes
 
