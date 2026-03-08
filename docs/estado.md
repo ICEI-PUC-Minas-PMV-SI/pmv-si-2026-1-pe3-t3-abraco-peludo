@@ -1,10 +1,10 @@
 # 2. ESTADO DA ARTE
-O estado da arte é um mapeamento de toda a produção acadêmica sobre um assunto específico, aqui especificamente sobre o tema escolhido para o seu trabalho. A ideia consiste em reunir as conclusões que outras pesquisas científicas chegaram sobre um determinado assunto. Neste momento você deverá buscar respostas para as seguintes perguntas:
+A adoção de animais domésticos é uma prática essencial para reduzir o número de cães e gatos em situação de abandono. Porém, o processo de adoção no Brasil ainda é muito localizado e muitas vezes as ONGs não conseguem lares responsáveis e amorosos para os pets disponíveis.
 
-1.	Quais pesquisas estão sendo desenvolvidas sobre esse tema?
-2.	Quem está pesquisando e onde?
-3.	O que as atuais pesquisas científicas concluíram sobre o tema? 
-4.	Quais as divergências dos pesquisadores sobre o assunto? 
-5.	Quais aspectos carecem de maior abordagem?
+Como forma de contribuir para minimizar o problema apresentado, nos últimos anos surgiram plataformas online dedicadas exclusivamente ao processo de adoção. O programa Adote Petz (2026), por exemplo, foi criado para estreitar laços entre adotantes e ONGs, incentivando a adoção e conscientização sobre a posse responsável. Outro exemplo é o programa Adota Web, proposto em Barros (2018), que consiste em um sistema web desenvolvido com a finalidade de simplificar o processo de adoção de animais. Entretanto, seus esforços concentraram-se predominantemente no desenvolvimento do back-end da aplicação, o que resultou em limitações relacionadas ao design e à usabilidade.
 
-É importante referenciar estas pesquisas, fazendo as devidas citações de acordo com as normas da ABNT e colocando as referências completas ao final do trabalho.
+A conclusão apresentada nas soluções tecnológicas citadas anteriormente demonstra que deve haver uma harmonia na divisão do trabalho de desenvolvimento entre o back-end e o front-end, priorizando a simplicidade e a funcionalidade. A boa aceitação do software pelos seus usuários indica a sua eficácia em facilitar a adoção de animais.
+
+Dadas as referências pesquisadas, não há uma divergência clara entre cada uma delas, pois todas tratam as questões de abandono e adoção responsável abordando tópicos de urgência e importância parecidos, e com pontos de vista semelhantes, buscando por soluções práticas e éticas para o problema dos maus-tratos aos animais.
+
+Tomando como exemplo o modelo atual disponibilizado pela empresa Petz para adoção de animais, conforme site AdotePetz (2026), verificamos a carência de detalhamento dos recursos que o adotante poderá fornecer ao animal de sua escolha para possibilitar ou impedir uma adoção, tendo como referência o estilo de vida de cada raça e espécie de animal, para que estes se adaptem adequadamente ao novo lar.
