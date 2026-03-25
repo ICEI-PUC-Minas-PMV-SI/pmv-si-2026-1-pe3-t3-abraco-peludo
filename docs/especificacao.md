@@ -31,27 +31,55 @@ O SCCA não fornece nenhuma forma de avaliação de alunos, pagamento de parcela
 
 | Código | Requisito Funcional (Funcionalidade) | Descrição |
 |--------------------|------------------------------------|----------------------------------------|
-| RF1 | Gerenciar Curso de Aperfeiçoamento |	Processamento de Inclusão, Alteração, Exclusão e Consulta de Cursos de Aperfeiçoamento |
-| RF2 |	Gerenciar Professor	| Processamento de Inclusão, Alteração, Exclusão e Consulta de professores |
-| RF3	| Gerenciar Matrícula |	Processamento de Inclusão, Alteração, Exclusão e Consulta de Matrículas de alunos em Cursos de Aperfeiçoamento |
-| ... |	...	| ... |
+| RF01 | Visualizar Lista Animais | O sistema deve permitir aos usuários visualizarem a lista de animais para doação |
+| RF02 | Cadastrar Adotante	| O sistema deve permitir ao usuário cadastrar uma conta de adotante |
+| RF03 | Atualizar Adotante | O sistema deve permitir aos adotantes atualizar as informações da sua conta |
+| RF04 | Visualizar Dados Adotante | O sistema deve permitir ao Adotante visualizar as informações cadastradas da conta |
+| RF05 | Deletar Adotante | O sistema deve permitir aos adotantes deletar a sua conta  |
+| RF06 | Acessar Andamento Adoção | O sistema deve permitir aos adotantes acesso ao andamento da adoção |
+| RF07 | Cadastrar ONG | O sistema deve permitir ao usuário cadastrar uma conta de ONG |
+| RF08 | Atualizar ONG | O sistema deve permitir aos responsáveis pela ONG atualizar as informações da sua conta |
+| RF09 | Visualizar Dados ONG | O sistema deve permitir aos responsáveis da ONG visualizar as informações cadastradas da conta |
+| RF10 | Deletar ONG | O sistema deve permitir aos responsáveis pela ONG deletar a sua conta |
+| RF11 | Cadastrar Animal | O sistema deve permitir aos responsáveis pela ONG cadastrar um animal para adoção |
+| RF12 | Exibir Mídia | O sistema deve permir aos adotantes ver a mídia de fotos, para conhecer os animais área de adoção |
+| RF13 | Cadastrar Mídia | O sistema deve permir aos responsáveis pela ONG de anexar as fotos dos animais na área de adoção |
+| RF14 | Filtrar Busca | O usuário deve conseguir filtrar os animais por porte (pequeno, médio, grande) e sexo |
+| RF15 | Incluir Tag | O responsável da ONG de cadastrar os animais deve conseguir adicionar Tags para filtrar os animais por porte (pequeno, médio, grande) e sexo |
+| RF16 | Exibir Perfil Detalhado | Ao clicar em um animal, o sistema deve exibir informações de saúde (vacinas, castração, vermifugação) e uma breve história do pet |
+| RF17 | Cadastrar o Perfil Detalhado | O sistema deve permitir ao responsável por cadastrar os animais, cadastrar as informações de saúde e uma breve história do pet |
+| RF18 | Atualizar o Perfil Detalhado  | O sistema deve permitir ao responsável por cadastrar os animais, atualizar as informações de saúde e uma breve história do pet |
+| RF19 | Ver o Perfil Detalhado  | O sistema deve permitir ao responsável por cadastrar os animais, ver as informações de saúde e uma breve história do pet |
+| RF20 | Deletar o Perfil Detalhado  | O sistema deve permitir ao responsável por cadastrar os animais, deletar as informações de saúde e uma breve história do pet |
+| RF21 | Alterar Status | O sistema deve permitir que a ONG altere a situação do processo (Ex: "Em Análise", "Entrevista Marcada", "Aprovado", "Recusado") |
+| RF22 | Ver Status alterado | O sistema deve permitir que a adotante veja a situação do processo (Ex: "Em Análise", "Entrevista Marcada", "Aprovado", "Recusado") |
+| RF23 | Identificador | O sistema deve: Identificar com um selo destacado os animais que possuem deficiências ou doenças crônicas, explicando de forma simples quais cuidados extras eles precisam |
+| RF24 | Agendar Visita | O sistema deve: Permitir que o usuário escolha um dia e horário disponível no calendário da ONG para ir ao abrigo conhecer o animal pessoalmente antes de decidir |
+| RF25 | Tirar Dúvidas | O sistema deve ter um chat simples dentro do aplicativo onde o interessado pode tirar dúvidas básicas com o protetor antes de clicar no botão oficial de "Adotar" |
+| RF26 | Aletar ONG | O sistema deve manter um histórico interno de CPFs que já tiveram solicitações negadas ou problemas em adoções anteriores, alertando a ONG quando uma dessas pessoas tentar uma nova adoção |
+| RF27 | Candidatar "Lar Temporário" | O sistema deve ter uma opção no perfil do animal para o usuário se candidatar apenas como "Lar Temporário", enviando um aviso para a ONG de que aquele pet específico tem um lugar para ficar enquanto não é adotado |
+| RF28 | Exibir Checklist "Primeiros Passos" | O sistema deve exibir uma lista automática de itens necessários (ex: ração, tamanho da guia, marca da areia) assim que a adoção for aprovada, para que o novo dono se prepare antes do pet chegar |
 
 ### 3.3.2 Requisitos Não Funcionais
 
 | Código | Requisito Não Funcional (Restrição) |
 |--------------------|------------------------------------|
-| RNF1 | O ambiente operacional a ser utilizado é o Windows XP. |
-| RNF2 | O sistema deverá executar em um computador configurado com uma impressora de tecnologia laser ou de jato de tinta, a ser usada para impressão dos relatórios. |
-| RNF3 |	Segurança	O produto deve restringir o acesso por meio de senhas individuais para o usuário. |
-| ... |	... |	... |
+| RNF01 | O sistema deve permitir ao usuário completar uma tarefa de cadastro em 1 minuto |
+| RNF02 | A consulta de animais disponívies para adoção deve demorar no máximo 5 segundos |
+| RNF03 | O sistema deve ser implementado na linguagem JavaScript |
+| RNF04 | O sistema apresentar as opções de animais para adoção próximos em no máximo 2 segundos |
+| RNF05 | O sistema deve seguir um Design System padronizado, utilizando a mesma paleta de cores, tipografia e estilos de botões em todas as telas |
+| RNF06 | Toda ação do usuário (clique em botão, envio de formulário) deve gerar um feedback visual imediato (ex: tooltips ou mensagens de sucesso/erro) |
+| RNF07 | O contraste entre texto e fundo deve seguir o padrão WCAG 2.1 (AA), com uma proporção mínima de 4.5:1, garantindo leitura para pessoas com baixa visão |
+| RNF08 | A interface deve ser Mobile-First ou totalmente responsiva, adaptando-se automaticamente a resoluções desde 360px (smartphones) até 1920px (desktops) sem perda de funcionalidade |
+| RNF09 | Para evitar que o usuário tenha que criar mais uma senha, o sistema deve permitir o cadastro e login rápido usando contas que ele já possui, como Google ou Apple, em um clique |
 
 ### 3.3.3 Usuários 
 
 | Ator | Descrição |
 |--------------------|------------------------------------|
-| Coordenador |	Usuário gerente do sistema responsável pelo cadastro e manutenção de cursos de aperfeiçoamento. Possui acesso geral ao sistema. |
-| Secretaria |	Usuário responsável por registros de alunos, professores, turmas e gerência de matrículas. |
-| ... |	... |	... |
+| Secretaria ONG |	Usuário responsável pelo registro e alteração de cadastro de animais |
+| Adotante |	Usuário responsável pelo início do pedido de adoção |
 
 ## 3.4 Modelagem do Sistema
 
