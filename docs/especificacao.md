@@ -32,33 +32,27 @@ O SCCA não fornece nenhuma forma de avaliação de alunos, pagamento de parcela
 | Código | Requisito Funcional (Funcionalidade) | Descrição |
 |--------------------|------------------------------------|----------------------------------------|
 | RF01 | Visualizar Lista Animais | O sistema deve permitir aos usuários visualizarem a lista de animais para doação |
-| RF02 | Cadastrar Adotante	| O sistema deve permitir ao usuário cadastrar uma conta de adotante |
-| RF03 | Atualizar Adotante | O sistema deve permitir aos adotantes atualizar as informações da sua conta |
-| RF04 | Visualizar Dados Adotante | O sistema deve permitir ao Adotante visualizar as informações cadastradas da conta |
-| RF05 | Deletar Adotante | O sistema deve permitir aos adotantes deletar a sua conta  |
-| RF06 | Acessar Andamento Adoção | O sistema deve permitir aos adotantes acesso ao andamento da adoção |
-| RF07 | Cadastrar ONG | O sistema deve permitir ao usuário cadastrar uma conta de ONG |
-| RF08 | Atualizar ONG | O sistema deve permitir aos responsáveis pela ONG atualizar as informações da sua conta |
-| RF09 | Visualizar Dados ONG | O sistema deve permitir aos responsáveis da ONG visualizar as informações cadastradas da conta |
-| RF10 | Deletar ONG | O sistema deve permitir aos responsáveis pela ONG deletar a sua conta |
-| RF11 | Cadastrar Animal | O sistema deve permitir aos responsáveis pela ONG cadastrar um animal para adoção |
-| RF12 | Exibir Mídia | O sistema deve permir aos adotantes ver a mídia de fotos, para conhecer os animais área de adoção |
-| RF13 | Cadastrar Mídia | O sistema deve permir aos responsáveis pela ONG de anexar as fotos dos animais na área de adoção |
-| RF14 | Filtrar Busca | O usuário deve conseguir filtrar os animais por porte (pequeno, médio, grande) e sexo |
-| RF15 | Incluir Tag | O responsável da ONG de cadastrar os animais deve conseguir adicionar Tags para filtrar os animais por porte (pequeno, médio, grande) e sexo |
-| RF16 | Exibir Perfil Detalhado | Ao clicar em um animal, o sistema deve exibir informações de saúde (vacinas, castração, vermifugação) e uma breve história do pet |
-| RF17 | Cadastrar o Perfil Detalhado | O sistema deve permitir ao responsável por cadastrar os animais, cadastrar as informações de saúde e uma breve história do pet |
-| RF18 | Atualizar o Perfil Detalhado  | O sistema deve permitir ao responsável por cadastrar os animais, atualizar as informações de saúde e uma breve história do pet |
-| RF19 | Ver o Perfil Detalhado  | O sistema deve permitir ao responsável por cadastrar os animais, ver as informações de saúde e uma breve história do pet |
-| RF20 | Deletar o Perfil Detalhado  | O sistema deve permitir ao responsável por cadastrar os animais, deletar as informações de saúde e uma breve história do pet |
-| RF21 | Alterar Status | O sistema deve permitir que a ONG altere a situação do processo (Ex: "Em Análise", "Entrevista Marcada", "Aprovado", "Recusado") |
-| RF22 | Ver Status alterado | O sistema deve permitir que a adotante veja a situação do processo (Ex: "Em Análise", "Entrevista Marcada", "Aprovado", "Recusado") |
-| RF23 | Identificador | O sistema deve: Identificar com um selo destacado os animais que possuem deficiências ou doenças crônicas, explicando de forma simples quais cuidados extras eles precisam |
-| RF24 | Agendar Visita | O sistema deve: Permitir que o usuário escolha um dia e horário disponível no calendário da ONG para ir ao abrigo conhecer o animal pessoalmente antes de decidir |
-| RF25 | Tirar Dúvidas | O sistema deve ter um chat simples dentro do aplicativo onde o interessado pode tirar dúvidas básicas com o protetor antes de clicar no botão oficial de "Adotar" |
-| RF26 | Aletar ONG | O sistema deve manter um histórico interno de CPFs que já tiveram solicitações negadas ou problemas em adoções anteriores, alertando a ONG quando uma dessas pessoas tentar uma nova adoção |
-| RF27 | Candidatar "Lar Temporário" | O sistema deve ter uma opção no perfil do animal para o usuário se candidatar apenas como "Lar Temporário", enviando um aviso para a ONG de que aquele pet específico tem um lugar para ficar enquanto não é adotado |
-| RF28 | Exibir Checklist "Primeiros Passos" | O sistema deve exibir uma lista automática de itens necessários (ex: ração, tamanho da guia, marca da areia) assim que a adoção for aprovada, para que o novo dono se prepare antes do pet chegar |
+| RF02 | Gerenciar Adotante	| O sistema deve permitir ao usuário cadastrar, atualizar e deletar uma conta de adotante |
+| RF03 | Visualizar Dados Adotante | O sistema deve permitir ao Adotante visualizar as informações cadastradas da conta |
+| RF04 | Acessar Andamento Adoção	| O sistema deve permitir aos adotantes acesso ao andamento da adoção |
+| RF05 | Gerenciar ONG | O sistema deve permitir ao usuário cadastrar, atualizar e deletar uma conta de ONG |
+| RF06 | Visualizar Dados ONG	| O sistema deve permitir aos responsáveis da ONG visualizar as informações cadastradas da conta |
+| RF07 | Cadastrar Animal | O sistema deve permitir aos responsáveis pela ONG cadastrar um animal para adoção |
+| RF08 | Exibir Mídia	| O sistema deve permir aos adotantes ver a mídia de fotos, para conhecer os animais área de adoção |
+| RF09 | Cadastrar Mídia | O sistema deve permir aos responsáveis pela ONG de anexar as fotos dos animais na área de adoção |
+| RF10 | Filtrar Busca | O usuário deve conseguir filtrar os animais por porte (pequeno, médio, grande) e sexo |
+| RF11 | Exibir Perfil Detalhado | Ao clicar em um animal, o sistema deve exibir informações de saúde (vacinas, castração, vermifugação) e uma breve história do pet |
+| RF12 | Gerenciar Perfil Detalhado | O sistema deve permitir ao responsável por cadastrar os animais, cadastrar, atualizar e deletar as informações de saúde e uma breve história do pet |
+| RF13 | Ver o Perfil Detalhado  | O sistema deve permitir ao responsável por cadastrar os animais, ver as informações de saúde e uma breve história do pet |
+| RF14 | Alterar Status | O sistema deve permitir que a ONG altere a situação do processo (Ex: "Em Análise", "Entrevista Marcada", "Aprovado", "Recusado") |
+| RF15 | Ver Status Alterado | O sistema deve permitir que a ONG veja a situação do processo (Ex: "Em Análise", "Entrevista Marcada", "Aprovado", "Recusado") |
+| RF16 | Agendar Visita | O sistema deve: Permitir que o usuário escolha um dia e horário disponível no calendário da ONG para ir ao abrigo conhecer o animal pessoalmente antes de decidir |
+| RF17 | Tirar Dúvidas | O sistema deve ter um chat simples dentro do aplicativo onde o interessado pode tirar dúvidas básicas com o protetor antes de clicar no botão oficial de "Adotar" |
+| RF18 | Alertar ONG | O sistema deve manter um histórico interno de CPFs que já tiveram solicitações negadas ou problemas em adoções anteriores, alertando a ONG quando uma dessas pessoas tentar uma nova adoção |
+| RF19 | Candidatar "Lar Temporário" | O sistema deve ter uma opção no perfil do animal para o usuário se candidatar apenas como "Lar Temporário", enviando um aviso para a ONG de que aquele pet específico tem um lugar para ficar enquanto não é adotado |
+| RF20 | Exibir Checklist "Primeiros Passos" | O sistema deve exibir uma lista automática de itens necessários (ex: ração, tamanho da guia, marca da areia) assim que a adoção for aprovada, para que o novo dono se prepare antes do pet chegar |
+| RF21 | ... | ... |
+| RF22 | ... | ... |
 
 ### 3.3.2 Requisitos Não Funcionais
 
