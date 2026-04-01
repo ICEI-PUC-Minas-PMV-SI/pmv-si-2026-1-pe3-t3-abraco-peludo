@@ -1,29 +1,38 @@
 # 3. DOCUMENTO DE ESPECIFICAÇÃO DE REQUISITOS DE SOFTWARE
 
-Nesta parte do trabalho você deve detalhar a documentação dos requisitos do sistema proposto de acordo com as seções a seguir. Ressalta-se que aqui é utilizado como exemplo um sistema de gestão de cursos de aperfeiçoamento.
+Este documento de Especificações de Requisitos de Software tem como objetivo detalhar as funcionalidades, requisitos e limitações do sistema, servindo como guia para todos os envolvidos no desenvolvimento. Seu propósito é descrever de forma clara e estruturada, os requisitos funcionais e não funcionais da plataforma, garantindo o alinhamento entre as necessidades dos usuários e das soluções a serem implantadas. 
+
+Além disso, este documento busca auxiliar a compreensão do sistema a partir das necessidades identificadas no contexto do problema, contribuindo para a definição de uma solução coerente. Através da aplicação de técnicas como análise de requisitos, busca-se estruturar as informações necessárias para o desenvolvimento do sistema, alinhando as necessidades dos usuários e os objetivos do projeto. 
+
 
 ## 3.1 Objetivos deste documento
-Descrever e especificar as necessidades da Coordenação do Curso de Sistemas de Informação da PUC Minas que devem ser atendidas pelo projeto SCCA – Sistema de Cadastro de Cursos de Aperfeiçoamento.
+Descrever e especificar em detalhes, as principais características da proposta de criação de um domínio on-line facilitador/intermediador de processos de adoção e doação responsável de animais domésticos, trazida pelo Grupo 1 da Turma 3 - Eixo 3 SI-PUC Minas Virtual.
 
 ## 3.2 Escopo do produto
 
 ### 3.2.1 Nome do produto e seus componentes principais
-O produto será denominado SCCA – Sistema de Cadastro de Cursos de Aperfeiçoamento. Ele terá somente um componente (módulo) com os devidos elementos necessários à gestão de cursos.
+O produto será nomeado Abraço Peludo. O sistema será constituído por módulos responsáveis pelo gerenciamento das informações relacionadas ao processo de adoção, contemplando as funcionalidades essenciais para cadastro, visualização e acompanhamento de dados.
+
+Os principais componentes do sistema incluem: 
+- Módulo Usuários : responsável pelo cadastro, autenticação e gerenciamento de perfis de adotantes e administradores (ONGs/protetores);
+- Módulo Administrativo: responsável pelo controle das informações e acompanhamento das etapas do processo de adoção.
+
 
 ### 3.2.2 Missão do produto
-Gerenciar informações sobre a oferta de cursos de aperfeiçoamento, gerenciar a composição das turmas, alunos, professores e matrículas. 
+Administrar as informações referentes ao fluxo de adoção de animais, viabilizando o cadastro e a organização dos dados dos animais disponíveis, aos usuários interessados e das solicitações de adoções. O sistema também visa apoiar o acompanhamento das etapas do processo, contribuindo para o aprimoramento do controle e da disponibilidade das informações aos usuários envolvidos nos processos. 
+
 
 ### 3.2.3 Limites do produto
-O SCCA não fornece nenhuma forma de avaliação de alunos, pagamento de parcelas do curso, pagamento a professore e agendamentos. O SCCA não contempla o atendimento a vários cursos de Sistemas de Informação de outras unidades da PUC Minas.
+A disponibilização de “animais compatíveis para adoção’’ com base no perfil do usuário depende da veracidade e completude das informações fornecidas, não sendo possível garantir compatibilidade total entre adotante e animal nem comprovação da veracidade das informações fornecidas pelo usuário. Além disso, o sistema atua como intermediador, não se responsabilizando pelas condições de saúde, comportamento ou histórico dos animais disponibilizados. A plataforma não substitui visitas presenciais ou processos de adaptação pós-adoção. Quanto à disponibilidade de animais cadastrados, pode variar conforme a região e parcerias com ONGs, impactando a abrangência das recomendações apresentadas ao usuário.
 
 ### 3.2.4 Benefícios do produto
 
 | # | Benefício | Valor para o Cliente |
 |--------------------|------------------------------------|----------------------------------------|
-|1	| Facilidade no cadastro de dados |	Essencial |
-|2 | Facilidade na recuperação de informações | Essencial | 
-|3 | Segurança no cadastro de matrículas | Essencial | 
-|4	| Melhoria na comunicação com os alunos	| Recomendável | 
+|1	| Melhoria na divulgação dos animais disponíveis para adoção |	Essencial |
+|2 | Facilidade no cadastro e gerenciamento de animais para adoção | Essencial | 
+|3 | Maior segurança e integridade no armazenamento das informações | Essencial | 
+|4	| Melhoria na qualidade de informações disponíveis durante o processo de adoção	| Essencial | 
 
 ## 3.3 Descrição geral do produto
 
@@ -51,8 +60,10 @@ O SCCA não fornece nenhuma forma de avaliação de alunos, pagamento de parcela
 | RF18 | Alertar ONG | O sistema deve manter um histórico interno de CPFs que já tiveram solicitações negadas ou problemas em adoções anteriores, alertando a ONG quando uma dessas pessoas tentar uma nova adoção |
 | RF19 | Candidatar "Lar Temporário" | O sistema deve ter uma opção no perfil do animal para o usuário se candidatar apenas como "Lar Temporário", enviando um aviso para a ONG de que aquele pet específico tem um lugar para ficar enquanto não é adotado |
 | RF20 | Exibir Checklist "Primeiros Passos" | O sistema deve exibir uma lista automática de itens necessários (ex: ração, tamanho da guia, marca da areia) assim que a adoção for aprovada, para que o novo dono se prepare antes do pet chegar |
-| RF21 | ... | ... |
-| RF22 | ... | ... |
+| RF21 | Identificador | O sistema deve: Identificar com um selo destacado os animais que possuem deficiências ou doenças crônicas |
+| RF22 | Cadastrar Selo | O sistema deve permitir aos responsáveis da ONG cadastrarem selos que destacam os animais que possuem deficiências ou doenças crônicas |
+| RF23 | Enviar Questionário Adoção | O sistema deve permitir aos responsáveis da ONG enviarem um questionário para aprovação, ou reprovação, da adoção para os adotantes que já escolheram um pet no site |
+| RF24 | Candidatar para Adoção | O sistema deve permitir ao adotante se candidatar para adotar um pet ao clicar no botão oficial de "Adotar" |
 
 ### 3.3.2 Requisitos Não Funcionais
 
@@ -74,6 +85,7 @@ O SCCA não fornece nenhuma forma de avaliação de alunos, pagamento de parcela
 |--------------------|------------------------------------|
 | Secretaria ONG |	Usuário responsável pelo registro e alteração de cadastro de animais |
 | Adotante |	Usuário responsável pelo início do pedido de adoção |
+| Atendente ONG | Usuário responsável pela comunicação entre o adotante e a ONG |
 
 ## 3.4 Modelagem do Sistema
 
