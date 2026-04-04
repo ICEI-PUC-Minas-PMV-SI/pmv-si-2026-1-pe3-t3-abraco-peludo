@@ -89,7 +89,7 @@ A disponibilização de “animais compatíveis para adoção’’ com base no 
 ## 3.4 Modelagem do Sistema
 
 ### 3.4.1 Diagrama de Casos de Uso
-Como observado no diagrama de casos de uso da Figura 1, a secretária poderá gerenciar as matrículas e professores no sistema, enquanto o coordenador, além dessas funções, poderá gerenciar os cursos de aperfeiçoamento.
+Como observado no diagrama de casos de uso da Figura 1, a Secretaria ONG poderá gerenciar as informações da ONG, cadastrar novos animais no sistema e seus respectivos perfis.
 
 #### Figura 1: Diagrama de Casos de Uso do Sistema.
 
@@ -97,52 +97,25 @@ Como observado no diagrama de casos de uso da Figura 1, a secretária poderá ge
  
 ### 3.4.2 Descrições de Casos de Uso
 
-Cada caso de uso deve ter a sua descrição representada nesta seção. Exemplo:
+#### Criar conta – Adotante (CSU01)
 
-#### Gerenciar Professor (CSU01)
+Sumário: O usuário realiza seu primeiro acesso ao site Abraço Peludo.
 
-Sumário: A Secretária realiza a gestão (inclusão, remoção, alteração e consulta) dos dados sobre professores.
+Ator primário: Usuário.
 
-Ator Primário: Secretária.
+Pré-condições: O usuário deve inserir um e-mail e CPF válido.
 
-Ator Secundário: Coordenador.
+Fluxo principal:
 
-Pré-condições: A Secretária deve ser validada pelo Sistema.
+1) O usuário acessa a página de criação de conta.
+2) O usuário registrará seu e-mail e senha nos campos fornecidos pelo programa.
+3) O usuário aceita os termos de uso do Abraço Peludo, fornecendo suas informações pessoais e localização.
 
-Fluxo Principal:
+Fluxo alternativo:
 
-1) 	A Secretária requisita manutenção de professores.
-2) 	O Sistema apresenta as operações que podem ser realizadas: inclusão de um novo professor, alteração de um professor, a exclusão de um professor e a consulta de dados de um professor.
-3) 	A Secretária seleciona a operação desejada: Inclusão, Exclusão, Alteração ou Consulta, ou opta por finalizar o caso de uso.
-4) 	Se a Secretária desejar continuar com a gestão de professores, o caso de uso retorna ao passo 2; caso contrário o caso de uso termina.
-
-Fluxo Alternativo (3): Inclusão
-
-a)	A Secretária requisita a inclusão de um professor. <br>
-b)	O Sistema apresenta uma janela solicitando o CPF do professor a ser cadastrado. <br>
-c)	A Secretária fornece o dado solicitado. <br>
-d)	O Sistema verifica se o professor já está cadastrado. Se sim, o Sistema reporta o fato e volta ao início; caso contrário, apresenta um formulário em branco para que os detalhes do professor (Código, Nome, Endereço, CEP, Estado, Cidade, Bairro, Telefone, Identidade, Sexo, Fax, CPF, Data do Cadastro e Observação) sejam incluídos. <br>
-e)	A Secretária fornece os detalhes do novo professor. <br>
-f)	O Sistema verifica a validade dos dados. Se os dados forem válidos, inclui o novo professor e a grade listando os professores cadastrados é atualizada; caso contrário, o Sistema reporta o fato, solicita novos dados e repete a verificação. <br>
-
-Fluxo Alternativo (3): Remoção
-
-a)	A Secretária seleciona um professor e requisita ao Sistema que o remova. <br>
-b)	Se o professor pode ser removido, o Sistema realiza a remoção; caso contrário, o Sistema reporta o fato. <br>
-
-Fluxo Alternativo (3): Alteração
-
-a)	A Secretária altera um ou mais dos detalhes do professor e requisita sua atualização. <br>
-b)	O Sistema verifica a validade dos dados e, se eles forem válidos, altera os dados na lista de professores, caso contrário, o erro é reportado. <br>
- 
-Fluxo Alternativo (3): Consulta
-
-a)	A Secretária opta por pesquisar pelo nome ou código e solicita a consulta sobre a lista de professores. <br>
-b)	O Sistema apresenta uma lista professores. <br>
-c)	A Secretária seleciona o professor. <br>
-d)	O Sistema apresenta os detalhes do professor no formulário de professores. <br>
-
-Pós-condições: Um professor foi inserido ou removido, seus dados foram alterados ou apresentados na tela.
+a) O usuário acessa a página de criação de conta. <br>
+b) O usuário registrará seu e-mail e senha nos campos fornecidos pelo programa. <br>
+c) O usuário não aceita os termos de uso do Abraço Peludo, retornando à página inicial do site. <br>
 
 ### 3.4.3 Diagrama de Classes 
 
@@ -150,7 +123,7 @@ A Figura 2 mostra o diagrama de classes do sistema. Um animal deve conter a iden
 
 #### Figura 2: Diagrama de Classes do Sistema.
  
-<img width="682" height="384" alt="Diagrama de Classes 1" src="https://github.com/user-attachments/assets/f1508404-9331-45c4-b510-dc4fe39ed4ae" />
+<img width="681" height="384" alt="1" src="https://github.com/user-attachments/assets/860de35b-795f-4696-8757-924cb25ed8fb" />
 
 
 ### 3.4.4 Descrições das Classes 
