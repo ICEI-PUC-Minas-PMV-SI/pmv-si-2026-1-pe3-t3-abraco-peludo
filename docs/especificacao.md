@@ -123,7 +123,7 @@ A Figura 2 mostra o diagrama de classes do sistema. Um animal deve conter a iden
 
 #### Figura 2: Diagrama de Classes do Sistema.
  
-<img width="681" height="384" alt="1" src="https://github.com/user-attachments/assets/860de35b-795f-4696-8757-924cb25ed8fb" />
+<img width="722" height="402" alt="3 drawio" src="https://github.com/user-attachments/assets/94d52a11-5cd2-459e-8c9b-ef8f21a1a458" />
 
 
 ### 3.4.4 Descrições das Classes 
@@ -135,3 +135,4 @@ A Figura 2 mostra o diagrama de classes do sistema. Um animal deve conter a iden
 | 3 | Adotante | Cadastro de informações relativas aos Adotantes. |
 | 4 | Animais | Cadastro de informações relativas aos Animais. |
 | 5	| Candidatura Adoção | Cadastro de Candidatura Adoção iniciado por um Adotante. |
+| 6	| Agendamento Visita | Cadastro de Agendamento de Visita iniciado por um Atendente. |
