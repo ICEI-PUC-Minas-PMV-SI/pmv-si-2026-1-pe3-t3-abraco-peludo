@@ -94,7 +94,7 @@ Como observado no diagrama de casos de uso da Figura 1, a secretária poderá ge
 
 #### Figura 1: Diagrama de Casos de Uso do Sistema.
 
-![dcu](https://github.com/user-attachments/assets/41f6b731-b44e-43aa-911f-423ad6198f47)
+<img width="896" height="462" alt="Diagrama Casos de Uso 1" src="https://github.com/user-attachments/assets/0e75769a-2980-45bb-82dd-a522d3938c98" />
  
 ### 3.4.2 Descrições de Casos de Uso
 
@@ -147,20 +147,20 @@ Pós-condições: Um professor foi inserido ou removido, seus dados foram altera
 
 ### 3.4.3 Diagrama de Classes 
 
-A Figura 2 mostra o diagrama de classes do sistema. A Matrícula deve conter a identificação do funcionário responsável pelo registro, bem com os dados do aluno e turmas. Para uma disciplina podemos ter diversas turmas, mas apenas um professor responsável por ela.
+A Figura 2 mostra o diagrama de classes do sistema. Um animal deve conter a identificação do funcionário responsável pelo registro, bem com os dados da ONG associada.
 
 #### Figura 2: Diagrama de Classes do Sistema.
  
-![image](https://github.com/user-attachments/assets/abc7591a-b46f-4ea2-b8f0-c116b60eb24e)
+<img width="682" height="384" alt="Diagrama de Classes 1" src="https://github.com/user-attachments/assets/f1508404-9331-45c4-b510-dc4fe39ed4ae" />
 
 
 ### 3.4.4 Descrições das Classes 
 
 | # | Nome | Descrição |
 |--------------------|------------------------------------|----------------------------------------|
-| 1	|	Aluno |	Cadastro de informações relativas aos alunos. |
-| 2	| Curso |	Cadastro geral de cursos de aperfeiçoamento. |
-| 3 |	Matrícula |	Cadastro de Matrículas de alunos nos cursos. |
-| 4 |	Turma |	Cadastro de turmas.
-| 5	|	Professor |	Cadastro geral de professores que ministram as disciplinas. |
-| ... |	... |	... |
+| 1	| Secretaria ONG | Cadastro de informações relativas às ONGs. |
+| 2	| Atendente ONG | Comunicação entre o Adotante e a ONG. |
+| 3 | Adotante | Cadastro de informações relativas aos Adotantes. |
+| 4 | Animais | Cadastro de informações relativas aos Animais. |
+| 5	| Candidatura “Lar Temporário” | Cadastro de Candidatura “Lar Temporário” iniciado por um Adotante. |
+| 6	| Candidatura Adoção | Cadastro de Candidatura Adoção iniciado por um Adotante. |
