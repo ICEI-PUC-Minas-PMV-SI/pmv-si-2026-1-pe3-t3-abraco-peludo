@@ -58,12 +58,11 @@ A disponibilização de “animais compatíveis para adoção’’ com base no 
 | RF16 | Agendar Visita | O sistema deve: Permitir que o usuário escolha um dia e horário disponível no calendário da ONG para ir ao abrigo conhecer o animal pessoalmente antes de decidir |
 | RF17 | Tirar Dúvidas | O sistema deve ter um chat simples dentro do aplicativo onde o interessado pode tirar dúvidas básicas com o protetor antes de clicar no botão oficial de "Adotar" |
 | RF18 | Alertar ONG | O sistema deve manter um histórico interno de CPFs que já tiveram solicitações negadas ou problemas em adoções anteriores, alertando a ONG quando uma dessas pessoas tentar uma nova adoção |
-| RF19 | Candidatar "Lar Temporário" | O sistema deve ter uma opção no perfil do animal para o usuário se candidatar apenas como "Lar Temporário", enviando um aviso para a ONG de que aquele pet específico tem um lugar para ficar enquanto não é adotado |
-| RF20 | Exibir Checklist "Primeiros Passos" | O sistema deve exibir uma lista automática de itens necessários (ex: ração, tamanho da guia, marca da areia) assim que a adoção for aprovada, para que o novo dono se prepare antes do pet chegar |
-| RF21 | Identificador | O sistema deve: Identificar com um selo destacado os animais que possuem deficiências ou doenças crônicas |
-| RF22 | Cadastrar Selo | O sistema deve permitir aos responsáveis da ONG cadastrarem selos que destacam os animais que possuem deficiências ou doenças crônicas |
-| RF23 | Enviar Questionário Adoção | O sistema deve permitir aos responsáveis da ONG enviarem um questionário para aprovação, ou reprovação, da adoção para os adotantes que já escolheram um pet no site |
-| RF24 | Candidatar para Adoção | O sistema deve permitir ao adotante se candidatar para adotar um pet ao clicar no botão oficial de "Adotar" |
+| RF19 | Exibir Checklist "Primeiros Passos" | O sistema deve exibir uma lista automática de itens necessários (ex: ração, tamanho da guia, marca da areia) assim que a adoção for aprovada, para que o novo dono se prepare antes do pet chegar |
+| RF20 | Identificador | O sistema deve: Identificar com um selo destacado os animais que possuem deficiências ou doenças crônicas |
+| RF21 | Cadastrar Selo | O sistema deve permitir aos responsáveis da ONG cadastrarem selos que destacam os animais que possuem deficiências ou doenças crônicas |
+| RF22 | Enviar Questionário Adoção | O sistema deve permitir aos responsáveis da ONG enviarem um questionário para aprovação, ou reprovação, da adoção para os adotantes que já escolheram um pet no site |
+| RF23 | Candidatar para Adoção | O sistema deve permitir ao adotante se candidatar para adotar um pet ao clicar no botão oficial de "Adotar" |
 
 ### 3.3.2 Requisitos Não Funcionais
 
@@ -162,5 +161,4 @@ A Figura 2 mostra o diagrama de classes do sistema. Um animal deve conter a iden
 | 2	| Atendente ONG | Comunicação entre o Adotante e a ONG. |
 | 3 | Adotante | Cadastro de informações relativas aos Adotantes. |
 | 4 | Animais | Cadastro de informações relativas aos Animais. |
-| 5	| Candidatura “Lar Temporário” | Cadastro de Candidatura “Lar Temporário” iniciado por um Adotante. |
-| 6	| Candidatura Adoção | Cadastro de Candidatura Adoção iniciado por um Adotante. |
+| 5	| Candidatura Adoção | Cadastro de Candidatura Adoção iniciado por um Adotante. |
