@@ -25,7 +25,7 @@ Administrar as informações referentes ao fluxo de adoção de animais, viabili
 
 
 ### 3.2.3 Limites do produto
-A disponibilização de “animais compatíveis para adoção’’ com base no perfil do usuário depende da veracidade e completude das informações fornecidas, não sendo possível garantir compatibilidade total entre adotante e animal nem comprovação da veracidade das informações fornecidas pelo usuário. Além disso, o sistema atua como intermediador, não se responsabilizando pelas condições de saúde, comportamento ou histórico dos animais disponibilizados. A plataforma não substitui visitas presenciais ou processos de adaptação pós-adoção. Quanto à disponibilidade de animais cadastrados, pode variar conforme a região e parcerias com ONGs, impactando a abrangência das recomendações apresentadas ao usuário.
+A efetividade das informações disponibilizadas depende da veracidade e completude dos dados fornecidos pelos usuários, não sendo possível garantir a comprovação da veracidade dessas informações. Além disso, o sistema atua como intermediador, não se responsabilizando pelas condições de saúde, comportamento ou histórico dos animais disponibilizados. A plataforma não substitui visitas presenciais ou processos de adaptação pós-adoção. Quanto à disponibilidade de animais cadastrados, pode variar conforme a região e parcerias com ONGs, impactando a abrangência das recomendações apresentadas ao usuário.
 
 ### 3.2.4 Benefícios do produto
 
