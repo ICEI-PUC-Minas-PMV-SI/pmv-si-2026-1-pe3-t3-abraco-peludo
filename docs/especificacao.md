@@ -176,12 +176,12 @@ d) O sistema exibe os detalhes do animal. <br>
 	
 <ins>Fluxos Alternativos:</ins>
 
-5) Aprovação
-- O sistema atualiza o status para “aprovado”.
-- O animal pode ter status alterado (ex: “em processo” ou “adotado”).
+(5) Aprovação \
+	- O sistema atualiza o status para “aprovado”. \
+	- O animal pode ter status alterado (ex: “em processo” ou “adotado”).
 
-5) Rejeição
-- O sistema atualiza o status para “rejeitado”.
+(5) Rejeição \
+	- O sistema atualiza o status para “rejeitado”.
 
 
 ### 3.4.3 Diagrama de Classes 
