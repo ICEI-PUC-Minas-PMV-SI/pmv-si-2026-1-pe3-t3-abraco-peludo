@@ -31,8 +31,9 @@ A disponibilização de “animais compatíveis para adoção’’ com base no 
 |--------------------|------------------------------------|----------------------------------------|
 |1	| Melhoria na divulgação dos animais disponíveis para adoção |	Essencial |
 |2 | Facilidade no cadastro e gerenciamento de animais para adoção | Essencial | 
-|3 | Maior segurança e integridade no armazenamento das informações | Essencial | 
-|4	| Melhoria na qualidade de informações disponíveis durante o processo de adoção	| Essencial | 
+|3 | Organização e controle no cadastro de adotantes | Essencial | 
+|4 | Maior segurança e integridade no armazenamento das informações | Essencial | 
+|5	| Melhoria na qualidade de informações disponíveis durante o processo de adoção	| Essencial | 
 
 ## 3.3 Descrição geral do produto
 
@@ -84,7 +85,6 @@ A disponibilização de “animais compatíveis para adoção’’ com base no 
 |--------------------|------------------------------------|
 | Secretaria ONG |	Usuário responsável pelo registro e alteração de cadastro de animais |
 | Adotante |	Usuário responsável pelo início do pedido de adoção |
-| Atendente ONG | Usuário responsável pela comunicação entre o adotante e a ONG |
 
 ## 3.4 Modelagem do Sistema
 
@@ -93,29 +93,96 @@ Como observado no diagrama de casos de uso da Figura 1, a Secretaria ONG poderá
 
 #### Figura 1: Diagrama de Casos de Uso do Sistema.
 
-<img width="896" height="462" alt="Diagrama Casos de Uso 1" src="https://github.com/user-attachments/assets/0e75769a-2980-45bb-82dd-a522d3938c98" />
- 
+<img width="657" height="261" alt="Abraço Peludo - Casos de Uso drawio" src="https://github.com/user-attachments/assets/6c8c9c7b-8bd9-4de0-9e4b-b6a4c21ab1a7" />
+
 ### 3.4.2 Descrições de Casos de Uso
 
 #### Criar conta – Adotante (CSU01)
 
-Sumário: O usuário realiza seu primeiro acesso ao site Abraço Peludo.
+**Sumário:** O usuário realiza seu primeiro acesso ao site Abraço Peludo. <br>
+**Ator primário:** Usuário. <br>
+**Pré-condições:** O usuário deve inserir um e-mail e CPF válido. <br>
 
-Ator primário: Usuário.
-
-Pré-condições: O usuário deve inserir um e-mail e CPF válido.
-
-Fluxo principal:
+<ins>Fluxo principal:</ins>
 
 1) O usuário acessa a página de criação de conta.
 2) O usuário registrará seu e-mail e senha nos campos fornecidos pelo programa.
 3) O usuário aceita os termos de uso do Abraço Peludo, fornecendo suas informações pessoais e localização.
 
-Fluxo alternativo:
+<ins>Fluxo alternativo:</ins>
 
 a) O usuário acessa a página de criação de conta. <br>
 b) O usuário registrará seu e-mail e senha nos campos fornecidos pelo programa. <br>
 c) O usuário não aceita os termos de uso do Abraço Peludo, retornando à página inicial do site. <br>
+
+#### Gerenciar Animais - ONG (CSU01)
+
+**Sumário:** A ONG realiza a gestão (inclusão, remoção, alteração e consulta) dos dados dos animais disponíveis para adoção. <br>
+**Ator Primário:** ONG / Protetor <br>
+**Ator Secundário:** Não tem <br>
+
+**Pré-condições:** A ONG deve estar cadastrada no sistema.
+
+<ins>Fluxo Principal:</ins>
+
+1) A ONG requisita a manutenção dos animais cadastrados.
+2) O sistema apresenta as operações disponíveis: inclusão, alteração, exclusão e consulta de animais.
+3) A ONG seleciona a operação desejada (inclusão, remoção, alteração ou consulta) ou opta por finalizar o caso de uso.
+4) Caso a ONG deseje continuar gerenciando os animais, **o fluxo retorna ao passo 3**; caso contrário, o caso de uso é **encerrado**.
+
+<ins>Fluxo Alternativo (3): Inclusão</ins>
+
+a) A ONG solicita a inclusão de um novo animal. <br>
+b) O sistema apresenta um formulário para cadastro do animal. <br>
+c) A ONG preenche os dados solicitados (nome, idade, porte, descrição, status, entre outros). <br>
+d) O sistema valida os dados informados (dados obrigatórios). <br>
+e) Se os dados forem válidos, o sistema realiza o cadastro do animal e atualiza a lista de animais disponíveis; caso contrário, o sistema informa o erro e solicita a correção dos dados. <br>
+
+<ins>Fluxo Alternativo (3): Remoção</ins>
+
+a) A ONG seleciona um animal cadastrado e solicita sua remoção. <br>
+b) O sistema verifica se o animal está vinculado a algum processo de adoção em andamento. <br>
+c) Se o animal não estiver vinculado a nenhum processo ativo, o sistema realiza a exclusão; caso contrário, informa a impossibilidade da ação devido à existência de processo de adoção em aberto. <br>
+
+<ins>Fluxo Alternativo (3): Alteração</ins>
+
+a) A ONG seleciona um animal e altera um ou mais de seus dados. <br>
+b) A ONG solicita a atualização das informações. <br>
+c) O sistema valida os dados informados. <br>
+d) Se válidos, o sistema atualiza as informações do animal; caso contrário, informa o erro e solicita correção. <br>
+
+<ins>Fluxo Alternativo (3): Consulta</ins>
+
+a) A ONG solicita a visualização dos animais cadastrados. <br>
+b) O sistema apresenta a lista de animais. <br>
+c) A ONG seleciona um animal. <br>
+d) O sistema exibe os detalhes do animal. <br>
+
+#### Gerenciar Solicitações de Adoção - ONG (CSU02)
+
+**Sumário:** A ONG realiza a gestão das solicitações de adoção, podendo visualizar, analisar e definir o status das solicitações. <br>
+**Ator Primário:** ONG / Protetor <br>
+**Pré-condição:** ONG autenticada no sistema <br>
+
+<ins>Fluxo Principal:</ins>
+
+1) A ONG solicita o acesso às solicitações de adoção.
+2) O sistema apresenta a lista de solicitações recebidas.
+3) A ONG seleciona uma solicitação.
+4) O sistema exibe os detalhes do adotante e do animal.
+5) A ONG pode realizar etapas de avaliação do adotante, como contato ou visita.
+6) Após a avaliação, a ONG decide pela aprovação ou rejeição da solicitação.
+7) O sistema registra a decisão e atualiza o status da solicitação.
+	
+<ins>Fluxos Alternativos:</ins>
+
+5) Aprovação
+- O sistema atualiza o status para “aprovado”.
+- O animal pode ter status alterado (ex: “em processo” ou “adotado”).
+
+5) Rejeição
+- O sistema atualiza o status para “rejeitado”.
+
 
 ### 3.4.3 Diagrama de Classes 
 
