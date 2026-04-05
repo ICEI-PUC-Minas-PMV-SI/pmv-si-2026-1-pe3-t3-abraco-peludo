@@ -8,6 +8,7 @@ Além disso, este documento busca auxiliar a compreensão do sistema a partir da
 ## 3.1 Objetivos deste documento
 Descrever e especificar em detalhes, as principais características da proposta de criação de um domínio on-line facilitador/intermediador de processos de adoção e doação responsável de animais domésticos, trazida pelo Grupo 1 da Turma 3 - Eixo 3 SI-PUC Minas Virtual.
 
+
 ## 3.2 Escopo do produto
 
 ### 3.2.1 Nome do produto e seus componentes principais
@@ -27,6 +28,7 @@ Administrar as informações referentes ao fluxo de adoção de animais, viabili
 ### 3.2.3 Limites do produto
 A efetividade das informações disponibilizadas depende da veracidade e completude dos dados fornecidos pelos usuários, não sendo possível garantir a comprovação da veracidade dessas informações. Além disso, o sistema atua como intermediador, não se responsabilizando pelas condições de saúde, comportamento ou histórico dos animais disponibilizados. A plataforma não substitui visitas presenciais ou processos de adaptação pós-adoção. Quanto à disponibilidade de animais cadastrados, pode variar conforme a região e parcerias com ONGs, impactando a abrangência das recomendações apresentadas ao usuário.
 
+
 ### 3.2.4 Benefícios do produto
 
 | # | Benefício | Valor para o Cliente |
@@ -36,6 +38,7 @@ A efetividade das informações disponibilizadas depende da veracidade e complet
 |3 | Organização e controle no cadastro de adotantes | Essencial | 
 |4 | Maior segurança e integridade no armazenamento das informações | Essencial | 
 |5	| Melhoria na qualidade de informações disponíveis durante o processo de adoção	| Essencial | 
+
 
 ## 3.3 Descrição geral do produto
 
@@ -67,6 +70,7 @@ A efetividade das informações disponibilizadas depende da veracidade e complet
 | RF22 | Enviar Questionário Adoção | O sistema deve permitir aos responsáveis da ONG enviarem um questionário para aprovação, ou reprovação, da adoção para os adotantes que já escolheram um pet no site |
 | RF23 | Candidatar para Adoção | O sistema deve permitir ao adotante se candidatar para adotar um pet ao clicar no botão oficial de "Adotar" |
 
+
 ### 3.3.2 Requisitos Não Funcionais
 
 | Código | Requisito Não Funcional (Restrição) |
@@ -81,12 +85,14 @@ A efetividade das informações disponibilizadas depende da veracidade e complet
 | RNF08 | A interface deve ser Mobile-First ou totalmente responsiva, adaptando-se automaticamente a resoluções desde 360px (smartphones) até 1920px (desktops) sem perda de funcionalidade |
 | RNF09 | Para evitar que o usuário tenha que criar mais uma senha, o sistema deve permitir o cadastro e login rápido usando contas que ele já possui, como Google ou Apple, em um clique |
 
+
 ### 3.3.3 Usuários 
 
 | Ator | Descrição |
 |--------------------|------------------------------------|
 | Secretaria ONG |	Usuário responsável pelo registro e alteração de cadastro de animais |
 | Adotante |	Usuário responsável pelo início do pedido de adoção |
+
 
 ## 3.4 Modelagem do Sistema
 
@@ -97,9 +103,10 @@ Como observado no diagrama de casos de uso da Figura 1, a Secretaria ONG poderá
 
 <img width="657" height="261" alt="Abraço Peludo - Casos de Uso drawio" src="https://github.com/user-attachments/assets/6c8c9c7b-8bd9-4de0-9e4b-b6a4c21ab1a7" />
 
+
 ### 3.4.2 Descrições de Casos de Uso
 
-#### Criar conta – Adotante (CSU01)
+> **Criar conta – Adotante (CSU01)**
 
 **Sumário:** O usuário realiza seu primeiro acesso ao site Abraço Peludo. <br>
 **Ator primário:** Usuário. <br>
@@ -117,7 +124,8 @@ a) O usuário acessa a página de criação de conta. <br>
 b) O usuário registrará seu e-mail e senha nos campos fornecidos pelo programa. <br>
 c) O usuário não aceita os termos de uso do Abraço Peludo, retornando à página inicial do site. <br>
 
-#### Gerenciar Animais - ONG (CSU01)
+
+> **Gerenciar Animais - ONG (CSU01)**
 
 **Sumário:** A ONG realiza a gestão (inclusão, remoção, alteração e consulta) dos dados dos animais disponíveis para adoção. <br>
 **Ator Primário:** ONG / Protetor <br>
@@ -160,7 +168,8 @@ b) O sistema apresenta a lista de animais. <br>
 c) A ONG seleciona um animal. <br>
 d) O sistema exibe os detalhes do animal. <br>
 
-#### Gerenciar Solicitações de Adoção - ONG (CSU02)
+
+> **Gerenciar Solicitações de Adoção - ONG (CSU02)**
 
 **Sumário:** A ONG realiza a gestão das solicitações de adoção, podendo visualizar, analisar e definir o status das solicitações. <br>
 **Ator Primário:** ONG / Protetor <br>
@@ -185,6 +194,7 @@ d) O sistema exibe os detalhes do animal. <br>
 (5) Rejeição \
 	- O sistema atualiza o status para “rejeitado”.
 
+<br>
 
 ### 3.4.3 Diagrama de Classes 
 
