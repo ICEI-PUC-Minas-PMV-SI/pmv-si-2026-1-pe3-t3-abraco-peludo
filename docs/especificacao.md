@@ -15,6 +15,8 @@ O produto será nomeado Abraço Peludo. O sistema será constituído por módulo
 
 Os principais componentes do sistema incluem: 
 - Módulo Usuários : responsável pelo cadastro, autenticação e gerenciamento de perfis de adotantes e administradores (ONGs/protetores);
+- Módulo de Animais: responsável pelo cadastro, edição, visualização e gerenciamento das informações dos animais disponíveis para adoção;
+- Módulo de Adoção: responsável pelo registro, acompanhamento e gerenciamento das solicitações de adoção realizadas pelos usuários;
 - Módulo Administrativo: responsável pelo controle das informações e acompanhamento das etapas do processo de adoção.
 
 
