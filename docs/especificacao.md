@@ -190,7 +190,7 @@ A Figura 2 mostra o diagrama de classes do sistema. Um animal deve conter a iden
 
 #### Figura 2: Diagrama de Classes do Sistema.
  
-<img width="722" height="412" alt="1" src="https://github.com/user-attachments/assets/3e831fd0-067e-4a38-becd-23c7b270f0d9" />
+<img width="722" height="412" alt="Diagrama de Classes" src="https://github.com/user-attachments/assets/13d774a6-32c1-4a4a-a1f8-f508a4a24ec3" />
 
 
 ### 3.4.4 Descrições das Classes 
@@ -198,8 +198,7 @@ A Figura 2 mostra o diagrama de classes do sistema. Um animal deve conter a iden
 | # | Nome | Descrição |
 |--------------------|------------------------------------|----------------------------------------|
 | 1	| Secretaria ONG | Cadastro de informações relativas às ONGs. |
-| 2	| Atendente ONG | Comunicação entre o Adotante e a ONG. |
-| 3 | Adotante | Cadastro de informações relativas aos Adotantes. |
-| 4 | Animais | Cadastro de informações relativas aos Animais. |
-| 5	| Candidatura Adoção | Cadastro de Candidatura Adoção iniciado por um Adotante. |
-| 6	| Agendamento Visita | Cadastro de Agendamento de Visita iniciado por um Atendente. |
+| 2 | Adotante | Cadastro de informações relativas aos Adotantes. |
+| 3 | Animais | Cadastro de informações relativas aos Animais. |
+| 4	| Candidatura Adoção | Cadastro de Candidatura Adoção iniciado por um Adotante. |
+| 5	| Agendamento Visita | Cadastro de Agendamento de Visita iniciado pela ONG. |
