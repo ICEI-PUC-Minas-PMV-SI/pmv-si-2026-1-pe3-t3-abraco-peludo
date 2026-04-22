@@ -69,7 +69,7 @@ A efetividade das informações disponibilizadas depende da veracidade e complet
 | RF21 | Cadastrar Selo | O sistema deve permitir aos responsáveis da ONG cadastrarem selos que destacam os animais que possuem deficiências ou doenças crônicas |
 | RF22 | Enviar Questionário Adoção | O sistema deve permitir aos responsáveis da ONG enviarem um questionário para aprovação, ou reprovação, da adoção para os adotantes que já escolheram um pet no site |
 | RF23 | Candidatar para Adoção | O sistema deve permitir ao adotante se candidatar para adotar um pet ao clicar no botão oficial de "Adotar" |
-
+| RF24 | Notificar adotante sobre o status da solicitação de adoção | O sistema deve permitir o envio de notificações ao adotante informando atualizações no status da solicitação de adoção, como aprovação, rejeição ou andamento do processo. |
 
 ### 3.3.2 Requisitos Não Funcionais
 
