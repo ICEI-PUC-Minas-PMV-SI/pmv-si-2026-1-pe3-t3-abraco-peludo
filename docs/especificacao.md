@@ -127,7 +127,7 @@ c) O usuário não aceita os termos de uso do Abraço Peludo, retornando à pág
 
 > **Gerenciar Animais - ONG (CSU01)**
 
-**Sumário:** A ONG realiza a gestão (inclusão, remoção, alteração e consulta) dos dados dos animais disponíveis para adoção. <br>
+**Sumário:** A ONG realiza a gestão (inclusão, remoção, alteração e consulta) dos dados dos animais disponíveis para adoção incluindo informações complementares como mídias e selos do animal. <br>
 **Ator Primário:** ONG / Protetor <br>
 **Ator Secundário:** Não tem <br>
 
@@ -145,8 +145,10 @@ c) O usuário não aceita os termos de uso do Abraço Peludo, retornando à pág
 a) A ONG solicita a inclusão de um novo animal. <br>
 b) O sistema apresenta um formulário para cadastro do animal. <br>
 c) A ONG preenche os dados solicitados (nome, idade, porte, descrição, status, entre outros). <br>
-d) O sistema valida os dados informados (dados obrigatórios). <br>
-e) Se os dados forem válidos, o sistema realiza o cadastro do animal e atualiza a lista de animais disponíveis; caso contrário, o sistema informa o erro e solicita a correção dos dados. <br>
+d) A ONG cadastra as mídias relacionadas ao animal (fotos e/ou vídeos). <br>
+f) A ONG informa os selos/características aplicáveis ao animal (ex.: vacinado, castrado, dócil). <br>
+g) O sistema valida os dados informados (dados obrigatórios). <br>
+h) Se os dados forem válidos, o sistema realiza o cadastro do animal e atualiza a lista de animais disponíveis; caso contrário, o sistema informa o erro e solicita a correção dos dados. <br>
 
 <ins>Fluxo Alternativo (3): Remoção</ins>
 
@@ -166,7 +168,7 @@ d) Se válidos, o sistema atualiza as informações do animal; caso contrário, 
 a) A ONG solicita a visualização dos animais cadastrados. <br>
 b) O sistema apresenta a lista de animais. <br>
 c) A ONG seleciona um animal. <br>
-d) O sistema exibe os detalhes do animal. <br>
+d) O sistema exibe os detalhes do animal, incluindo mídias e selos associados. <br>
 
 
 > **Gerenciar Solicitações de Adoção - ONG (CSU02)**
