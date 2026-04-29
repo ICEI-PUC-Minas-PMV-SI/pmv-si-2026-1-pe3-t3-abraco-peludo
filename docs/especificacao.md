@@ -57,7 +57,7 @@ A efetividade das informações disponibilizadas depende da veracidade e complet
 | RF09 | Cadastrar Mídia | O sistema deve permir aos responsáveis pela ONG de anexar as fotos dos animais na área de adoção |
 | RF10 | Filtrar Busca | O usuário deve conseguir filtrar os animais por porte (pequeno, médio, grande) e sexo |
 | RF11 | Exibir Perfil Detalhado | Ao clicar em um animal, o sistema deve exibir informações de saúde (vacinas, castração, vermifugação) e uma breve história do pet |
-| RF12 | Gerenciar Perfil Detalhado | O sistema deve permitir ao responsável por cadastrar os animais, cadastrar, atualizar e deletar as informações de saúde e uma breve história do pet |
+| RF12 | Gerenciar Perfil Detalhado | O sistema deve permitir ao responsável por cadastrar os animais, atualizar e deletar as informações de saúde e uma breve história do pet |
 | RF13 | Ver o Perfil Detalhado  | O sistema deve permitir ao responsável por cadastrar os animais, ver as informações de saúde e uma breve história do pet |
 | RF14 | Alterar Status | O sistema deve permitir que a ONG altere a situação do processo (Ex: "Em Análise", "Entrevista Marcada", "Aprovado", "Recusado") |
 | RF15 | Ver Status Alterado | O sistema deve permitir que a ONG veja a situação do processo (Ex: "Em Análise", "Entrevista Marcada", "Aprovado", "Recusado") |
