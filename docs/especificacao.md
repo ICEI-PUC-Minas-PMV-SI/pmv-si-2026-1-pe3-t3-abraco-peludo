@@ -204,8 +204,7 @@ A Figura 2 mostra o diagrama de classes do sistema. Um animal deve conter a iden
 
 #### Figura 2: Diagrama de Classes do Sistema.
  
-<img width="722" height="412" alt="Diagrama de Classes" src="https://github.com/user-attachments/assets/13d774a6-32c1-4a4a-a1f8-f508a4a24ec3" />
-
+<img width="801" height="454" alt="1 drawio (1)" src="https://github.com/user-attachments/assets/7dc8fec8-1d69-4445-9ab0-b622cb022aa3" />
 
 ### 3.4.4 Descrições das Classes 
 
