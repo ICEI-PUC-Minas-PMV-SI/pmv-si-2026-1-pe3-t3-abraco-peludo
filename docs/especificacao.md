@@ -207,22 +207,22 @@ d) O sistema exibe os detalhes do animal, incluindo mídias e selos associados. 
 
 <ins>Fluxo Principal:</ins>
 
-O adotante requisita a adoção de um animal cadastrado.
-O sistema apresenta ao adotante o questionário de adoção a ser preenchido.
-O sistema notifica o atendente de uma nova solicitação de adoção.
-O sistema apresenta as operações disponíveis: visualizar questionário, enviar avaliação.
-O adotante seleciona a operação desejada (visualizar questionário ou enviar avaliação) ou opta por finalizar o caso de uso.
+1) O adotante requisita a adoção de um animal cadastrado.
+2) O sistema apresenta ao adotante o questionário de adoção a ser preenchido.
+3) O sistema notifica o atendente de uma nova solicitação de adoção.
+4) O sistema apresenta as operações disponíveis: visualizar questionário e enviar avaliação.
+5) O adotante seleciona a operação desejada (visualizar questionário ou enviar avaliação) ou opta por finalizar o caso de uso.
 
 <ins>Fluxo Alternativo (4): Visualizar Questionário</ins>
 
-a) O atendente seleciona uma solicitação de adoção e solicita sua visualização.
-b) O sistema verifica se o adotante já teve uma solicitação de adoção recusada. 
+a) O atendente seleciona uma solicitação de adoção e solicita sua visualização. <br>
+b) O sistema verifica se o adotante já teve uma solicitação de adoção recusada. <br>
 c) Se o adotante não estiver vinculado a nenhuma solicitação recusada, o sistema continuará normalmente; caso contrário, informa o número de solicitações negadas, motivo, data e observações.
 
 <ins>Fluxo Alternativo (4): Enviar Avaliação</ins>
 
-a) O atendente seleciona uma solicitação de adoção e solicita "enviar avaliação".
-b) O sistema apresenta as operações disponíveis: recusar e aprovar.
+a) O atendente seleciona uma solicitação de adoção e solicita "enviar avaliação". <br>
+b) O sistema apresenta as operações disponíveis: recusar e aprovar. <br>
 c) O adotante seleciona a operação desejada (recusar ou aprovar) ou opta por finalizar o caso de uso.
 
 <br>
