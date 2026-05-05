@@ -92,7 +92,7 @@ A efetividade das informações disponibilizadas depende da veracidade e complet
 |--------------------|------------------------------------|
 | Secretaria ONG |	Usuário responsável pelo registro e alteração de cadastro de animais |
 | Adotante |	Usuário responsável pelo início do pedido de adoção |
-| Atendente ONG | Usuário responsável pela comunicação entre o adotante e a ONG |
+| voluntário ONG | Usuário responsável pela comunicação entre o adotante e a ONG |
 
 
 ## 3.4 Modelagem do Sistema
@@ -102,7 +102,7 @@ Como observado no diagrama de casos de uso da Figura 1, a Secretaria ONG poderá
 
 #### Figura 1: Diagrama de Casos de Uso do Sistema.
 
-<img width="1000" height="539" alt="1 drawio" src="https://github.com/user-attachments/assets/c08ee2f5-cacd-4991-a226-cd68b96eae3d" />
+<img width="1000" height="719" alt="1 drawio" src="https://github.com/user-attachments/assets/83d68c24-fb8c-4be7-a209-dab3a0010c4a" />
 
 
 ### 3.4.2 Descrições de Casos de Uso
@@ -197,10 +197,10 @@ d) O sistema exibe os detalhes do animal, incluindo mídias e selos associados. 
 (5) Rejeição \
 	- O sistema atualiza o status para “rejeitado”.
 
-> **Avaliar Questionário de Adoção - Atendente da ONG (CSU01)**
+> **Avaliar Questionário de Adoção - Voluntário ONG (CSU01)**
 
-**Sumário:** O atendente da ONG realiza a avaliação do questionário de adoção preenchido previamente por um adotante interessado em um dos animal disponíveis no site, podendo consultar o histórico de solicitações de adoções do referido usuário e, posteriormente, enviando para a secretaria. <br>
-**Ator Primário:** Atendente da ONG <br>
+**Sumário:** O voluntário da ONG realiza a avaliação do questionário de adoção preenchido previamente por um adotante interessado em um dos animal disponíveis no site, podendo consultar o histórico de solicitações de adoções do referido usuário e, posteriormente, enviando para a secretaria. <br>
+**Ator Primário:** Voluntário da ONG <br>
 **Ator Secundário:** Adotante e Secretaria ONG <br>
 
 **Pré-condições:** A ONG, o animal e o adotante devem estar cadastrados no sistema.
@@ -209,19 +209,19 @@ d) O sistema exibe os detalhes do animal, incluindo mídias e selos associados. 
 
 1) O adotante requisita a adoção de um animal cadastrado.
 2) O sistema apresenta ao adotante o questionário de adoção a ser preenchido.
-3) O sistema notifica o atendente de uma nova solicitação de adoção.
+3) O sistema notifica o voluntário de uma nova solicitação de adoção.
 4) O sistema apresenta as operações disponíveis: visualizar questionário e enviar avaliação.
 5) O adotante seleciona a operação desejada (visualizar questionário ou enviar avaliação) ou opta por finalizar o caso de uso.
 
 <ins>Fluxo Alternativo (4): Visualizar Questionário</ins>
 
-a) O atendente seleciona uma solicitação de adoção e solicita sua visualização. <br>
+a) O voluntário seleciona uma solicitação de adoção e solicita sua visualização. <br>
 b) O sistema verifica se o adotante já teve uma solicitação de adoção recusada. <br>
 c) Se o adotante não estiver vinculado a nenhuma solicitação recusada, o sistema continuará normalmente; caso contrário, informa o número de solicitações negadas, motivo, data e observações.
 
 <ins>Fluxo Alternativo (4): Enviar Avaliação</ins>
 
-a) O atendente seleciona uma solicitação de adoção e solicita "enviar avaliação". <br>
+a) O voluntário seleciona uma solicitação de adoção e solicita "enviar avaliação". <br>
 b) O sistema apresenta as operações disponíveis: recusar e aprovar. <br>
 c) O adotante seleciona a operação desejada (recusar ou aprovar) ou opta por finalizar o caso de uso.
 
@@ -233,7 +233,7 @@ A Figura 2 mostra o diagrama de classes do sistema. Um animal deve conter a iden
 
 #### Figura 2: Diagrama de Classes do Sistema.
  
-<img width="801" height="654" alt="2 drawio" src="https://github.com/user-attachments/assets/7d8e430f-2fad-48f3-8cef-664fb8e8e44d" />
+<img width="801" height="654" alt="3 drawio" src="https://github.com/user-attachments/assets/567ee5c0-ab00-4112-91b9-5a0be34fdec6" />
 
 ### 3.4.4 Descrições das Classes 
 
@@ -244,4 +244,4 @@ A Figura 2 mostra o diagrama de classes do sistema. Um animal deve conter a iden
 | 3 | Animais | Cadastro de informações relativas aos Animais. |
 | 4	| Candidatura Adoção | Cadastro de Candidatura Adoção iniciado por um Adotante. |
 | 5	| Agendamento Visita | Cadastro de Agendamento de Visita iniciado pela ONG. |
-| 6	| Atendente ONG | Comunicação entre o Adotante e a ONG. |
+| 6	| Voluntário ONG | Comunicação entre o Adotante e a ONG. |
