@@ -102,8 +102,7 @@ Como observado no diagrama de casos de uso da Figura 1, a Secretaria ONG poderá
 
 #### Figura 1: Diagrama de Casos de Uso do Sistema.
 
-<img width="1000" height="719" alt="1 drawio" src="https://github.com/user-attachments/assets/83d68c24-fb8c-4be7-a209-dab3a0010c4a" />
-
+<img width="1000" height="719" alt="1 drawio (1)" src="https://github.com/user-attachments/assets/dfee5b50-bbc3-4125-9cab-56f5c180af65" />
 
 ### 3.4.2 Descrições de Casos de Uso
 
