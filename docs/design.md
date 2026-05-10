@@ -1,7 +1,7 @@
 # **4.** PROJETO DO DESIGN DE INTERAÇÃO
 Link referente ao Canva : https://canva.link/wcig5p9vus4msz1
 
-## **4.**1 Personas
+## 4.1 Personas
 
 Nesta seção são apresentadas as personas do projeto, representando os principais perfis de usuários identificados durante a pesquisa. Cada persona possui objetivos, dores, comportamentos e necessidades específicas relacionadas ao processo de adoção animal.
 
@@ -90,7 +90,7 @@ Editor de vídeo, cuida da imagem e redes sociais da ONG. Busca aproximar intere
 
 ---
 
-## **4.**2 Mapa de Empatia
+## 4.2 Mapa de Empatia
 
 Mapa da Empatia é um material utilizado para conhecer melhor o seu cliente. A partir do mapa da empatia é possível detalhar a personalidade do cliente e compreendê-la melhor. O objetivo é obter um nível mais profundo de compreensão de uma persona.
 
@@ -104,8 +104,6 @@ Mapa da Empatia é um material utilizado para conhecer melhor o seu cliente. A p
 | **6. Haruto** | Satisfação em ajudar; desejo de visibilidade. | Animais com pouca divulgação; dados antigos. | Sugestões de melhoria em campanhas. | Compartilha histórias; publica em redes. | Informações espalhadas; baixo alcance. | Centralização de dados e rapidez. |
 
 ---
-
-## **4.**3 Protótipos das Interfaces
 
 ## 4.3 Protótipos das Interfaces
 Apresente nesta seção os protótipos de alta fidelidade do sistema proposto. A fidelidade do protótipo refere-se ao nível de detalhes e funcionalidades incorporadas a ele. Assim, um protótipo de alta fidelidade é uma representação interativa do produto, baseada no computador ou em dispositivos móveis. Esse protótipo já apresenta maior semelhança com o design final em termos de detalhes e funcionalidades. No desenvolvimento dos protótipos, devem ser considerados os princípios gestálticos, as recomendações ergonômicas e as regras de design (como as 8 regras de ouro). É importante descrever no texto do relatório como os princípios gestálticos e as regras de ouro foram seguidas no projeto das interfaces. Nesta etapa deve-se dar uma ênfase na implementação do software de modo que possam ser realizados os testes com usuários na etapa seguinte.
