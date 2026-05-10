@@ -106,7 +106,59 @@ Mapa da Empatia é um material utilizado para conhecer melhor o seu cliente. A p
 ---
 
 ## 4.3 Protótipos das Interfaces
-Apresente nesta seção os protótipos de alta fidelidade do sistema proposto. A fidelidade do protótipo refere-se ao nível de detalhes e funcionalidades incorporadas a ele. Assim, um protótipo de alta fidelidade é uma representação interativa do produto, baseada no computador ou em dispositivos móveis. Esse protótipo já apresenta maior semelhança com o design final em termos de detalhes e funcionalidades. No desenvolvimento dos protótipos, devem ser considerados os princípios gestálticos, as recomendações ergonômicas e as regras de design (como as 8 regras de ouro). É importante descrever no texto do relatório como os princípios gestálticos e as regras de ouro foram seguidas no projeto das interfaces. Nesta etapa deve-se dar uma ênfase na implementação do software de modo que possam ser realizados os testes com usuários na etapa seguinte.
+
+Os protótipos de alta fidelidade do sistema **Abraço Peludo** foram desenvolvidos na ferramenta Figma com o objetivo de representar, de forma visual e interativa, as principais funcionalidades da plataforma. As telas detalham cores, fontes e interações, proporcionando uma experiência visual e funcional muito próxima do produto real.
+
+O protótipo abrange os fluxos para os dois perfis centrais do sistema: **Adotantes** e **ONGs/Protetores**
+
+As interfaces foram projetadas sob a ótica da Gestalt e da ergonomia, aplicando regras essenciais de design para criar uma experiência clara, coerente e intuitiva para o usuário.
+
+### **Aplicação dos Princípios Gestálticos**
+**Proximidade:** informações relacionadas, como dados do animal, status de saúde e informações da ONG, foram agrupadas visualmente em blocos distintos.
+
+**Semelhança:** botões, campos de formulário e cards seguem padrões visuais consistentes de cor, tipografia e formato.
+
+**Figura e fundo:** o contraste entre elementos e o plano de fundo facilita a identificação das áreas interativas e do conteúdo principal.
+
+**Hierarquia visual:** títulos, subtítulos e botões possuem tamanhos e pesos diferentes, orientando a atenção do usuário.
+
+**Alinhamento e continuidade:** os elementos foram organizados em grades e alinhamentos consistentes, favorecendo a leitura e a navegação.
+
+### Aplicação das Regras de Ouro
+
+1. **Consistência:** padrões de navegação, cores, ícones e componentes foram mantidos em todas as telas.
+2. **Atalhos para usuários frequentes:** menus e botões de ação rápida facilitam o acesso às funcionalidades mais utilizadas.
+3. **Feedback informativo:** mensagens e modais confirmam ações como envio, aprovação ou recusa de solicitações.
+4. **Diálogos com fechamento:** após cada ação importante, o sistema apresenta confirmações claras.
+5. **Prevenção de erros:** validação de campos obrigatórios e confirmação antes de exclusões.
+6. **Facilidade de reversão:** ações críticas, como exclusão, exigem confirmação prévia.
+7. **Controle do usuário:** a navegação permite retornar e revisar informações antes de confirmar ações.
+8. **Redução da carga de memória:** informações essenciais permanecem visíveis e o sistema utiliza linguagem objetiva e intuitiva.
+
+### Recomendações Ergonômicas
+
+As interfaces foram desenvolvidas com foco em usabilidade e acessibilidade, adotando:
+
+- tipografia legível;
+- contraste adequado entre texto e fundo;
+- botões com dimensões apropriadas;
+- organização visual limpa;
+- linguagem clara e objetiva.
+
+### Objetivo dos Protótipos
+
+Os protótipos de alta fidelidade permitem validar a estrutura das interfaces, a navegabilidade e o fluxo das principais funcionalidades antes da implementação definitiva. Além disso, servirão como base para a realização de testes com usuários, possibilitando identificar oportunidades de melhoria na experiência de uso e no atendimento às necessidades dos diferentes perfis envolvidos no processo de adoção responsável de animais.
+
+
+
+
+
+
+
+
+
+
+
 
 ## 4.4 Testes com Protótipos
 Nesta seção você deve apresentar os testes realizados com usuários utilizando os protótipos de alta fidelidade desenvolvidos na seção anterior. O objetivo é avaliar a usabilidade, a clareza das informações e a adequação do design às necessidades das personas definidas no projeto.
