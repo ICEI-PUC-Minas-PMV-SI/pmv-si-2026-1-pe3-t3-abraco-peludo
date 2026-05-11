@@ -17,6 +17,7 @@ O desenvolvimento da solução segue os princípios de **Design Centrado no Usu�
 * Camila Santos Gomes
 * Júlia Maria Coutinho Corrêa
 * Raíssa Barbieri Fernandes Silva
+* Rômulo Ruggiero
 
 
 ## Orientador
