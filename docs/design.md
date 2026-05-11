@@ -107,6 +107,8 @@ Mapa da Empatia é um material utilizado para conhecer melhor o seu cliente. A p
 
 ## 4.3 Protótipos das Interfaces
 
+> Link referente ao Figma : [clique aqui](https://www.figma.com/proto/7iQtOYLHmIAUSW9VMIUnck/Abra%C3%A7o-Peludo?node-id=128-2515&p=f&viewport=-82%2C250%2C0.05&t=z07c1r1IxgtEdndt-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=128%3A2515&page-id=0%3A1)
+
 Os protótipos de alta fidelidade do sistema **Abraço Peludo** foram desenvolvidos na ferramenta Figma com o objetivo de representar, de forma visual e interativa, as principais funcionalidades da plataforma. As telas detalham cores, fontes e interações, proporcionando uma experiência visual e funcional muito próxima do produto real.
 
 O protótipo abrange os fluxos para os dois perfis centrais do sistema: **Adotantes** e **ONGs/Protetores**
