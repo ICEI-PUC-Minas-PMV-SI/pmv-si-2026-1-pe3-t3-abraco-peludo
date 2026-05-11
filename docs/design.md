@@ -181,7 +181,7 @@ Durante a interação com o protótipo, os usuários relataram as seguintes falh
 
 ### 2. Oportunidades de Melhoria (Feedbacks dos Usuários)
 
-Apesar da navegação geral ter sido compreendida, os usuários se engajaram com o propósito da plataforma e sugeriram adições valiosas para a experiência, focadas em facilitar o processo de adoção e a gestão por parte das ONGs:
+Apesar da navegação geral ter sido bem compreendida, os usuários se engajaram com o propósito da plataforma e sugeriram adições valiosas para a experiência, focadas em facilitar o processo de adoção e a gestão por parte das ONGs:
 
 **Visão do Adotante:**
 *   **Filtros de Saúde Avançados:** Necessidade urgente de incluir filtros específicos (ex: vermifugado, castrado, vacinado) na tela de busca, facilitando a decisão do adotante.
