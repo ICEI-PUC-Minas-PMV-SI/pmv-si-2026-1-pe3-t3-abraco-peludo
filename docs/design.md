@@ -168,3 +168,36 @@ Cada integrante do grupo deverá aplicar o teste com um usuário distinto, prefe
 Durante a aplicação do teste, registre observações sobre comportamentos, dúvidas, erros e comentários feitos pelo usuário, bem como o tempo necessário para a execução de cada tarefa. Ao final, colete o feedback do participante, destacando pontos positivos e aspectos a serem melhorados.
 
 Os resultados obtidos por todos os integrantes devem ser consolidados, apresentando uma análise geral com os principais problemas encontrados, oportunidades de melhoria e as ações previstas para o projeto final. 
+
+Nesta seção são apresentados os resultados dos testes de usabilidade realizados com usuários utilizando os protótipos de alta fidelidade desenvolvidos no Figma. O objetivo foi avaliar a fluidez da navegação, a clareza das informações e identificar melhorias no fluxo para as personas definidas no projeto (Adotantes e ONGs).
+
+Cada membro do grupo conduziu testes individuais, solicitando que os usuários navegassem livremente pelos fluxos principais (ex: cadastro, perfil da ONG, busca). Abaixo estão os resultados consolidados.
+
+### 1. Principais Problemas Encontrados (Usabilidade e Navegação)
+
+Durante a interação com o protótipo, os usuários relataram as seguintes falhas de navegação e clareza:
+
+*   **Erro de Fluxo (Botão Quebrado):** Foi identificado um erro crítico de navegação: após o usuário acessar a tela de Login e realizar o fluxo, o botão "Home" no menu de navegação superior deixou de funcionar, impedindo o retorno à página inicial.
+*   **Falta de Clareza em Formulário (ONG):** Na tela destinada à criação ou edição do perfil das ONGs, notou-se que o rótulo de um dos campos principais solicitava "Nome Completo" (termo voltado para pessoa física). Os usuários apontaram confusão, sugerindo que o correto seria "Nome da ONG" ou "Razão Social".
+
+### 2. Oportunidades de Melhoria (Feedbacks dos Usuários)
+
+Apesar da navegação geral ter sido compreendida, os usuários se engajaram com o propósito da plataforma e sugeriram adições valiosas para a experiência, focadas em facilitar o processo de adoção e a gestão por parte das ONGs:
+
+**Visão do Adotante:**
+*   **Filtros de Saúde Avançados:** Necessidade urgente de incluir filtros específicos (ex: vermifugado, castrado, vacinado) na tela de busca, facilitando a decisão do adotante.
+*   **Maior Detalhamento do Perfil do Animal:** Inclusão de atributos essenciais como "Espécie", além de uma seção dedicada a um "Histórico" ou descrição detalhada do animal, fornecendo mais contexto antes do pedido de adoção.
+*   **Feature *Pre-order* (Lista de Interesse):** Sugestão inovadora de criar um sistema onde o adotante possa sinalizar interesse por um tipo específico de animal que ainda não está ofertado pelas ONGs cadastradas.
+
+**Visão da ONG:**
+*   **Gestão de Dados em Larga Escala:** Os usuários apontaram a necessidade de implementar filtros de busca e ordenação tanto na lista de "Pedidos de Adoção" quanto na lista de "Animais" dentro do painel da ONG, prevendo cenários reais de uso com grande volume de dados.
+
+### 3. Ações Previstas para o Projeto Final
+
+Com base nos problemas identificados e nos feedbacks consolidados, as seguintes ações de melhoria serão implementadas no design final:
+
+1.  **Correção de Navegação:** Ajustar o link do botão "Home" no fluxo pós-login do Figma para garantir o retorno à página principal.
+2.  **Ajuste de Copywriting:** Alterar a nomenclatura do campo "Nome Completo" para "Nome da ONG" nos fluxos referentes a perfis institucionais.
+3.  **Atualização de Banco e Interface:** Incorporar os novos atributos sugeridos (Espécie, Histórico, Filtros de Saúde) na modelagem de dados e aplicá-los nas telas de perfil do animal e na busca.
+4.  **Melhoria em Dashboards:** Adicionar componentes de filtro (ex: barra de busca, selects) nas telas de gestão das ONGs (Pedidos e Animais).
+5.  **Análise de Viabilidade:** A funcionalidade de "Pre-order" / Lista de Interesse será documentada no backlog como uma oportunidade de melhoria para versões futuras do sistema.
