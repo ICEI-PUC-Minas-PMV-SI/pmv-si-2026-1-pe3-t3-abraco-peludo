@@ -171,7 +171,6 @@ Os resultados obtidos por todos os integrantes devem ser consolidados, apresenta
 
 Nesta seção são apresentados os resultados dos testes de usabilidade realizados com usuários utilizando os protótipos de alta fidelidade desenvolvidos no Figma. O objetivo foi avaliar a fluidez da navegação, a clareza das informações e identificar melhorias no fluxo para as personas definidas no projeto (Adotantes e ONGs).
 
-Cada membro do grupo conduziu testes individuais, solicitando que os usuários navegassem livremente pelos fluxos principais (ex: cadastro, perfil da ONG, busca). Abaixo estão os resultados consolidados.
 
 ### 1. Principais Problemas Encontrados (Usabilidade e Navegação)
 
