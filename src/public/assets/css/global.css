@@ -1,0 +1,72 @@
+:root {
+    --marrom: #4D3227;
+    --laranja: #FF8C42;
+    --bege: #FFF2D7;
+    --verde-claro: #88D498;
+    --preto: #000000;
+    --cinza: #D9D9D9;
+    --verde: #3CB371;
+    --azul: #0061A9;
+    --vermelho: #DD000D;
+    --branco: #FFFFFF;
+    --laranja-hover: #E67E35;
+    --verde-hover: #2E9E62;
+    --azul-hover: #004F8A;
+    --vermelho-hover: #B8000A;
+    --cor-fundo: var(--bege);
+    --cor-texto: var(--marrom);
+    --cor-borda: var(--cinza);
+    --cor-card: var(--branco);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bege);
+    font-family: "Poppins";
+    color: var(--marrom);
+}
+
+h1 {
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: var(--marrom);
+}
+
+h2 {
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--marrom);
+}
+
+h3 {
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--marrom);
+}
+
+p {
+    font-family: "Poppins";
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--marrom);
+}
+
+a {
+    font-family: "Poppins";
+    color: var(--azul);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--azul-hover);
+    text-decoration: underline;
+}
+
