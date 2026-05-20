@@ -151,17 +151,6 @@ As interfaces foram desenvolvidas com foco em usabilidade e acessibilidade, adot
 
 Os protótipos de alta fidelidade permitem validar a estrutura das interfaces, a navegabilidade e o fluxo das principais funcionalidades antes da implementação definitiva. Além disso, servirão como base para a realização de testes com usuários, possibilitando identificar oportunidades de melhoria na experiência de uso e no atendimento às necessidades dos diferentes perfis envolvidos no processo de adoção responsável de animais.
 
-
-
-
-
-
-
-
-
-
-
-
 ## 4.4 Testes com Protótipos
 Nesta seção você deve apresentar os testes realizados com usuários utilizando os protótipos de alta fidelidade desenvolvidos na seção anterior. O objetivo é avaliar a usabilidade, a clareza das informações e a adequação do design às necessidades das personas definidas no projeto.
 
@@ -181,6 +170,7 @@ Durante a interação com o protótipo, os usuários relataram as seguintes falh
 *   **Erro de Fluxo (Botão Quebrado):** Foi identificado um erro crítico de navegação: após o usuário acessar a tela de Login e realizar o fluxo, o botão "Home" no menu de navegação superior deixou de funcionar, impedindo o retorno à página inicial.
 *   **Falta de Clareza em Formulário (ONG):** Na tela destinada à criação ou edição do perfil das ONGs, notou-se que o rótulo de um dos campos principais solicitava "Nome Completo" (termo voltado para pessoa física). Os usuários apontaram confusão, sugerindo que o correto seria "Nome da ONG" ou "Razão Social".
 
+
 ### 2. Oportunidades de Melhoria (Feedbacks dos Usuários)
 
 Apesar da navegação geral ter sido bem compreendida, os usuários se engajaram com o propósito da plataforma e sugeriram adições valiosas para a experiência, focadas em facilitar o processo de adoção e a gestão por parte das ONGs:
@@ -193,6 +183,7 @@ Apesar da navegação geral ter sido bem compreendida, os usuários se engajaram
 **Visão da ONG:**
 *   **Gestão de Dados em Larga Escala:** Os usuários apontaram a necessidade de implementar filtros de busca e ordenação tanto na lista de "Pedidos de Adoção" quanto na lista de "Animais" dentro do painel da ONG, prevendo cenários reais de uso com grande volume de dados.
 
+
 ### 3. Ações Previstas para o Projeto Final
 
 Com base nos problemas identificados e nos feedbacks consolidados, as seguintes ações de melhoria serão implementadas no design final:
@@ -202,3 +193,89 @@ Com base nos problemas identificados e nos feedbacks consolidados, as seguintes 
 3.  **Atualização de Banco e Interface:** Incorporar os novos atributos sugeridos (Espécie, Histórico, Filtros de Saúde) na modelagem de dados e aplicá-los nas telas de perfil do animal e na busca.
 4.  **Melhoria em Dashboards:** Adicionar componentes de filtro (ex: barra de busca, selects) nas telas de gestão das ONGs (Pedidos e Animais).
 5.  **Análise de Viabilidade:** A funcionalidade de "Pre-order" / Lista de Interesse será documentada no backlog como uma oportunidade de melhoria para versões futuras do sistema.
+
+
+## Telas do Protótipo
+
+### Landing Page
+<img width="1440" height="1364" alt="Landing Page" src="https://github.com/user-attachments/assets/130e4ced-2dcd-4705-97b0-ccf2515693e5" />
+
+### Escolha do tipo de cadastro
+<img width="1440" height="1024" alt="Cadastro" src="https://github.com/user-attachments/assets/6b3a48ca-2a04-4671-8e95-ea041876d594" />
+
+### Cadastro do adotante
+<img width="1440" height="1024" alt="Cadastro do Adotante" src="https://github.com/user-attachments/assets/146c531e-e96a-440b-82a8-3ce6cc3281cf" />
+<img width="1440" height="1024" alt="Termos de uso" src="https://github.com/user-attachments/assets/10d200d3-8d5e-455f-988d-e213ede34a8e" />
+
+### Cadastro da instituição
+<img width="1440" height="1024" alt="Cadastro da Instituição - Instituição 8" src="https://github.com/user-attachments/assets/049c88a3-fdec-42bf-8bf8-e0189f343aa0" />
+<img width="1440" height="1024" alt="Cadastro da Instituição - Instituição 7" src="https://github.com/user-attachments/assets/faae4897-a061-4964-bc4f-1158fe75df1b" />
+<img width="1440" height="1024" alt="Cadastro da Instituição - Instituição 5" src="https://github.com/user-attachments/assets/ef7eec45-723e-4ffb-aebe-38116227de76" />
+<img width="1440" height="1024" alt="Cadastro da Instituição - Instituição 6" src="https://github.com/user-attachments/assets/11acb847-ee1a-48a3-911c-360ca5c61387" />
+
+### Login
+<img width="1440" height="1024" alt="Login" src="https://github.com/user-attachments/assets/2ca40268-7dc3-4bc5-b3d0-bce072520f35" />
+
+### Esqueci a senha
+<img width="1440" height="1024" alt="Esqueci a senha" src="https://github.com/user-attachments/assets/3f03a620-d247-40b4-adaa-52860a2d3da2" />
+
+### Listagem dos animais - Login Adotante
+<img width="1440" height="1024" alt="Listagem dos animais" src="https://github.com/user-attachments/assets/1cea26ac-be13-401e-9c84-19f13f2fcb42" />
+
+### Histórico de adoção - Login Adotante
+<img width="1440" height="1024" alt="Histórico de Adoção" src="https://github.com/user-attachments/assets/071f6651-8db5-456a-94c1-9f0a0e2ecbe1" />
+
+### Atualizar e deletar cadastro - Login Adotante
+<img width="1440" height="1024" alt="Atualizar e deletar cadastro" src="https://github.com/user-attachments/assets/74bc84c1-17b8-422c-b595-e76cbd9f6ad0" />
+
+### Perfil detalhado do animal - Login Adotante
+<img width="1448" height="1406" alt="Perfil detalhado do animal" src="https://github.com/user-attachments/assets/1c5f4227-1b65-4023-ab37-23919f1cd43d" />
+
+### Perfil da ONG - Login Adotante
+<img width="1440" height="1677" alt="Perfil da ONG-1" src="https://github.com/user-attachments/assets/1fdb38af-6cd3-47b8-99c1-7ac3dd61e604" />
+
+### Formulário de adoção - Login Adotante
+<img width="1440" height="1024" alt="Formulário de adoção 1" src="https://github.com/user-attachments/assets/0511cd45-9909-4b76-a906-9d6e1056f301" />
+<img width="1440" height="1024" alt="Formulário de adoção 2 (termos de adoção)" src="https://github.com/user-attachments/assets/6145a79c-6d3b-4c08-b8f0-21e1abb67503" />
+<img width="1440" height="1024" alt="Formulário de adoção 3" src="https://github.com/user-attachments/assets/f7530ae4-8f4d-418b-a3d6-24e54e938bee" />
+<img width="1440" height="1024" alt="Formulário de adoção 4" src="https://github.com/user-attachments/assets/ba9acf47-01f6-49a2-a72c-56f6c7b821b6" />
+<img width="1440" height="1024" alt="Tela de sucesso" src="https://github.com/user-attachments/assets/27070760-214e-4831-a9c1-dcaa4c926c53" />
+<img width="1440" height="1024" alt="Tela de Erro" src="https://github.com/user-attachments/assets/f84984fd-5080-41f5-a5cc-4329526a1b26" />
+
+### Histórico de adoções realizadas - Login ONG
+<img width="1440" height="1024" alt="Histórico de adoções realizadas" src="https://github.com/user-attachments/assets/3b24b59f-2919-42d7-8f49-81ca842d18f4" />
+
+### Visualização e edição de animais cadastrados - Login ONG
+<img width="1440" height="1024" alt="Visualização e edição de animais cadastrados" src="https://github.com/user-attachments/assets/19774308-c7b6-4ea5-af75-4fb5881e138a" />
+
+### Cadastrar animal - Login ONG
+<img width="1440" height="1878" alt="Cadastrar Animal" src="https://github.com/user-attachments/assets/f82d9d79-2764-43fc-9f67-8d46f78bd20a" />
+
+### Editar cadastro do animal - Login ONG 
+<img width="1440" height="2026" alt="Editar de cadastro de animais" src="https://github.com/user-attachments/assets/dcf68953-d1c1-4828-8a37-6fad5085887b" />
+
+### Pedidos de adoção - Login ONG
+<img width="1440" height="1024" alt="Pedidos de adoção - Instituição" src="https://github.com/user-attachments/assets/dd248c5f-8aae-4412-91d1-24980120e5de" />
+
+### Avaliação de solicitação de adoção - Login ONG
+<img width="1440" height="1985" alt="Avaliação de Solicitação de Adoção - Instituição" src="https://github.com/user-attachments/assets/300a5223-9fca-427e-9298-71edf6f48eae" />
+<img width="1440" height="1024" alt="Tela de sucesso-1" src="https://github.com/user-attachments/assets/d9f949fb-de31-4822-ae53-2e4cdad27f1f" />
+<img width="1440" height="1024" alt="Tela de Erro-1" src="https://github.com/user-attachments/assets/71a8c668-c920-4319-a4e3-edd9b7a723a7" />
+
+### Configurar conta - Login ONG
+<img width="1440" height="1917" alt="Configurar conta" src="https://github.com/user-attachments/assets/be2364a9-a915-49da-82e3-9056cfb18519" />
+
+### Configuração de perfil - Login ONG
+<img width="1440" height="1024" alt="Configurações do perfil - Editar" src="https://github.com/user-attachments/assets/610be6c9-36ad-423e-be51-47114ae5cdeb" />
+
+### Perfil da ONG - Login ONG
+<img width="1440" height="1398" alt="Perfil da ONG" src="https://github.com/user-attachments/assets/f74b31e1-50c8-46ff-881a-2938b3624fc8" />
+
+### Deletar animal cadastrado - Login ONG
+<img width="836" height="592" alt="Deletar Animal Cadastrado" src="https://github.com/user-attachments/assets/80fce178-cd72-424a-9bdd-d923f22a320c" />
+
+### Deletar cadastro
+<img width="836" height="592" alt="Deletar cadastro" src="https://github.com/user-attachments/assets/c43d59ed-52a4-418a-81dd-5b49c74931d1" />
+
+### Sair da conta
+<img width="836" height="592" alt="Sair da Conta Adotante" src="https://github.com/user-attachments/assets/5a7fa08b-ed23-404c-9845-af67e156b210" />
