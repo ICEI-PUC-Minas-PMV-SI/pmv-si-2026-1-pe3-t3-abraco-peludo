@@ -18,60 +18,71 @@
         </div>
     </div>
 
-    <div id="container-left">
-        <div>
-            <h1>
-                <i class="fa-solid fa-gear"></i>
-                Configurações
-            </h1>
-            <div>
-                <a href="#" id="atualizar-dados">
-                    <i class="fa-regular fa-pen-to-square"></i>
-                    Atualizar dados
-                </a>
-                <a href="#" id="excluir-conta">
-                    <i class="fa-regular fa-trash-can"></i>
-                    Excluir conta
-                </a>
+    <div id="main">
+        <aside>
+            <div id="asideConfig">
+                <h1>
+                    <i class="fa-solid fa-gear"></i>
+                    Configurações
+                </h1>
             </div>
-        </div>
 
-        <div id="container-right">
-            <div>
-                <h2>Atualizar Dados</h2>
-                <div>
-                    <p>
-                        Nome Completo
-                        <input type="text">
-                    </p>
-                    <p>
-                        CPF
-                        <input type="text">
-                    </p>
-                    <p>
-                        Data de Nascimento
-                        <input type="text">
-                    </p>
-                    <p>
-                        Email
-                        <input type="text">
-                    </p>
-                    <p>
-                        Senha
-                        <input type="text">
-                    </p>
-                    <p>
-                        Confirmar senha
-                        <input type="text">
-                    </p>
+            <div id="asideOpt">
+                <div id="asideOptBtn">
+                    <a href="#" class="asideBtnText special">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                        Atualizar dados
+                    </a>
+
+                    <a href="#" class="asideBtnText">
+                        <i class="fa-regular fa-trash-can"></i>
+                        Excluir conta
+                    </a>
                 </div>
-                <div>
-                    <button>Cancelar</button>
-                    <button>Atualizar</button>
+            </div>
+        </aside>
+
+        <div id="editContainer">
+            <div id="edit1">
+                <div id="edit2">
+                    <h2>Atualizar Dados</h2>
+
+                    <form>
+                        <div>
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" input id="nome" placeholder="Nome Completo" required>
+                        </div>
+                        <div>
+                            <label for="cpf">CPF</label>
+                            <input type="text" input id="cpf" placeholder="000.000.000-00" required>
+                        </div>
+                        <div>
+                            <label for="nascimento">Data de Nascimento</label>
+                            <input type="date" input id="nascimento" placeholder="00/00/0000" required>
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="text" input id="nascimento" placeholder="exemplo@gmail.com" required>
+                        </div>
+                        <div>
+                            <label for="senha">Senha</label>
+                            <input type="text" input id="senha" placeholder="Senha" required>
+                        </div>
+                        <div>
+                            <label for="confirmarSenha">Confirmar senha</label>
+                            <input type="text" input id="confirmarSenha" placeholder="Confirmar senha" required>
+                        </div>
+                    </form>
+
+                    <div id="submitBtn">
+                        <button class="btn">Cancelar</button>
+                        <button class="btn">Atualizar</button>
+                    </div>
                 </div>
             </div>
         </div>
 
     </div>
 </body>
+
 </html>

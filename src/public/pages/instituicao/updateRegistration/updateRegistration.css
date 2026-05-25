@@ -12,6 +12,20 @@ body {
     align-items: center;
 }
 
+#main {
+    height: 100vh;
+    display: flex;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------- */
+/* Nav */
+
 #container-nav{
     background-color: #4D3227;
     height: 124px;
@@ -33,67 +47,170 @@ body {
     text-decoration: none;
 }
 
-#container-left {
+/* --------------------------------------------------------- */
+/* Aside */
+
+aside {
     background-color: #FFD9AA;
-    align-items: center;
     height: 100vh;
-    width: 362px;
-    padding: 50px 20px;
+    width: calc(100% - 60%);
+    max-width: 320px;
     display: flex;
     flex-direction: column;
 }
 
-#container-left>div {
+#asideConfig {
     color: #4D3227;
+    padding: 30px;
     display: flex;
-    flex-direction: column;
-    gap: 60px;
-}
-
-#container-left>div>h1 {
     justify-content: center;
-    display: flex;
-    gap: 20px;
     align-items: center;
+    gap: 20px;
 }
 
-#container-left>div>h1>i {
-    display: flex;
-    width: 32px;
+#asideConfig h1 {
+    font-size: 30px;
+    font-weight: bold;
 }
 
-#container-left>div>div {
+#asideOptBtn {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+}
+
+.asideBtnText {
+    color: #4D3227;
+    padding: 20px;
+    display: flex;
+    text-decoration: none;
     gap: 30px;
 }
 
-#atualizar-dados, #excluir-conta {
-    color: #4D3227;
-    align-items: center;
-    text-decoration: none;
+.asideBtnText i {
+    padding: 0 30px;
     font-size: 20px;
-    display: flex;
-    height: 69px;
-    width: 320px;
-    gap: 35px;
-    padding: 25px;
-}
-
-#atualizar-dados>i, #excluir-conta>i {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
     width: 32px;
 }
 
-#atualizar-dados {
-    color: white;
+.asideBtnText a {
+    font-size: 25px;
+    width: 180px;
+    text-align: left;
+}
+
+#asideOptBtn a:hover,
+.special {
     background-color: #FF8C42;
+    color: white;
     border-radius: 5px;
 }
 
-#container-right {
-    visibility: hidden;
+/* --------------------------------------------------------- */
+/* Container Right */
+
+#editContainer {
+    margin-top: 25px;
+    width: calc(100% - 25%);
+    height: 850px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#edit1 {
+    display: flex;
+    align-items: center;
+}
+
+#edit2 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#edit2 h2 {
+    color: #4D3227;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#submitBtn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+/* --------------------------------------------------------- */
+input {
+    outline: none;
+    background-color: #FEFEFE;
+    border: 1px solid #D3D3D3;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #4D3227;
+    display: inline-block;
+    font-size: 20px;
+    padding: 15px;
+    width: 800px;
+    height: 60px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+::placeholder,
+label,
+#nascimento {
+    color: #9B9B9B;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    transition: 0.5s;
+    background-color: #FF8C42;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #e96c1f;
+}
+
+/* ---------------------------------------------------------------- */
+/* Media Query */
+@media (max-width: 1180px) {
+    aside {
+        display: none;
+    }
+
+    #editContainer {
+        display: flex;
+        width: 100%;
+    }
+
+    input {
+        width: 400px;
+    }
+
+    .btn {
+        width: 150px;
+    }
 }
