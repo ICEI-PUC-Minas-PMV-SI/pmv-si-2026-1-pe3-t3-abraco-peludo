@@ -9,15 +9,18 @@
     --azul: #0061A9;
     --vermelho: #DD000D;
     --branco: #FFFFFF;
+    
     --laranja-hover: #E67E35;
     --verde-hover: #2E9E62;
     --azul-hover: #004F8A;
     --vermelho-hover: #B8000A;
+
     --cor-fundo: var(--bege);
     --cor-texto: var(--marrom);
     --cor-borda: var(--cinza);
     --cor-card: var(--branco);
 }
+
 
 * {
     margin: 0;
@@ -25,48 +28,60 @@
     box-sizing: border-box;
 }
 
+
+img,svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 body {
-    background-color: var(--bege);
-    font-family: "Poppins";
-    color: var(--marrom);
+    background-color: var(--cor-fundo);
+    font-family: "Inter";
+    color: var(--cor-texto);
+    min-height: 100vh;
+    overflow-x: hidden; 
+    -webkit-font-smoothing: antialiased;
 }
 
-h1 {
-    font-family: "Inter";
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Inter","Poppins";
+    color: var(--cor-texto);
     font-weight: 600;
-    font-size: 2.5rem;
-    color: var(--marrom);
 }
 
-h2 {
-    font-family: "Inter";
-    font-weight: 600;
-    font-size: 2rem;
-    color: var(--marrom);
-}
-
-h3 {
-    font-family: "Inter";
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: var(--marrom);
-}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
 
 p {
-    font-family: "Poppins";
+    font-family:"Inter", "Poppins";
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--marrom);
+    color: var(--cor-texto);
 }
+
 
 a {
-    font-family: "Poppins";
-    color: var(--azul);
+    font-family:"Inter", "Poppins";
+    color: inherit;
     text-decoration: none;
+    transition: all 0.2s ease;
 }
 
-a:hover {
+p a {
+    color: var(--azul);
+}
+
+p a:hover {
     color: var(--azul-hover);
     text-decoration: underline;
 }
 
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.3rem; }
+    p { font-size: 0.95rem; }
+}
