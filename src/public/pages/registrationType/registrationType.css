@@ -1,0 +1,142 @@
+.reg-type-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - 140px); 
+    background-color: var(--cor-fundo);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+
+.reg-type-title {
+    font-family: "Inter", sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--marrom);
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+
+.reg-type-subtitle {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.85rem;
+    color: var(--marrom);
+    opacity: 0.8;
+    margin-bottom: 60px;
+}
+
+
+.selection-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px; 
+    width: 100%;
+    max-width: 800px;
+}
+
+
+.selection-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+
+.selection-item:hover {
+    transform: translateY(-8px);
+}
+
+
+.circle-btn {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+
+.circle-adotante {
+    background-color: var(--verde-claro);
+}
+
+
+.circle-instituicao {
+    background-color: var(--laranja);
+}
+
+
+.circle-btn svg {
+    width: 75px;
+    height: 75px;
+    fill: var(--marrom); 
+}
+
+
+.selection-item:hover .circle-btn {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    filter: brightness(0.98);
+}
+
+
+.selection-label {
+    font-family: "Inter", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--marrom);
+    margin-top: 24px;
+    transition: color 0.2s ease;
+}
+
+
+.selection-item:hover .selection-label {
+    color: var(--preto);
+}
+
+.circle-icon {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+
+@media (max-width: 680px) {
+    .circle-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .reg-type-title {
+        font-size: 2rem;
+    }
+
+    .selection-row {
+        flex-direction: column; 
+        gap: 45px;
+    }
+
+    .circle-btn {
+        width: 150px;
+        height: 150px;
+    }
+
+    .circle-btn svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .selection-label {
+        font-size: 1.3rem;
+        margin-top: 14px;
+    }
+}
