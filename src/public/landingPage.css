@@ -1,4 +1,3 @@
-/* Definição da Paleta de Cores do Protótipo */
 :root {
     /* Cores da Navbar */
     --bg-navbar: #4D3227;
@@ -15,7 +14,6 @@
     --num-animais-cadastrados: #824D2F;
 }
 
-/* Reset básico de margens */
 * {
     margin: 0;
     padding: 0;
@@ -23,13 +21,13 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Inter" , "Poppins";
     background-color: var(--bg-body);
     color: var(--text-body);
     line-height: 1.6;
 }
 
-/* --- ESTILIZAÇÃO DA NAVBAR --- */
+
 .navbar {
     background-color: var(--bg-navbar);
     width: 100%;
@@ -37,17 +35,17 @@ body {
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
     display: flex;
-    justify-content: flex-end; /* Alinha os links à direita */
-    padding: 0 40px;
+    justify-content: flex-end; 
+    padding: 0 20px;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 40px; /* Distância entre cada link */
+    gap: 40px; 
 }
 
 .nav-menu li a {
@@ -70,45 +68,45 @@ body {
 
 .hero-image {
     width: 100%;
-    height: 420px; /* Define uma altura proporcional para o banner */
+    height: 420px; 
     object-fit: cover;
     display: block;
 }
 
-/* --- CONTAINER DO CONTEÚDO --- */
+
 .main-content {
     max-width: 1000px;
     margin: 0 auto;
     padding: 50px 20px;
 }
 
-/* Bloco dos Contadores */
+
 .counters-container {
     display: flex;
     justify-content: center;
-    gap: 50px; /* Distância horizontal entre os blocos verde e laranja */
+    gap: 50px; 
     margin-bottom: 50px;
-    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+    flex-wrap: wrap; 
 }
 
 .counter-group {
     display: flex;
-    gap: 10px; /* Espaço entre o botão de texto e o botão de número */
+    gap: 10px; 
     align-items: center;
 }
 
-/* Estilo Base dos Badges/Pílulas */
+
 .badge {
     padding: 10px 24px;
-    border-radius: 25px; /* Deixa os cantos arredondados como no figma */
+    border-radius: 25px; 
     font-size: 15px;
     font-weight: 500;
-    color: #FFFFFF; /* Texto interno branco para dar contraste */
+    color: #FFFFFF; 
     display: inline-block;
     text-align: center;
 }
 
-/* Cores específicas de cada item fornecido */
+
 .badge-adotados {
     background-color: var(--btn-animais-adotados);
 }
@@ -127,7 +125,7 @@ body {
     min-width: 75px;
 }
 
-/* --- SEÇÃO DE TEXTO --- */
+
 .text-section {
     text-align: center;
     max-width: 850px;
@@ -143,21 +141,21 @@ body {
 
 .main-paragraph {
     font-size: 15px;
-    text-align: justify; /* Justificado conforme o print */
+    text-align: justify; 
     color: var(--text-body);
     line-height: 1.6;
 }
 
-/* --- RESPONSIVIDADE BÁSICA --- */
+
 @media (max-width: 768px) {
     .nav-container {
-        justify-content: center; /* Centraliza o menu em telas pequenas */
+        justify-content: center; 
         padding: 0 20px;
     }
     .counters-container {
         gap: 25px;
     }
     .hero-image {
-        height: 250px; /* Diminui o banner no celular */
+        height: 250px; 
     }
 }
