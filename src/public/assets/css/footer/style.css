@@ -1,0 +1,150 @@
+:root {
+    --marrom: #4D3227;
+    --laranja-escuro-circulo: #7C3E12;
+    --laranja-contato: #FFB486;
+    --quase-branco-texto: #F9F9F9;
+}
+
+.footer {
+    background-color: var(--marrom);
+    width: 100%;
+    padding: 40px 0 30px 0;
+    color: var(--quase-branco-texto);
+    font-family: 'inter';
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--laranja-escuro-circulo);
+    border-radius: 50%;
+    color: var(--quase-branco-texto); 
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.social-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor; 
+}
+
+.copyright {
+    font-size: 13px;
+    color: var(--quase-branco-texto);
+    opacity: 0.85;
+}
+
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+.footer-divider {
+    width: 1px;
+    height: 70px;
+    background-color: rgba(249, 249, 249, 0.25); 
+}
+
+.contact-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.email-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--quase-branco-texto); 
+}
+
+.email-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contact-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--laranja-contato); 
+}
+
+.contact-email {
+    font-size: 14px;
+    color: var(--quase-branco-texto);
+    text-decoration: none;
+}
+
+.contact-email:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column-reverse; 
+        gap: 35px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .footer-left {
+        align-items: center;
+    }
+
+    .footer-right {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .footer-divider {
+        width: 60%;
+        height: 1px; 
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
