@@ -7,13 +7,11 @@
 
 body {
     background-color: #FFF2D7;
-    height: 100vh;
     justify-content: center;
     align-items: center;
 }
 
 #main {
-    height: 100vh;
     display: flex;
 }
 
@@ -52,11 +50,12 @@ button {
 
 aside {
     background-color: #FFD9AA;
-    height: 100vh;
+    min-height: 100%;
     width: calc(100% - 60%);
-    max-width: 320px;
+    max-width: 362px;
     display: flex;
     flex-direction: column;
+    align-items: stretch;
 }
 
 #asideConfig {
@@ -83,18 +82,20 @@ aside {
     color: #4D3227;
     padding: 20px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     text-decoration: none;
     gap: 30px;
 }
 
 .asideBtnText i {
-    padding: 0 30px;
-    font-size: 20px;
-    width: 32px;
+    font-size: 25px;
+    width: 30px;
 }
 
-.asideBtnText a {
-    font-size: 25px;
+.asideBtnText p {
+    font-size: 23px;
     width: 180px;
     text-align: left;
 }
@@ -110,12 +111,12 @@ aside {
 /* Container Right */
 
 #editContainer {
-    margin-top: 25px;
+    margin: 50px 0;
     width: calc(100% - 25%);
-    height: 850px;
+    min-height: 100dvh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 #edit1 {
@@ -173,7 +174,7 @@ input {
 
 ::placeholder,
 label,
-#nascimento {
+#dataFundacao {
     color: #9B9B9B;
 }
 
@@ -196,7 +197,7 @@ label,
 
 /* ---------------------------------------------------------------- */
 /* Media Query */
-@media (max-width: 1180px) {
+@media (max-width: 1220px) {
     aside {
         display: none;
     }

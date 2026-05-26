@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurar Conta</title>
+    <link rel="stylesheet" href="./configureAccount.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="container-nav">
+        <div>
+            <a href="#" class="active">Painel de Histórico</a>
+            <a href="#" class="active">Pedidos de Adoção</a>
+            <a href="#"><i class="fa-solid fa-bars"></i></a>
+        </div>
+    </div>
+
+    <div id="main">
+        <aside>
+            <div id="asideConfig">
+                <h1>
+                    <i class="fa-solid fa-gear"></i>
+                    Configurações
+                </h1>
+            </div>
+
+            <div id="asideOpt">
+                <div id="asideOptBtn">
+                    <a href="#" class="asideBtnText special">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                        <p>Configurar conta</p>
+                    </a>
+
+                    <a href="#" class="asideBtnText">
+                        <i class="fa-solid fa-brush"></i>
+                        <p>Atualizar perfil</p>
+                    </a>
+
+                    <a href="#" class="asideBtnText">
+                        <i class="fa-regular fa-trash-can"></i>
+                        <p>Excluir conta</p>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <div id="editContainer">
+            <div id="edit1">
+                <div id="edit2">
+                    <h2>Configurar Conta</h2>
+
+                    <form>
+                        <div>
+                            <label for="CNPJ">CNPJ</label>
+                            <input type="text" input id="CNPJ" placeholder="00.000.000 / 0000-00" required>
+                        </div>
+                        <div>
+                            <label for="cargoResponsavel">Cargo Responsável</label>
+                            <input type="text" input id="cargoResponsavel" placeholder="Cargo Responsável" required>
+                        </div>
+                        <div>
+                            <label for="responsavelLegal">Reponsável Legal</label>
+                            <input type="text" input id="responsavelLegal" placeholder="Reponsável Legal" required>
+                        </div>
+                        <div>
+                            <label for="dataFundacao">Data da Fundação</label>
+                            <input type="date" input id="dataFundacao" required>
+                        </div>
+                        <div>
+                            <label for="tipoInstituicao">Tipo de Instituição</label>
+                            <input type="text" input id="tipoInstituicao" placeholder="Tipo de Instituição" required>
+                        </div>
+                        <div>
+                            <label for="endereco">Endereço</label>
+                            <input type="text" input id="endereco" placeholder="Confirmar senha" required>
+                        </div>
+                        <div>
+                            <label for="bairro">Bairro</label>
+                            <input type="text" input id="bairro" placeholder="Bairro" required>
+                        </div>
+                        <div>
+                            <label for="numero">Número</label>
+                            <input type="text" input id="numero" placeholder="000" required>
+                        </div>
+                        <div>
+                            <label for="cidade">Cidade</label>
+                            <input type="text" input id="cidade" placeholder="Cidade" required>
+                        </div>
+                        <div>
+                            <label for="complemento">Complemento</label>
+                            <input type="text" input id="complemento" placeholder="Complemento" required>
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="text" input id="endereco" placeholder="Email" required>
+                        </div>
+                        <div>
+                            <label for="senha">Senha</label>
+                            <input type="text" input id="senha" placeholder="Senha" required>
+                        </div>
+                        <div>
+                            <label for="confirmarSenha">Confirmar senha</label>
+                            <input type="text" input id="confirmarSenha" placeholder="Senha" required>
+                        </div>
+                    </form>
+
+                    <div id="submitBtn">
+                        <button class="btn">Cancelar</button>
+                        <button class="btn">Atualizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
