@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurar perfil</title>
+    <link rel="stylesheet" href="./updadeAccount.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="container-nav">
+        <div>
+            <a href="#" class="active">Painel de Histórico</a>
+            <a href="#" class="active">Pedidos de Adoção</a>
+            <a href="#"><i class="fa-solid fa-bars"></i></a>
+        </div>
+    </div>
+
+    <div id="main">
+        <aside>
+            <div id="asideConfig">
+                <h1>
+                    <i class="fa-solid fa-gear"></i>
+                    Configurações
+                </h1>
+            </div>
+
+            <div id="asideOpt">
+                <div id="asideOptBtn">
+                    <a href="../configureAccount/configureAccount.html" class="asideBtnText">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                        <p>Configurar conta</p>
+                    </a>
+
+                    <a href="../updadeAccount/updadeAccount.html" class="asideBtnText special">
+                        <i class="fa-solid fa-brush"></i>
+                        <p>Atualizar perfil</p>
+                    </a>
+
+                    <a href="#" class="asideBtnText">
+                        <i class="fa-regular fa-trash-can"></i>
+                        <p>Excluir conta</p>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <div id="editContainer">
+            <div id="edit1">
+                <div id="edit2">
+                    <h2>Atualizar Perfil</h2>
+
+                    <form>
+                        <div>
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" input id="nome" placeholder="Nome Completo" required>
+                        </div>
+                        <div>
+                            <label for="descricao">Descrição</label>
+                            <textarea type="text" input id="descricao" placeholder="Descrição" required></textarea>
+                        </div>
+                        <div>
+                            <label for="foto">Mídia</label>
+                            <input id="foto" type="file" accept="image/*" class="inputFoto">
+                        </div>
+                    </form>
+
+                    <div id="submitBtn">
+                        <button class="btn">Cancelar</button>
+                        <button class="btn">Atualizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
