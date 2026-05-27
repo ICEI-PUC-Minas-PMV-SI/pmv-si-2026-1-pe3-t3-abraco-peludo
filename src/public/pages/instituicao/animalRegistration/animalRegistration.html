@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar animal</title>
+    <link rel="stylesheet" href="./animalRegistration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="container-nav">
+        <div>
+            <a href="#" class="active">Painel de Histórico</a>
+            <a href="#" class="active">Pedidos de Adoção</a>
+            <a href="#"><i class="fa-solid fa-bars"></i></a>
+        </div>
+    </div>
+
+    <div id="main">
+        <aside>
+            <div id="asideConfig">
+                <h1>
+                    <i class="fa-solid fa-paw"></i>
+                    Animais
+                </h1>
+            </div>
+
+            <div id="asideOpt">
+                <div id="asideOptBtn">
+                    <a href="../configureAccount/configureAccount.html" class="asideBtnText special">
+                        <i class="fa-solid fa-bone"></i>
+                        <p>Cadastrar animal</p>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <div id="editContainer">
+            <div id="edit1">
+                <div id="edit2">
+                    <h2>Cadastrar Animal</h2>
+
+                    <form id="inputContainer">
+                        <div>
+                            <label for="nome">Nome do animal</label>
+                            <input type="text" input id="nome" placeholder="Nome do animal" required>
+                        </div>
+                        <div>
+                            <label for="descricao">Descrição do animal</label>
+                            <textarea type="text" input class="descricao" placeholder="Texto" required></textarea>
+                        </div>
+                        <div>
+                            <label for="raca">Raça</label>
+                            <input type="text" input id="raca" placeholder="Raça" required>
+                        </div>
+                        <div>
+                            <label for="sexo">Sexo</label>
+                            <input type="text" input id="sexo" placeholder="Sexo" required>
+                        </div>
+                        <div>
+                            <label for="idade">Idade</label>
+                            <input type="text" input id="idade" placeholder="Idade" required>
+                        </div>
+
+                        <div>
+                            <label for="porte">Porte</label>
+                            <select id="porte" name="Porte">
+                                <option value="p">Pequeno</option>
+                                <option value="m">Médio</option>
+                                <option value="g">Grande</option>
+                            </select>
+                        </div>
+
+                        <div id="saudeAnimal">
+                            <label for="saude">Saúde do animal</label>
+                            <div>
+                                <div>
+                                    <input type="checkbox" id="saudavel" class="checkbox" value="saudavel">
+                                    <label for="saudavel">Saudável</label>
+                                </div>
+                                <div>                                    
+                                    <input type="checkbox" id="tratamento" class="checkbox" value="tratamento">
+                                    <label for="tratamento">Em tratamento</label>
+                                </div>
+                                <div>                                    
+                                    <input type="checkbox" id="doente" class="checkbox" value="doente">
+                                    <label for="doente">Doente</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="descricao">Mais detalhes do animal</label>
+                            <textarea type="text" input class="descricao" placeholder="Texto" required></textarea>
+                        </div>
+                        <div>
+                            <label for="foto">Mídia</label>
+                            <input id="foto" type="file" accept="image/*" class="inputFoto">
+                        </div>
+                    </form>
+
+                    <div id="submitBtn">
+                        <button class="btn">Cancelar</button>
+                        <button class="btn">Cadastar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

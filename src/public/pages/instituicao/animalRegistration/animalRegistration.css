@@ -50,12 +50,11 @@ button {
 
 aside {
     background-color: #FFD9AA;
-    min-height: 100%;
+    min-height: 100dvh;
     width: calc(100% - 60%);
     max-width: 362px;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
 }
 
 #asideConfig {
@@ -113,7 +112,7 @@ aside {
 #editContainer {
     margin: 50px 0;
     width: calc(100% - 25%);
-    min-height: 100dvh;
+    min-height: 815px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,29 +129,19 @@ aside {
     gap: 40px;
 }
 
-#edit3 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#edit3 input {
-    width: 350px;
-}
-
 #edit2 h2 {
     color: #4D3227;
     font-size: 40px;
     font-weight: bold;
 }
 
-form {
+#inputContainer {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-form div {
+#inputContainer div {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -161,12 +150,25 @@ form div {
 #submitBtn {
     margin-top: 20px;
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
+    justify-content: space-between;
+}
+
+.inputFoto {
+    color: transparent;
+}
+
+::file-selector-button {
+    border: none;
+    background-color: transparent;
+    color: #9B9B9B;
+    cursor: pointer;
 }
 
 /* --------------------------------------------------------- */
-input {
+input,
+textarea, 
+select {
     outline: none;
     background-color: #FEFEFE;
     border: 1px solid #D3D3D3;
@@ -182,9 +184,15 @@ input {
     transition: 0.5s;
 }
 
+textarea {
+    resize: none;
+    width: 800px;
+    height: 300px;
+}
+
 ::placeholder,
 label,
-#dataFundacao {
+select {
     color: #9B9B9B;
 }
 
@@ -205,6 +213,25 @@ label,
     background-color: #e96c1f;
 }
 
+#saudeAnimal {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+#saudeAnimal div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkbox {
+    accent-color: #e96c1f;
+    width: 35px;
+    height: 35px;
+}
+
 /* ---------------------------------------------------------------- */
 /* Media Query */
 @media (max-width: 1220px) {
@@ -217,8 +244,14 @@ label,
         width: 100%;
     }
 
-    input {
+    input,
+    select {
         width: 400px;
+    }
+
+    textarea {
+        width: 400px;
+        height: 300px;
     }
 
     .btn {
