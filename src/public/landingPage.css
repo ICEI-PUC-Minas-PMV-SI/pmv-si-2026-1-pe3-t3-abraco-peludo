@@ -60,13 +60,8 @@ body {
     opacity: 0.8;
 }
 
-/* --- BANNER HERO --- */
-.hero {
-    width: 100%;
-    height: auto;
-}
 
-.hero-image {
+.img-header {
     width: 100%;
     height: 420px; 
     object-fit: cover;
@@ -155,7 +150,7 @@ body {
     .counters-container {
         gap: 25px;
     }
-    .hero-image {
+    .img-header {
         height: 250px; 
     }
 }
