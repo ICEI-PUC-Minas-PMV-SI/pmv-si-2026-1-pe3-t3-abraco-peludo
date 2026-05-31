@@ -29,8 +29,13 @@ button {
     height: 124px;
     width: auto;
     display: flex;
-    justify-content: flex-end;
-    padding: 0 50px;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+#logo-abraco img {
+    width: 152px;
+    height: 95px;
 }
 
 #container-nav>div{
