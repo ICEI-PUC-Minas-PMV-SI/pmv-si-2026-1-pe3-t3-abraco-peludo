@@ -29,3 +29,23 @@
     color: var(--cinza);
     text-decoration: none;
 }
+
+.fa-dog {
+    position: relative;
+    font-size: 30px;
+}
+
+.fa-dog:hover {
+    animation-name: dogAnimation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes dogAnimation {
+    0% {bottom: 0px; top: 0px;}
+    25% {bottom: 0px; top: 10px;}
+    50% {bottom: 10px; top: 0px;}
+    75% {bottom: 0px; top: 10px;}
+    100% {bottom: 0px; top: 0px;}
+}
