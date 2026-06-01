@@ -181,12 +181,23 @@ select {
     height: 60px;
     font-size: 20px;
     transition: 0.5s;
-    background-color: #FF8C42;
     color: white;
 }
 
-.btn:hover {
-    background-color: #e96c1f;
+.btnCancelar {
+    background-color: #FF383C;
+}
+
+.btnSalvar {
+    background-color: #3CB371;
+}
+
+.btnCancelar:hover {
+    background-color: #e22b2e;
+}
+
+.btnSalvar:hover {
+    background-color: #2E9E62;
 }
 
 #saudeAnimal {
