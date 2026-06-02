@@ -214,7 +214,7 @@ select {
     gap: 20px;
 }
 
-.checkbox {
+.radio {
     accent-color: #e96c1f;
     width: 35px;
     height: 35px;
