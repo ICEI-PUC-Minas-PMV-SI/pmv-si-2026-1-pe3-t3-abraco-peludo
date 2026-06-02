@@ -29,6 +29,10 @@
     color: var(--branco);
 }
 
+#container-nav>div>a>img {
+    height: 30px;
+}
+
 .fa-dog {
     position: relative;
     font-size: 30px;

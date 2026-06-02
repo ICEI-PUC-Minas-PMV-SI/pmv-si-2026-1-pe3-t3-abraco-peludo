@@ -7,8 +7,12 @@
     <title>Atualizar cadastro</title>
 
     <link rel="icon" type="image/x-icon" href="../../../assets/img/logo-abraco-peludo-aba.svg">
-    <link rel="stylesheet" href="../../../assets/css/navbar/style.css">
     <link rel="stylesheet" href="./updateRegistration.css">
+    <link rel="stylesheet" href="../../../assets/css/navbar/style.css">
+
+    <link rel="stylesheet" href="../../../assets/css/dropDown/dropDown.css">
+    <script src="../../../assets/js/dropDown/dropDown.js"></script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -21,8 +25,15 @@
         <div>
             <a href="#" class="active">Home</a>
             <a href="#" class="active">Histórico de Adoções</a>
-            <a href="#"><i class="fa-solid fa-bars"></i></a>
+            <a href="#" onclick="toggleDropdown()">
+                <img src="../../../assets/img/icon-perfil.svg" class="user-icon">
+            </a>
         </div>
+    </div>
+
+    <div id="userDropdown" class="dropdown-menu" style="display: none;">
+        <a href="#">Configurações da conta <i class="fa-solid fa-gear"></i></a>
+        <a href="#" id="btnLogout">Sair <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
     </div>
 
     <div id="main">
@@ -90,6 +101,7 @@
         </div>
 
     </div>
+
 </body>
 
 </html>
