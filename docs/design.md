@@ -270,6 +270,12 @@ Com base nos problemas identificados e nos feedbacks consolidados, as seguintes 
 <img width="1440" height="1024" alt="Tela de sucesso" src="https://github.com/user-attachments/assets/27070760-214e-4831-a9c1-dcaa4c926c53" />
 <img width="1440" height="1024" alt="Tela de Erro" src="https://github.com/user-attachments/assets/f84984fd-5080-41f5-a5cc-4329526a1b26" />
 
+### Deletar cadastro - Login Adotante
+<img width="1440" height="1024" alt="Deletar Cadastro" src="https://github.com/user-attachments/assets/f94aefa5-d2a8-4d96-b6d6-4a91e8ec041b" />
+
+### Sair da conta - Login Adotante
+<img width="1440" height="1024" alt="Sair da Conta Adotante" src="https://github.com/user-attachments/assets/e5877bef-3c64-414b-b391-06bfe381c398" />
+
 ### Histórico de adoções realizadas - Login ONG
 <img width="1440" height="1024" alt="Histórico de adoções realizadas" src="https://github.com/user-attachments/assets/3b24b59f-2919-42d7-8f49-81ca842d18f4" />
 
@@ -299,11 +305,12 @@ Com base nos problemas identificados e nos feedbacks consolidados, as seguintes 
 ### Perfil da ONG - Login ONG
 <img width="1440" height="1398" alt="Perfil da ONG" src="https://github.com/user-attachments/assets/f74b31e1-50c8-46ff-881a-2938b3624fc8" />
 
+### Deletar cadastro - Login ONG
+<img width="1440" height="1024" alt="Deletar cadastro" src="https://github.com/user-attachments/assets/40a883d9-3575-4113-a633-361f98394618" />
+
 ### Deletar animal cadastrado - Login ONG
-<img width="836" height="592" alt="Deletar Animal Cadastrado" src="https://github.com/user-attachments/assets/80fce178-cd72-424a-9bdd-d923f22a320c" />
+<img width="1440" height="1024" alt="Deletar Animal Cadastrado" src="https://github.com/user-attachments/assets/1a81b5d7-2020-4ed9-b35c-97c8af20a7cd" />
 
-### Deletar cadastro
-<img width="836" height="592" alt="Deletar cadastro" src="https://github.com/user-attachments/assets/c43d59ed-52a4-418a-81dd-5b49c74931d1" />
+### Sair da conta - Login ONG
+<img width="1440" height="1024" alt="Sair da Conta Instituição" src="https://github.com/user-attachments/assets/d6e4f397-ec27-4bfa-a43e-8a743f096c49" />
 
-### Sair da conta
-<img width="836" height="592" alt="Sair da Conta Adotante" src="https://github.com/user-attachments/assets/5a7fa08b-ed23-404c-9845-af67e156b210" />
