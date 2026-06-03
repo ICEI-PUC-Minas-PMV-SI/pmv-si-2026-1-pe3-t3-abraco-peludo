@@ -111,7 +111,7 @@ Os protótipos de alta fidelidade do sistema Abraço Peludo foram desenvolvidos 
 
 Os protótipos de alta fidelidade do sistema **Abraço Peludo** desenvolvidos na ferramenta Figma com o objetivo de representar, de forma visual e interativa, as principais funcionalidades da plataforma. As telas detalham cores, fontes e interações, proporcionando uma experiência visual e funcional muito próxima do produto real. Abaixo são apresentadas as principais interfaces do sistema, acompanhadas da análise de sua aderência aos requisitos das personas, princípios de design e normas ergonômicas. 
 
-### ** 4.3.1 Matriz de Rastreabilidade: Personas vs. Interfaces** ###
+### **4.3.1 Matriz de Rastreabilidade: Personas vs. Interfaces** ###
 
 Para garantir que o design do sistema **Abraço Peludo** atenda diretamente às dores e necessidades mapeados no projeto, aprensentamos a seguir uma tabela  restreabilidade entre as funcionalidades demandandas pelas personas e as telas correspondentes no protótipo: 
 
@@ -125,25 +125,33 @@ Para garantir que o design do sistema **Abraço Peludo** atenda diretamente às 
 | **P6: Haruto** | Divulgação da ONG | Sistema centralizado para atualização rápida de fotos, organização de campanhas e integração visual com redes sociais | Tela com mídia do pet |
 
 
-### ** 4.3.2 Aplicação dos Princípios Gestálticos**
+### **4.3.2 Aplicação dos Princípios Gestálticos**
 
 As interfaces foram projetadas considerando as leis Gestalt, que regem a percepção visual humana, garantindo que o usuário interprete as informações de forma natural. 
 
-**Proximidade:** Elementos proximos são percebidos como parte de um mesmo grupo. 
-  *Aplicação Prática:* Como é possível observar na tela "Perfil detalhado do animal - Login adotante", as informações sobre o animal (idade, sexo, tamanho, descrição temperamental e vida clinica) estão agrupadas e um bloco de texto coeso, separadas visualmente das informações da ONG por outro grupo de espaçamento de (**à confirmar**)
+**Proximidade:** Elementos proximos são percebidos como parte de um mesmo grupo.
+
+  *Aplicação Prática:* Como é possível observar na tela "Perfil detalhado do animal - Login adotante", as informações sobre o animal (idade, sexo, tamanho, descrição temperamental e vida clinica) estão agrupadas e um bloco de texto coeso, separadas visualmente das informações da ONG por outro grupo de espaçamento de (**à confirmar**).
  
 <img width="1448" height="1406" alt="Perfil detalhado do animal" src="https://github.com/user-attachments/assets/1c5f4227-1b65-4023-ab37-23919f1cd43d" />
 
-**Semelhança:** Elementos com características visuais parecidas (cor, forma, tamanho) são interpretados como tendo a mesma função.
+**Semelhança:** Elementos com características visuais parecidas (cor, forma, tamanho) são interpretados como tendo a mesma função. 
+
+  *Aplicação Prática:* Botões de ação primária (como "Cadastrar" e " Próximo") utilizam a cor #FF8C42 nas telas de cadastro do adotante. Tendo o uma caixa retangular de tamanho (**à confimar**), conforme nas telas "Termos de uso" e "Cadastro do Adotante".
+
+<img width="1440" height="1024" alt="Termos de uso" src="https://github.com/user-attachments/assets/10d200d3-8d5e-455f-988d-e213ede34a8e" />
+
+<img width="1440" height="1024" alt="Cadastro do Adotante" src="https://github.com/user-attachments/assets/146c531e-e96a-440b-82a8-3ce6cc3281cf" />
+
+**Figura e fundo:** O cérebro humano tende a separar o objeto principal do plano de fundo. 
+
+  *Aplicação Prática:* Na tela "Configurações de Perfil - Modal de exclusão de cadastro", o fundo dela recebe uma camada de opacidade laranja (#FF8C42 overlay) de 50% para isolar visualmente o modal de feedback, eliminando distração ao redor. Adicionalmente, para destacar a ação crítica dentro da figura do modal, o botão de exclusão adota a cor vermelha (#FF383C), garantindo o contraste necessário para a identificação imediata do usuário.
+
+**Fechamento:** O cérebro preenche lacunas visuais para completar formas.
+
   *Aplicação Prática:*  (**à confirmar**)
 
-**Figura e fundo:** o contraste entre elementos e o plano de fundo facilita a identificação das áreas interativas e do conteúdo principal.
-  *Aplicação Prática:*  (**à confirmar**)
-
-**Hierarquia visual:** títulos, subtítulos e botões possuem tamanhos e pesos diferentes, orientando a atenção do usuário.
-  *Aplicação Prática:*  (**à confirmar**)
-
-**Alinhamento e continuidade:** os elementos foram organizados em grades e alinhamentos consistentes, favorecendo a leitura e a navegação.
+**Região Comum:** os elementos foram organizados em grades e alinhamentos consistentes, favorecendo a leitura e a navegação.
   *Aplicação Prática:*  (**à confirmar**)
 
 ### Aplicação das Regras de Ouro
