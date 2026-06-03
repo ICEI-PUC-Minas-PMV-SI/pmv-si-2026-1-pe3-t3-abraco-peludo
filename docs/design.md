@@ -147,20 +147,35 @@ As interfaces foram projetadas considerando as leis Gestalt, que regem a percep�
 
   *Aplicação Prática:* Na tela "Configurações de Perfil - Modal de exclusão de cadastro", o fundo dela recebe uma camada de opacidade laranja (#FF8C42 overlay) de 50% para isolar visualmente o modal de feedback, eliminando distração ao redor. Adicionalmente, para destacar a ação crítica dentro da figura do modal, o botão de exclusão adota a cor vermelha (#FF383C), garantindo o contraste necessário para a identificação imediata do usuário.
 
-**Fechamento:** O cérebro preenche lacunas visuais para completar formas.
+**Região Comum:** Elementos delimitados por uma barreira visual ou que compartilham uma memsma aréa de fundo são percebidos como um grupo coeaso, mesmo que possuam formas ou cores diferentes. 
 
-  *Aplicação Prática:*  (**à confirmar**)
+  *Aplicação Prática:* Na tela "Listagem dos animais", utilizou-se o conceito de cards. Cada animal disponível para adoção possui sua foto, nome e idade envelopados dentro de um mesmo bloco com bordas delimitadas e fundo laranja claro (#FFD9AA), separando nitidamente um animal do outro e facilitando a leitura em blocos pelo usuário.
 
-**Região Comum:** os elementos foram organizados em grades e alinhamentos consistentes, favorecendo a leitura e a navegação.
-  *Aplicação Prática:*  (**à confirmar**)
+<img width="1440" height="1024" alt="Listagem dos animais" src="https://github.com/user-attachments/assets/1cea26ac-be13-401e-9c84-19f13f2fcb42" />
 
-### Aplicação das Regras de Ouro
 
-1. **Consistência:** padrões de navegação, cores, ícones e componentes foram mantidos em todas as telas.
+**Nota Teórica sobre os Princípios Não Aplicados:**
+Os princípios de *Fechamento* e *Destino Comum* não incluiu os princípios de Fechamento e Destino Comum. Para reduzir a carga cognitiva de usuários menos familiarizados com tecnologia (como a Persona José Carlos), optou-se por não utilizar o princípio do Fechamento, priorizando ícones e formas totalmente preenchidos e explícitos. Já o Destino Comum (onde elementos visuais se movem na mesma direção para indicar relação) não se aplica ao escopo atual, visto que a interface Desktop do sistema prioriza navegações estáticas, limpas e sem transições de elementos animados complexos.
+
+### 4.3.3 Aplicação das Regras de Ouro
+
+Para estruturar o diálogo e as interações do Abraço Peludo, aplicou-se o conjunto de Regras de Ouro propostas por Ben Shneiderman, demonstradas detalhadamente a seguir:
+
+1. **Esforço pela Consistência:** Mantém-se o mesmo padrão de fontes e cores.
+   
+   *Exemplo:* O botão de deleção ou cancelamento sempre adota o padrão visual vermelho [Figura X]
+   
 2. **Atalhos para usuários frequentes:** menus e botões de ação rápida facilitam o acesso às funcionalidades mais utilizadas.
-3. **Feedback informativo:** mensagens e modais confirmam ações como envio, aprovação ou recusa de solicitações.
-4. **Diálogos com fechamento:** após cada ação importante, o sistema apresenta confirmações claras.
-5. **Prevenção de erros:** validação de campos obrigatórios e confirmação antes de exclusões.
+   
+   *Exemplo:* O botão de deleção ou cancelamento sempre adota o padrão visual vermelho [Figura X]
+   
+3. **Oferecer Feedback Informativo:** Para cada ação, o sistema responde visualmente. Na tela de "Sucesso", ao enviar um formulário de adoção, a tela exibe uma tela com a mensagem clara: "Formulário enviado com sucesso! Obrigado por fazer a diferença na vida de um animal." [Figura X]
+   
+4. **Prevenção de Erros:** O sistema impede falhas antes que elas aconteçam.
+
+   *Exemplo:* 
+
+   
 6. **Facilidade de reversão:** ações críticas, como exclusão, exigem confirmação prévia.
 7. **Controle do usuário:** a navegação permite retornar e revisar informações antes de confirmar ações.
 8. **Redução da carga de memória:** informações essenciais permanecem visíveis e o sistema utiliza linguagem objetiva e intuitiva.
