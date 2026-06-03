@@ -111,7 +111,7 @@ Os protótipos de alta fidelidade do sistema Abraço Peludo foram desenvolvidos 
 
 Os protótipos de alta fidelidade do sistema **Abraço Peludo** desenvolvidos na ferramenta Figma com o objetivo de representar, de forma visual e interativa, as principais funcionalidades da plataforma. As telas detalham cores, fontes e interações, proporcionando uma experiência visual e funcional muito próxima do produto real. Abaixo são apresentadas as principais interfaces do sistema, acompanhadas da análise de sua aderência aos requisitos das personas, princípios de design e normas ergonômicas. 
 
-### **Matriz de Rastreabilidade: Personas vs. Interfaces** ###
+### ** 4.3.1 Matriz de Rastreabilidade: Personas vs. Interfaces** ###
 
 Para garantir que o design do sistema **Abraço Peludo** atenda diretamente às dores e necessidades mapeados no projeto, aprensentamos a seguir uma tabela  restreabilidade entre as funcionalidades demandandas pelas personas e as telas correspondentes no protótipo: 
 
@@ -125,17 +125,26 @@ Para garantir que o design do sistema **Abraço Peludo** atenda diretamente às 
 | **P6: Haruto** | Divulgação da ONG | Sistema centralizado para atualização rápida de fotos, organização de campanhas e integração visual com redes sociais | Tela com mídia do pet |
 
 
-### **Aplicação dos Princípios Gestálticos**
+### ** 4.3.2 Aplicação dos Princípios Gestálticos**
 
-**Proximidade:** informações relacionadas, como dados do animal, status de saúde e informações da ONG, foram agrupadas visualmente em blocos distintos.
+As interfaces foram projetadas considerando as leis Gestalt, que regem a percepção visual humana, garantindo que o usuário interprete as informações de forma natural. 
 
-**Semelhança:** botões, campos de formulário e cards seguem padrões visuais consistentes de cor, tipografia e formato.
+**Proximidade:** Elementos proximos são percebidos como parte de um mesmo grupo. 
+  *Aplicação Prática:* Como é possível observar na tela "Perfil detalhado do animal - Login adotante", as informações sobre o animal (idade, sexo, tamanho, descrição temperamental e vida clinica) estão agrupadas e um bloco de texto coeso, separadas visualmente das informações da ONG por outro grupo de espaçamento de (**à confirmar**)
+ 
+<img width="1448" height="1406" alt="Perfil detalhado do animal" src="https://github.com/user-attachments/assets/1c5f4227-1b65-4023-ab37-23919f1cd43d" />
+
+**Semelhança:** Elementos com características visuais parecidas (cor, forma, tamanho) são interpretados como tendo a mesma função.
+  *Aplicação Prática:*  (**à confirmar**)
 
 **Figura e fundo:** o contraste entre elementos e o plano de fundo facilita a identificação das áreas interativas e do conteúdo principal.
+  *Aplicação Prática:*  (**à confirmar**)
 
 **Hierarquia visual:** títulos, subtítulos e botões possuem tamanhos e pesos diferentes, orientando a atenção do usuário.
+  *Aplicação Prática:*  (**à confirmar**)
 
 **Alinhamento e continuidade:** os elementos foram organizados em grades e alinhamentos consistentes, favorecendo a leitura e a navegação.
+  *Aplicação Prática:*  (**à confirmar**)
 
 ### Aplicação das Regras de Ouro
 
