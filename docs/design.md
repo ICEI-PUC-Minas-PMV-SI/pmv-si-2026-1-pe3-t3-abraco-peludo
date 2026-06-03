@@ -107,15 +107,26 @@ Mapa da Empatia é um material utilizado para conhecer melhor o seu cliente. A p
 
 ## 4.3 Protótipos das Interfaces
 
-> Link referente ao Figma : [clique aqui](https://www.figma.com/proto/7iQtOYLHmIAUSW9VMIUnck/Abra%C3%A7o-Peludo?node-id=128-2515&p=f&viewport=-82%2C250%2C0.05&t=z07c1r1IxgtEdndt-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=128%3A2515&page-id=0%3A1)
+Os protótipos de alta fidelidade do sistema Abraço Peludo foram desenvolvidos na ferramenta figma (disponível no [clique aqui](https://www.figma.com/proto/7iQtOYLHmIAUSW9VMIUnck/Abra%C3%A7o-Peludo?node-id=128-2515&p=f&viewport=-82%2C250%2C0.05&t=z07c1r1IxgtEdndt-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=128%3A2515&page-id=0%3A1)
 
-Os protótipos de alta fidelidade do sistema **Abraço Peludo** foram desenvolvidos na ferramenta Figma com o objetivo de representar, de forma visual e interativa, as principais funcionalidades da plataforma. As telas detalham cores, fontes e interações, proporcionando uma experiência visual e funcional muito próxima do produto real.
+Os protótipos de alta fidelidade do sistema **Abraço Peludo** desenvolvidos na ferramenta Figma com o objetivo de representar, de forma visual e interativa, as principais funcionalidades da plataforma. As telas detalham cores, fontes e interações, proporcionando uma experiência visual e funcional muito próxima do produto real. Abaixo são apresentadas as principais interfaces do sistema, acompanhadas da análise de sua aderência aos requisitos das personas, princípios de design e normas ergonômicas. 
 
-O protótipo abrange os fluxos para os dois perfis centrais do sistema: **Adotantes** e **ONGs/Protetores**
+### **Matriz de Rastreabilidade: Personas vs. Interfaces** ###
 
-As interfaces foram projetadas sob a ótica da Gestalt e da ergonomia, aplicando regras essenciais de design para criar uma experiência clara, coerente e intuitiva para o usuário.
+Para garantir que o design do sistema **Abraço Peludo** atenda diretamente às dores e necessidades mapeados no projeto, aprensentamos a seguir uma tabela  restreabilidade entre as funcionalidades demandandas pelas personas e as telas correspondentes no protótipo: 
+
+| Persona | Perfil |  Necessidade Mapeada | Telas(s) do Protótipo Correpondentes(s) |
+| :--- | :--- | :--- | :--- |
+| **P1: Ana Paula** | Adotante Insegura | Clareza nas etapas da adoção e acompanhamento transparente do status do processo para evitar desistências | • Tela "Histórico de Adoção" - (com Linha do Tempo/Status do Processo) |
+| **P2:José Carlos da Silva** | Voluntário da ONG | Formulários de cadastro simples, campos objetivos, feedbacks visuais claros e fontes maiores para evitar erros operacionais | • Tela "Cadastro da Instituição" <br> • Tela "Cadastrar Animal" (layout limpo e fontes com tamanho adequado para facilitar a leitura e o preenchimento) |
+| **P3: Lara Machado** | Adotante Detalhista | Filtros evidentes de porte/temperamento e perfis com informações claras sobre a convivência do pet com outros animais (gatos) | • Tela "Listagem de Animais" com opção de busca e filtros avançados  <br> • Tela "Perfil detalhado do animal" |
+| **P4: Melissa Schmidt** | Adotante (Médica) | Registro documental acessível, credibilidade institucional e acesso ao protocolo oficial de suporte pós-adoção e devolução responsável | • Tela "Termos de Uso"  <br> • Tela " Formulário de Adoção" |
+| **P5: Geraldo Santos** | Administrador da ONG | Automação da burocracia manual, agilidade nas etapas contratuais e ferramentas para exportação de dados de adotantes | Tela "Pedidos de Adoção" |
+| **P6: Haruto** | Divulgação da ONG | Sistema centralizado para atualização rápida de fotos, organização de campanhas e integração visual com redes sociais | Tela com mídia do pet |
+
 
 ### **Aplicação dos Princípios Gestálticos**
+
 **Proximidade:** informações relacionadas, como dados do animal, status de saúde e informações da ONG, foram agrupadas visualmente em blocos distintos.
 
 **Semelhança:** botões, campos de formulário e cards seguem padrões visuais consistentes de cor, tipografia e formato.
