@@ -4,9 +4,9 @@ function toggleDropdown() {
 }
 
 // Fecha o dropdown se clicar fora
-window.onclick = function(event) {
-  const dropdown = document.getElementById("userDropdown");
-  if (!event.target.closest('.user-icon') && !event.target.closest('#userDropdown')) {
-    dropdown.style.display = "none";
-  }
-}
+// window.onclick = function(event) {
+//   const dropDown = document.getElementById("userDropdown");
+//   if (!event.target.closest('.user-icon') && !event.target.closest('#userDropdown')) {
+//     dropDown.style.display = "none";
+//   }
+// }

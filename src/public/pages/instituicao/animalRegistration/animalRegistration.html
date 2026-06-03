@@ -7,8 +7,13 @@
     <title>Cadastrar animal</title>
 
     <link rel="icon" type="image/x-icon" href="../../../assets/img/logo-abraco-peludo-aba.svg">
-    <link rel="stylesheet" href="../../../assets/css/navbar/style.css">
     <link rel="stylesheet" href="./animalRegistration.css">
+    <link rel="stylesheet" href="../../../assets/css/navbar/style.css">
+
+    <link rel="stylesheet" href="../../../assets/css/dropDown/dropDown.css">
+    <script src="../../../assets/js/dropDown/dropDown.js"></script>
+    <script src="../../../assets/js/dropDown/dropDownHistory.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -17,11 +22,26 @@
         <div id="logo-abraco">
             <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
         </div>
+
         <div>
-            <a href="#" class="active">Painel de Histórico</a>
+            <a href="#" class="active history-icon" onclick="toggleDropdownHistory()">Painel de Histórico</a>
             <a href="#" class="active">Pedidos de Adoção</a>
-            <a href="#"><i class="fa-solid fa-dog"></i></a>
+            <a href="#" class="user-icon" onclick="toggleDropdown()">
+                <img src="../../../assets/img/icon-perfil-dog.svg" class="fa-dog">
+            </a>
         </div>
+    </div>
+
+    <div id="userDropdown" class="dropdown-menu" style="display: none;">
+        <a href="#">Visualizar perfil ONG <i class="fa-regular fa-eye"></i></a>
+        <a href="../configureAccount/configureAccount.html">Configurações da conta <i class="fa-solid fa-gear"></i></a>
+        <a href="../updadeProfile/updadeProfile.html">Atualizar perfil <i class="fa-solid fa-pen-to-square"></i></a>
+        <a href="#" id="btnLogout">Sair <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+    </div>
+
+    <div id="historyDropdown" class="dropdown-menu" style="display: none;">
+        <a href="#">Histórico de doações realizadas <i class="fa-solid fa-folder-open"></i></a>
+        <a href="#">Animais cadastrados <i class="fa-solid fa-cat"></i></a>
     </div>
 
     <div id="main">
