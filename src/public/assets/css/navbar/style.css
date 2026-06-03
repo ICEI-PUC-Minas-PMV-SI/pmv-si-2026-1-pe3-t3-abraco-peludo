@@ -29,7 +29,7 @@
     color: var(--branco);
 }
 
-#container-nav>div>a>img {
+#container-nav>div>div>a>img {
     height: 30px;
 }
 

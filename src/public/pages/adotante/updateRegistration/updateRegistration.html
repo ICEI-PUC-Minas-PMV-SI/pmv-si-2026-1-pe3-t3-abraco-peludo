@@ -25,15 +25,17 @@
         <div>
             <a href="#" class="active">Home</a>
             <a href="#" class="active">Histórico de Adoções</a>
-            <a href="#" onclick="toggleDropdown()">
-                <img src="../../../assets/img/icon-perfil.svg" class="user-icon">
-            </a>
+            
+            <div>
+                <a href="#" onclick="toggleDropdown()">
+                    <img src="../../../assets/img/icon-perfil.svg" class="user-icon">
+                </a>
+                <div id="userDropdown" class="dropdown-menu" style="display: none;">
+                    <a href="#">Configurações da conta <i class="fa-solid fa-gear"></i></a>
+                    <a href="#" id="btnLogout">Sair <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div id="userDropdown" class="dropdown-menu" style="display: none;">
-        <a href="#">Configurações da conta <i class="fa-solid fa-gear"></i></a>
-        <a href="#" id="btnLogout">Sair <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
     </div>
 
     <div id="main">
