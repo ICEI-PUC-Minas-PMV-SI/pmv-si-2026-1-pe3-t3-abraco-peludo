@@ -197,7 +197,7 @@ Para estruturar o diálogo e as interações do Abraço Peludo, aplicou-se o con
    
 ### 6. **Facilidade de reversão:** Esta regra aplica-se a situações onde o usuário já executou uma ação, mas o sistema oferece uma maneira simples e imediata de mitigar o impacto e "voltar atrás".
 
-   *Exemplo:* Na tela "Configurações de Perfil - Atualizar dados", caso o usuário clique no botão "Excluir conta", o sistema aciona um modal com o diálogo "Você realmente deseja  deletar permanentemente esse cadastro?", assim o usuário pode cancelar a ação. [Figura deletar cadastro]
+   *Exemplo:* Na tela "Configurações de Perfil - Atualizar dados", caso o usuário clique no botão "Excluir conta", o sistema aciona um modal com o diálogo "Você realmente deseja deletar permanentemente esse cadastro?", assim o usuário pode cancelar a ação. [Figura deletar cadastro]
 
    <img width="1440" height="1024" alt="Deletar Cadastro" src="https://github.com/user-attachments/assets/f94aefa5-d2a8-4d96-b6d6-4a91e8ec041b" />
 
