@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Adoção - Termos</title>
+  <link rel="stylesheet" href="adoptionForm02.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="conteudo">
+
+      <header class="topo">
+        <div class="logo">
+          <img src="../../../assets/img/logo-abraco-peludo-aba.svg" alt="Logo">
+        </div>
+
+        <nav class="menu">
+          <a href="home.html">Home</a>
+          <a href="historico.html">Histórico de Adoções</a>
+        </nav>
+
+        <div class="perfil-area">
+          <div class="perfil">
+            <img src="../../../assets/img/icon-login.svg" alt="Perfil">
+          </div>
+
+          <div class="menu-perfil">
+            <a href="configuracoes.html">
+              Configurações da conta
+              <img src="../../../assets/img/icon-configuracao.svg" alt="Configurações">
+            </a>
+            <a href="#" id="btnLogout" data-sair-conta>
+              Sair
+              <img src="../../../assets/img/icon-sair.svg" alt="Sair">
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <div class="area-externa">
+        <section class="area-form">
+          <div class="card">
+            
+            <h1 class="titulo">Termos de adoção</h1>
+            <div class="linha"></div>
+
+            <div class="caixa-texto-termos">
+              <h3>TERMO DE ADOÇÃO E RESPONSABILIDADE</h3>
+              <br>
+              <p>
+                Ao prosseguir com este processo de adoção, o adotante declara estar ciente e de acordo com as seguintes condições de posse responsável:
+              </p>
+              <br>
+              <p>
+                <strong>1. Bem-Estar e Cuidados:</strong> Garantir as condições necessárias de saúde, alimentação, higiene e segurança do animal, tratando-o com zelo, respeito e afeto.
+              </p>
+              <br>
+              <p>
+                <strong>2. Assistência Médica:</strong> Comprometer-se a fornecer assistência veterinária sempre que necessário, incluindo a aplicação de vacinas anuais, vermifugação e tratamentos de saúde emergenciais ou preventivos.
+              </p>
+              <br>
+              <p>
+                <strong>3. Segurança do Local:</strong> Manter o animal em local seguro, protegido do sol, da chuva e com barreiras físicas (como muros ou telas) que impeçam totalmente o acesso à rua ou fugas.
+              </p>
+              <br>
+              <p>
+                <strong>4. Política de Devolução e Não Abandono:</strong> Compreender que o abandono ou maus-tratos a animais configura crime previsto pela Lei nº 9.605/98. Caso ocorra total impossibilidade de permanência com o animal por motivos de força maior, o adotante assume o compromisso de **não repassá-lo a terceiros e nunca abandoná-lo**, devendo obrigatoriamente entrar em contato imediato com o nosso **e-mail de suporte ou canal oficial da ONG** para receber orientações e formalizar a devolução responsável.
+              </p>
+              <br>
+              <p>
+                <strong>5. Acompanhamento:</strong> Permitir, quando solicitado, o acompanhamento pós-adoção por parte dos protetores responsáveis, através de fotos, vídeos ou visitas previamente agendadas, para certificar-se da adaptação do animal.
+              </p>
+            </div>
+
+            <label class="container-checkbox">
+              <input type="checkbox" id="aceite-termos">
+              <span class="checkbox-customizado"></span>
+              Li e estou de acordo com o Termo de Adoção
+            </label>
+
+            <div class="botoes-grupo">
+              <a href="../adoptionForm01/adoptionForm01.html" class="btn-voltar">Voltar</a>
+              <button class="btn-continuar" id="btn-continuar" disabled>Continuar</button>
+            </div>
+
+          </div>
+        </section>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const checkbox = document.getElementById('aceite-termos');
+    const btnContinuar = document.getElementById('btn-continuar');
+
+    checkbox.addEventListener('change', function() {
+      btnContinuar.disabled = !this.checked;
+    });
+
+    btnContinuar.addEventListener('click', function() {
+      if(!this.disabled) {
+        window.location.href = "proxima_pagina.html"; 
+      }
+    });
+  </script>
+
+  <script src="../../../assets/js/modal/sairContaModal.js" data-home-url="../../../index.html"></script>
+</body>
+</html>
