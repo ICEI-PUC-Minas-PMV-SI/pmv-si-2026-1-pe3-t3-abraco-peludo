@@ -145,7 +145,7 @@ As interfaces foram projetadas considerando as leis Gestalt, que regem a percep�
 
 **Figura e fundo:** O cérebro humano tende a separar o objeto principal do plano de fundo. 
 
-  *Aplicação Prática:* Na tela "Configurações de Perfil - Modal de exclusão de cadastro", o fundo dela recebe uma camada de opacidade laranja (#FF8C42 overlay) de 50% para isolar visualmente o modal de feedback, eliminando distração ao redor. Adicionalmente, para destacar a ação crítica dentro da figura do modal, o botão de exclusão adota a cor vermelha (#FF383C), garantindo o contraste necessário para a identificação imediata do usuário.
+  *Aplicação Prática:* Na tela "Configurações de Perfil - Modal de exclusão de cadastro", o fundo dela recebe uma camada de opacidade da cor bege claro (#FFF2D7 overlay) de 50% para isolar visualmente o modal de feedback, eliminando distração ao redor. Adicionalmente, para destacar a ação crítica dentro da figura do modal, o botão de exclusão adota a cor vermelha (#FF383C), garantindo o contraste necessário para a identificação imediata do usuário.
 
 **Região Comum:** Elementos delimitados por uma barreira visual ou que compartilham uma memsma aréa de fundo são percebidos como um grupo coeaso, mesmo que possuam formas ou cores diferentes. 
 
@@ -169,26 +169,49 @@ Para estruturar o diálogo e as interações do Abraço Peludo, aplicou-se o con
    
    *Exemplo:* O botão de deleção ou cancelamento sempre adota o padrão visual vermelho [Figura X]
    
-3. **Oferecer Feedback Informativo:** Para cada ação, o sistema responde visualmente. Na tela de "Sucesso", ao enviar um formulário de adoção, a tela exibe uma tela com a mensagem clara: "Formulário enviado com sucesso! Obrigado por fazer a diferença na vida de um animal." [Figura X]
-   
-4. **Prevenção de Erros:** O sistema impede falhas antes que elas aconteçam.
+3. **Oferecer Feedback Informativo:** Para cada ação, o sistema responde visualmente.
+
+   *Exemplo:* Na tela de "Sucesso", ao enviar um formulário de adoção, é direcionado a outra tela com a mensagem clara: "Formulário enviado com sucesso! Obrigado por fazer a diferença na vida de um animal." [Figura X]
+
+4. **Diálogos com Fechamento (Início, Meio e Fim):** O sistema foi projetado para antecipar possíveis falhas operacionais do usuário, impedindo que o erro aconteça antes mesmo da submissão dos dados.
 
    *Exemplo:* 
-
    
-6. **Facilidade de reversão:** ações críticas, como exclusão, exigem confirmação prévia.
-7. **Controle do usuário:** a navegação permite retornar e revisar informações antes de confirmar ações.
-8. **Redução da carga de memória:** informações essenciais permanecem visíveis e o sistema utiliza linguagem objetiva e intuitiva.
+5. **Prevenção de Erros:** O sistema foi projetado para antecipar possíveis falhas operacionais do usuário, impedindo que o erro aconteça antes mesmo da submissão dos dados.
+
+   *Exemplo:* Na tela "Cadastro de Animais" (utilizada pela Persona José Carlos, que possui dificuldades com sistemas), os campos numéricos como "Idade Estimada" e "Peso" rejeitam automaticamente a digitação de caracteres alfabéticos ou símbolos. [Figura X]
+   
+6. **Facilidade de reversão:** Esta regra aplica-se a situações onde o usuário já executou uma ação, mas o sistema oferece uma maneira simples e imediata de mitigar o impacto e "voltar atrás".
+
+   *Exemplo:* Na tela "Configurações de Perfil - Edição de cadastro", caso o usuário clique no botão "Excluir conta", o sistema aciona um modal com o diálogo "Você realmente deseja  deletar permanentemente esse cadastro?", assim o usuário pode cancelar a ação. [Figura X]
+
+7. **Controle do usuário:** O usuário deve sentir que está no comando do sistema, iniciando as ações e tendo a liberdade de navegar sem se sentir encurralado por fluxos rígidos.
+
+*Exemplo:*  Na tela de "Formulário de adoção",que possui múltiplas etapas, o usuário não é obrigado a seguir até o fim de forma linear. Conforme ilustrado na [Figura X], o sistema disponibiliza de forma fixa e visível os botões "Voltar". Isso permite que o usuário adotante retorne à página anterior para revisar suas respostas. [Figura X]
+
+8. **Redução da carga de memória:** A interface deve ser direta e autoexplicativa, evitando que o usuário precise memorizar informações de telas anteriores para conseguir concluir a tarefa atual.
+
+    *Exemplo:* Conforme observado no fluxo das telas de "Cadastro", o sistema divide o processo de coleta de dados em etapas curtas e focadas (passo a passo), em vez de exibir um formulário longo em uma única página. Cada tela apresenta entre 3 e 5 campos objetivos (como E-mail, Senha e Repetir senha na segunda etapa). Isso reduz drasticamente a quantidade de informações que o usuário precisa processar e lembrar simultaneamente, respeitando o limite da memória de curto prazo (atendendo diretamente à Persona José Carlos).[Figura X]
 
 ### Recomendações Ergonômicas
 
-As interfaces foram desenvolvidas com foco em usabilidade e acessibilidade, adotando:
+Visando à usabilidade prática e ao atendimento dos critérios de ergonomia de software, o design das interfaces concretizou, de forma eficiente e intuitiva, os requisitos não funcionais relacionados à interface do sistema. As decisões de design foram tomadas com base nas limitações e necessidades das personas mapeadas, conforme detalhado a seguir:
 
-- tipografia legível;
-- contraste adequado entre texto e fundo;
-- botões com dimensões apropriadas;
-- organização visual limpa;
-- linguagem clara e objetiva.
+**Tipografia, Legibilidade e Tom de Voz (Atendimento ao RNF05):** 
+
+Para cumprir a padronização e a consistência exigidas pelo RNF05, estabeleceu-se uma hierarquia tipográfica rigorosa. Para a estrutura de navegação geral e fluxos de dados (como as telas de Cadastro e Formulários), foi adotada a família tipográfica **Inter**. A escolha justifica-se pela sua alta legibilidade em telas digitais devido ao desenho limpo de seus caracteres, o que reduz o esforço visual de usuários como a Persona José Carlos. Excepcionalmente nas telas de "Perfil da ONG" e "Perfil do Animal", introduziu-se a tipografia Poppins, cujas formas mais arredondadas e geométricas transmitem uma sensação de acolhimento e proximidade afetiva, coerente com a proposta de adoção responsável. O tamanho da fonte para a leitura de dados adota a base mínima de 16px, expandindo-se para 24px (Bold) em títulos para garantir uma organização visual clara e imediata. O tom de voz prioriza uma linguagem clara, sem termos acadêmicos ou sistêmicos complexos, tornando a plataforma inclusiva. 
+
+**Acessibilidade de Cores e Razão de Contraste (Atendimento ao RNF07):**
+
+Em estrito cumprimento ao RNF07, a paleta de cores foi projetada para garantir que o contraste entre texto e fundo siga o padrão WCAG 2.1 AA (Diretrizes de Acessibilidade para Conteúdo Web), com uma proporção mínima de 4.5:1, assegurando a leitura para pessoas com baixa visão ou dificuldades visuais. Utilizou-se como plano de fundo uma tonalidade de Bege Claro (creme), que reduz o brilho excessivo do monitor e mitiga a fadiga ocular. Para o corpo de texto e rótulos das caixas de entrada, aplicou-se a cor Marrom Escuro, estabelecendo uma razão de contraste cromático segura e de alta legibilidade sobre o fundo creme. A cor Laranja foi delimitada exclusivamente para elementos de ação primária (botões de avanço e submissão), operando como um forte ponto focal na interface.
+
+**Dimensões Ergonômicas e Elementos de Interação (Atendimento ao RNF05 e RNF06):** 
+
+Pensando na Persona José Carlos (que possui dificuldades motoras com sistemas e demanda fontes e componentes expandidos) e seguindo as diretrizes de estilos unificados do RNF05, rejeitou-se o uso de componentes pequenos. Todos os botões principais (como os botões "Próximo" e "Cadastrar" das Figuras apresentadas) foram desenhados com dimensões ampliadas e áreas de clique generosas, garantindo uma zona de interação segura que reduz a taxa de erros por cliques acidentais. Adicionalmente, em conformidade com o RNF06, esses elementos foram mapeados para disparar estados visuais (hover e foco) e modais instantâneos, garantindo que toda ação do usuário gere um feedback visual imediato.
+
+**Densidade de Informação e Responsividade do Layout (Atendimento ao RNF08):**
+
+Para combater a dor de "excesso de informação na tela" e o "medo de errar" relatados pelas personas, o layout adota uma distribuição de peso equilibrada de 50% para imagem e 50% para dados. A inclusão de uma fotografia expressiva à esquerda humaniza o sistema no primeiro contato, enquanto o formulário à direita exibe pouquíssimos elementos simultâneos. Todo essa estrutara visual foi projetado sob uma grade flexível em conformidade com o RNF08, assegurando que a interface seja totalmente responsiva e se adapte automaticamente desde resoluções de smartphones até monitores desktop  sem qualquer perda de funcionalidade, legibilidade ou quebra de componentes.
 
 ### Objetivo dos Protótipos
 
