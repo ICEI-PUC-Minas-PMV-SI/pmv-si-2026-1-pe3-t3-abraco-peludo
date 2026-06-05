@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de adoção</title>
+
+  <link rel="stylesheet" href="adoptionForm01.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="conteudo">
+
+      <header class="topo">
+
+        <div class="logo">
+          <img src="../../../assets/img/logo-abraco-peludo-aba.svg" alt="Logo">
+        </div>
+
+        <nav class="menu">
+          <a href="home.html">Home</a>
+          <a href="historico.html">Histórico de Adoções</a>
+        </nav>
+
+        <div class="perfil-area">
+
+          <div class="perfil">
+            <img src="../../../assets/img/icon-login.svg" alt="Perfil">
+          </div>
+
+          <div class="menu-perfil">
+
+            <a href="configuracoes.html">
+              Configurações da conta
+              <img src="../../../assets/img/icon-configuracao.svg" alt="Configurações">
+            </a>
+
+            <a href="login.html">
+              Sair
+              <img src="../../../assets/img/icon-sair.svg" alt="Sair">
+            </a>
+
+          </div>
+
+        </div>
+
+      </header>
+
+      <div class="area-externa">
+
+        <section class="area-form">
+
+          <div class="card">
+
+            <h1 class="titulo">
+              Formulário de adoção
+            </h1>
+
+            <div class="linha"></div>
+
+            <div class="grupo">
+
+              <label for="estado">Estado:</label>
+
+              <select id="estado">
+                <option value="">Selecione um estado</option>
+              </select>
+
+            </div>
+
+            <div class="grupo">
+
+              <label for="cidade">Cidade:</label>
+
+              <select id="cidade">
+                <option value="">Selecione uma cidade</option>
+              </select>
+
+            </div>
+
+            <button class="btn">
+              Continuar
+            </button>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    const estados = [
+      { sigla: "AC", nome: "Acre" },
+      { sigla: "AL", nome: "Alagoas" },
+      { sigla: "AP", nome: "Amapá" },
+      { sigla: "AM", nome: "Amazonas" },
+      { sigla: "BA", nome: "Bahia" },
+      { sigla: "CE", nome: "Ceará" },
+      { sigla: "DF", nome: "Distrito Federal" },
+      { sigla: "ES", nome: "Espírito Santo" },
+      { sigla: "GO", nome: "Goiás" },
+      { sigla: "MA", nome: "Maranhão" },
+      { sigla: "MT", nome: "Mato Grosso" },
+      { sigla: "MS", nome: "Mato Grosso do Sul" },
+      { sigla: "MG", nome: "Minas Gerais" },
+      { sigla: "PA", nome: "Pará" },
+      { sigla: "PB", nome: "Paraíba" },
+      { sigla: "PR", nome: "Paraná" },
+      { sigla: "PE", nome: "Pernambuco" },
+      { sigla: "PI", nome: "Piauí" },
+      { sigla: "RJ", nome: "Rio de Janeiro" },
+      { sigla: "RN", nome: "Rio Grande do Norte" },
+      { sigla: "RS", nome: "Rio Grande do Sul" },
+      { sigla: "RO", nome: "Rondônia" },
+      { sigla: "RR", nome: "Roraima" },
+      { sigla: "SC", nome: "Santa Catarina" },
+      { sigla: "SP", nome: "São Paulo" },
+      { sigla: "SE", nome: "Sergipe" },
+      { sigla: "TO", nome: "Tocantins" }
+    ];
+
+    const estadoSelect = document.getElementById("estado");
+    const cidadeSelect = document.getElementById("cidade");
+
+    estados.forEach(function(estado){
+
+      const option = document.createElement("option");
+
+      option.value = estado.sigla;
+      option.textContent = estado.nome;
+
+      estadoSelect.appendChild(option);
+
+    });
+
+    estadoSelect.addEventListener("change", async function(){
+
+      const estadoSelecionado = estadoSelect.value;
+
+      if(!estadoSelecionado){
+        cidadeSelect.innerHTML =
+          '<option value="">Selecione uma cidade</option>';
+        return;
+      }
+
+      cidadeSelect.innerHTML =
+        '<option value="">Carregando cidades...</option>';
+
+      try{
+
+        const url =
+          `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${estadoSelecionado}/municipios`;
+
+        const response = await fetch(url);
+
+        const cidades = await response.json();
+
+        cidadeSelect.innerHTML =
+          '<option value="">Selecione uma cidade</option>';
+
+        cidades.forEach(function(cidade){
+
+          const option = document.createElement("option");
+
+          option.value = cidade.nome;
+          option.textContent = cidade.nome;
+
+          cidadeSelect.appendChild(option);
+
+        });
+
+      }catch(error){
+
+        cidadeSelect.innerHTML =
+          '<option value="">Erro ao carregar cidades</option>';
+
+        console.error(error);
+
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>
