@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Adoção - Perguntas</title>
+  <link rel="stylesheet" href="adoptionForm03.css">
+  <link rel="stylesheet" href="../../../assets/css/modal/sairContaModal.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="conteudo">
+
+      <header class="topo">
+        <div class="logo">
+          <img src="../../../assets/img/logo-abraco-peludo-aba.svg" alt="Logo">
+        </div>
+
+        <nav class="menu">
+          <a href="home.html">Home</a>
+          <a href="historico.html">Histórico de Adoções</a>
+        </nav>
+
+        <div class="perfil-area">
+          <div class="perfil">
+            <img src="../../../assets/img/icon-login.svg" alt="Perfil">
+          </div>
+
+          <div class="menu-perfil">
+            <a href="configuracoes.html">
+              Configurações da conta
+              <img src="../../../assets/img/icon-configuracao.svg" alt="Configurações">
+            </a>
+            <a href="#" id="btnLogout" data-sair-conta>
+              Sair
+              <img src="../../../assets/img/icon-sair.svg" alt="Sair">
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <div class="area-externa">
+        <section class="area-form">
+          <div class="card">
+
+            <h1 class="titulo">Formulário de adoção</h1>
+            <div class="linha"></div>
+
+            <div class="grupo">
+              <label for="criancas">Tem crianças em casa?</label>
+              <select id="criancas">
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+              </select>
+            </div>
+
+            <div class="grupo">
+              <label for="familia">Todos em casa estão cientes e de acordo com a adoção?</label>
+              <select id="familia">
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+              </select>
+            </div>
+
+            <div class="grupo">
+              <label for="presente">O pet é para você mesmo ou é um presente para alguém?</label>
+              <select id="presente">
+                <option value="mim">Para mim</option>
+                <option value="presente">Presente</option>
+              </select>
+            </div>
+
+            <div class="botoes-grupo">
+              <a href="../adoptionForm02/adoptionForm02.html" class="btn-voltar">Voltar</a>
+              <button class="btn-continuar" id="btn-continuar">Continuar</button>
+            </div>
+
+          </div>
+        </section>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../../../assets/js/modal/sairContaModal.js" data-home-url="../../../index.html"></script>
+</body>
+</html>
