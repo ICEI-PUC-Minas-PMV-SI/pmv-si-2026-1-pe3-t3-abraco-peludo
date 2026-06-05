@@ -1,0 +1,128 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+}
+
+/* HEADER */
+
+header{
+    height:130px;
+    background:#5B382D;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    padding-right:80px;
+}
+
+nav{
+    display:flex;
+    gap:80px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:300;
+}
+
+/* CONTEÚDO */
+
+.container{
+    height:calc(100vh - 130px);
+    display:flex;
+}
+
+/* FOTO */
+
+.left-side{
+    width:50%;
+}
+
+.left-side img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* FORMULÁRIO */
+
+.right-side{
+    width:50%;
+    background:#EFE4C8;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.form-box{
+    width:420px;
+    text-align:center;
+}
+
+.form-box h1{
+    font-size:60px;
+    color:#5B382D;
+    margin-bottom:10px;
+}
+
+.underline{
+    width:240px;
+    height:10px;
+    background:#F98B3D;
+    margin:0 auto 35px auto;
+    border-radius:10px;
+}
+
+.form-box p{
+    color:#5B382D;
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+/* INPUTS */
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+input{
+    height:55px;
+    border:none;
+    border-radius:4px;
+    padding:0 20px;
+    font-size:16px;
+    background:white;
+}
+
+input::placeholder{
+    color:#999;
+}
+
+/* BOTÃO */
+
+button{
+    margin-top:20px;
+    height:60px;
+    border:none;
+    background:#F98B3D;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    width:300px;
+    align-self:center;
+    transition:.3s;
+}
+
+button:hover{
+    opacity:.9;
+}
