@@ -129,69 +129,95 @@ Para garantir que o design do sistema **Abraço Peludo** atenda diretamente às 
 
 As interfaces foram projetadas considerando as leis Gestalt, que regem a percepção visual humana, garantindo que o usuário interprete as informações de forma natural. 
 
-**Proximidade:** Elementos proximos são percebidos como parte de um mesmo grupo.
+### **Proximidade:** Elementos proximos são percebidos como parte de um mesmo grupo.
 
-  *Aplicação Prática:* Como é possível observar na tela "Perfil detalhado do animal - Login adotante", as informações sobre o animal (idade, sexo, tamanho, descrição temperamental e vida clinica) estão agrupadas e um bloco de texto coeso, separadas visualmente das informações da ONG por outro grupo de espaçamento de (**à confirmar**).
+  *Aplicação Prática:* Como é possível observar na tela "Perfil detalhado do animal - Login adotante", as informações sobre o animal (idade, sexo, tamanho, descrição temperamental e vida clinica) estão agrupadas e um bloco de texto coeso, separadas visualmente das informações da ONG por outro grupo de espaçamento de rigoroso. [Figura perfil detalhado do animal]
  
 <img width="1448" height="1406" alt="Perfil detalhado do animal" src="https://github.com/user-attachments/assets/1c5f4227-1b65-4023-ab37-23919f1cd43d" />
 
-**Semelhança:** Elementos com características visuais parecidas (cor, forma, tamanho) são interpretados como tendo a mesma função. 
+### **Semelhança:** Elementos com características visuais parecidas (cor, forma, tamanho) são interpretados como tendo a mesma função. 
 
-  *Aplicação Prática:* Botões de ação primária (como "Cadastrar" e " Próximo") utilizam a cor #FF8C42 nas telas de cadastro do adotante. Tendo o uma caixa retangular de tamanho (**à confimar**), conforme nas telas "Termos de uso" e "Cadastro do Adotante".
+  *Aplicação Prática:* Botões de ação primária (como "Cadastrar" e " Próximo") utilizam a cor #FF8C42 nas telas de cadastro do adotante. Tendo o uma caixa retangular de tamanho (**à confimar**), conforme nas telas "Termos de uso" e "Cadastro do Adotante". [Figuras termos de uso e cadastro do adotante]
 
 <img width="1440" height="1024" alt="Termos de uso" src="https://github.com/user-attachments/assets/10d200d3-8d5e-455f-988d-e213ede34a8e" />
 
 <img width="1440" height="1024" alt="Cadastro do Adotante" src="https://github.com/user-attachments/assets/146c531e-e96a-440b-82a8-3ce6cc3281cf" />
 
-**Figura e fundo:** O cérebro humano tende a separar o objeto principal do plano de fundo. 
+### **Figura e fundo:** O cérebro humano tende a separar o objeto principal do plano de fundo. 
 
-  *Aplicação Prática:* Na tela "Configurações de Perfil - Modal de exclusão de cadastro", o fundo dela recebe uma camada de opacidade da cor bege claro (#FFF2D7 overlay) de 50% para isolar visualmente o modal de feedback, eliminando distração ao redor. Adicionalmente, para destacar a ação crítica dentro da figura do modal, o botão de exclusão adota a cor vermelha (#FF383C), garantindo o contraste necessário para a identificação imediata do usuário.
+  *Aplicação Prática:* Na tela "Configurações de Perfil - Modal de exclusão de cadastro", o fundo dela recebe uma camada de opacidade da cor bege claro (#FFF2D7 overlay) de 50% para isolar visualmente o modal de feedback, eliminando distração ao redor. Adicionalmente, para destacar a ação crítica dentro da figura do modal, o botão de exclusão adota a cor vermelha (#FF383C), garantindo o contraste necessário para a identificação imediata do usuário. [Figura Deletar Cadastro]
 
-**Região Comum:** Elementos delimitados por uma barreira visual ou que compartilham uma memsma aréa de fundo são percebidos como um grupo coeaso, mesmo que possuam formas ou cores diferentes. 
+   <img width="1440" height="1024" alt="Deletar Cadastro" src="https://github.com/user-attachments/assets/f94aefa5-d2a8-4d96-b6d6-4a91e8ec041b" />
+
+### **Região Comum:** Elementos delimitados por uma barreira visual ou que compartilham uma memsma aréa de fundo são percebidos como um grupo coeaso, mesmo que possuam formas ou cores diferentes. 
 
   *Aplicação Prática:* Na tela "Listagem dos animais", utilizou-se o conceito de cards. Cada animal disponível para adoção possui sua foto, nome e idade envelopados dentro de um mesmo bloco com bordas delimitadas e fundo laranja claro (#FFD9AA), separando nitidamente um animal do outro e facilitando a leitura em blocos pelo usuário.
 
 <img width="1440" height="1024" alt="Listagem dos animais" src="https://github.com/user-attachments/assets/1cea26ac-be13-401e-9c84-19f13f2fcb42" />
 
 
-**Nota Teórica sobre os Princípios Não Aplicados:**
-Os princípios de *Fechamento* e *Destino Comum* não incluiu os princípios de Fechamento e Destino Comum. Para reduzir a carga cognitiva de usuários menos familiarizados com tecnologia (como a Persona José Carlos), optou-se por não utilizar o princípio do Fechamento, priorizando ícones e formas totalmente preenchidos e explícitos. Já o Destino Comum (onde elementos visuais se movem na mesma direção para indicar relação) não se aplica ao escopo atual, visto que a interface Desktop do sistema prioriza navegações estáticas, limpas e sem transições de elementos animados complexos.
+### **Nota Teórica sobre os Princípios Não Aplicados:**
+O princípio gestáltico de Destino Comum (onde elementos visuais se movem na mesma direção e velocidade para indicar relação) não foi incorporado ao projeto arquitetural das interfaces do sistema Abraço Peludo. A não utilização justifica-se pelo escopo atual do projeto, visto que a interface Desktop da plataforma prioriza telas estruturadas de forma estática, limpa e sem a transição de elementos animados complexos, focando na simplicidade e na redução de distrações visuais durante os fluxos de cadastro e adoção.
 
 ### 4.3.3 Aplicação das Regras de Ouro
 
 Para estruturar o diálogo e as interações do Abraço Peludo, aplicou-se o conjunto de Regras de Ouro propostas por Ben Shneiderman, demonstradas detalhadamente a seguir:
 
-1. **Esforço pela Consistência:** Mantém-se o mesmo padrão de fontes e cores.
+### 1. **Esforço pela Consistência:** O sistema mantém uma padronização rigorosa de componentes visuais, fontes, cores e comportamentos em todas as telas, permitindo que o usuário aprenda as regras do sistema uma única vez e as replique naturalmente.
    
-   *Exemplo:* O botão de deleção ou cancelamento sempre adota o padrão visual vermelho [Figura X]
+   *Exemplo:* A consistência se manifesta na identidade visual e no comportamento dos elementos interativos. Os botões de avanço e submissão primária adotam sempre a cor laranja, enquanto ações críticas, destrutivas ou de cancelamento definitivo (como a deleção ou interrupção de um fluxo) adotam o padrão visual vermelho. Essa uniformidade visual reduz o tempo de reação e a incerteza do usuário ao navegar por diferentes módulos da aplicação. [Figuras botão cancelar e botão avançar]
+
    
-2. **Atalhos para usuários frequentes:** menus e botões de ação rápida facilitam o acesso às funcionalidades mais utilizadas.
    
-   *Exemplo:* O botão de deleção ou cancelamento sempre adota o padrão visual vermelho [Figura X]
+### 2. **Atalhos para usuários frequentes:** À medida que o usuário se familiariza com a interface, ele busca executar as ações com maior rapidez. O sistema deve oferecer mecanismos que reduzam o número de interações necessárias para atingir um objetivo comum.
    
-3. **Oferecer Feedback Informativo:** Para cada ação, o sistema responde visualmente.
+   *Exemplo:* Para otimizar o tempo de voluntários e representantes de ONGs que interagem com a plataforma recorrentemente, a interface do sistema Desktop disponibiliza menus estruturados e links de ação rápida localizados de forma fixa no topo/lateral da aplicação. Em vez de obrigar o usuário experiente a navegar por caminhos longos ou retornar à página inicial para gerenciar as informações, ele consegue acessar diretamente abas essenciais como "Cadastrar Animal" ou "Visualizar Perfil" com apenas um clique a partir de qualquer ponto do sistema, acelerando drasticamente o fluxo de trabalho diário. [ dropdown]
 
-   *Exemplo:* Na tela de "Sucesso", ao enviar um formulário de adoção, é direcionado a outra tela com a mensagem clara: "Formulário enviado com sucesso! Obrigado por fazer a diferença na vida de um animal." [Figura X]
-
-4. **Diálogos com Fechamento (Início, Meio e Fim):** O sistema foi projetado para antecipar possíveis falhas operacionais do usuário, impedindo que o erro aconteça antes mesmo da submissão dos dados.
-
-   *Exemplo:* 
    
-5. **Prevenção de Erros:** O sistema foi projetado para antecipar possíveis falhas operacionais do usuário, impedindo que o erro aconteça antes mesmo da submissão dos dados.
-
-   *Exemplo:* Na tela "Cadastro de Animais" (utilizada pela Persona José Carlos, que possui dificuldades com sistemas), os campos numéricos como "Idade Estimada" e "Peso" rejeitam automaticamente a digitação de caracteres alfabéticos ou símbolos. [Figura X]
    
-6. **Facilidade de reversão:** Esta regra aplica-se a situações onde o usuário já executou uma ação, mas o sistema oferece uma maneira simples e imediata de mitigar o impacto e "voltar atrás".
+### 3. **Oferecer Feedback Informativo:** Para cada ação, o sistema responde visualmente.
 
-   *Exemplo:* Na tela "Configurações de Perfil - Edição de cadastro", caso o usuário clique no botão "Excluir conta", o sistema aciona um modal com o diálogo "Você realmente deseja  deletar permanentemente esse cadastro?", assim o usuário pode cancelar a ação. [Figura X]
+   *Exemplo:* Na tela de "Sucesso", ao enviar um formulário de adoção, é direcionado a outra tela com a mensagem clara: "Formulário enviado com sucesso! Obrigado por fazer a diferença na vida de um animal." [Figura Sucesso]
 
-7. **Controle do usuário:** O usuário deve sentir que está no comando do sistema, iniciando as ações e tendo a liberdade de navegar sem se sentir encurralado por fluxos rígidos.
+   <img width="1440" height="1024" alt="Tela de sucesso" src="https://github.com/user-attachments/assets/27070760-214e-4831-a9c1-dcaa4c926c53" />
 
-*Exemplo:*  Na tela de "Formulário de adoção",que possui múltiplas etapas, o usuário não é obrigado a seguir até o fim de forma linear. Conforme ilustrado na [Figura X], o sistema disponibiliza de forma fixa e visível os botões "Voltar". Isso permite que o usuário adotante retorne à página anterior para revisar suas respostas. [Figura X]
+### 4. **Diálogos com Fechamento (Início, Meio e Fim):** As sequências de ações do sistema devem ser organizadas em grupos com início, meio e fim, oferecendo ao usuário a sensação de dever cumprido e um sinal claro de conclusão ao término do fluxo. 
 
-8. **Redução da carga de memória:** A interface deve ser direta e autoexplicativa, evitando que o usuário precise memorizar informações de telas anteriores para conseguir concluir a tarefa atual.
+   *Exemplo:* Em vez de uma submissão contínua e indefinida, o usuário avança progressivamente preenchendo blocos lógicos de informação. O fechamento definitivo do diálogo ocorre na última tela do fluxo, onde o botão de ação primária muda o rótulo de "Próximo" para "Cadastrar". Essa mudança de termo fornece o feedback definitivo de que o processo foi concluído e que os dados foram consolidados no sistema, reduzindo a ansiedade da Persona Ana Paula sobre o sucesso da sua ação. [Figuras Cadastro da Instuição]
+   
+   <img width="1440" height="1024" alt="Cadastro da Instituição - Instituição 8" src="https://github.com/user-attachments/assets/049c88a3-fdec-42bf-8bf8-e0189f343aa0" />
+   <img width="1440" height="1024" alt="Cadastro da Instituição - Instituição 7" src="https://github.com/user-attachments/assets/faae4897-a061-4964-bc4f-1158fe75df1b" />
+   <img width="1440" height="1024" alt="Cadastro da Instituição - Instituição 5" src="https://github.com/user-attachments/assets/ef7eec45-723e-4ffb-aebe-38116227de76" />
+   <img width="1440" height="1024" alt="Cadastro da Instituição - Instituição 6" src="https://github.com/user-attachments/assets/11acb847-ee1a-48a3-911c-360ca5c61387" /> 
 
-    *Exemplo:* Conforme observado no fluxo das telas de "Cadastro", o sistema divide o processo de coleta de dados em etapas curtas e focadas (passo a passo), em vez de exibir um formulário longo em uma única página. Cada tela apresenta entre 3 e 5 campos objetivos (como E-mail, Senha e Repetir senha na segunda etapa). Isso reduz drasticamente a quantidade de informações que o usuário precisa processar e lembrar simultaneamente, respeitando o limite da memória de curto prazo (atendendo diretamente à Persona José Carlos).[Figura X]
+   
+### 5. **Prevenção de Erros:** O sistema foi projetado para antecipar possíveis falhas operacionais do usuário, impedindo que o erro aconteça antes mesmo da submissão dos dados.
+
+   *Exemplo:* Na tela "Cadastro de Animais" (utilizada pela Persona José Carlos, que possui dificuldades com sistemas), o campo numérico de  "Idade" do animal rejeita automaticamente a digitação de caracteres alfabéticos ou símbolos. [Figura idade animal]
+   
+### 6. **Facilidade de reversão:** Esta regra aplica-se a situações onde o usuário já executou uma ação, mas o sistema oferece uma maneira simples e imediata de mitigar o impacto e "voltar atrás".
+
+   *Exemplo:* Na tela "Configurações de Perfil - Atualizar dados", caso o usuário clique no botão "Excluir conta", o sistema aciona um modal com o diálogo "Você realmente deseja  deletar permanentemente esse cadastro?", assim o usuário pode cancelar a ação. [Figura deletar cadastro]
+
+   <img width="1440" height="1024" alt="Deletar Cadastro" src="https://github.com/user-attachments/assets/f94aefa5-d2a8-4d96-b6d6-4a91e8ec041b" />
+
+### 7. **Controle do usuário:** O usuário deve sentir que está no comando do sistema, iniciando as ações e tendo a liberdade de navegar sem se sentir encurralado por fluxos rígidos.
+
+   *Exemplo:*  Na tela de "Formulário de adoção",que possui múltiplas etapas, o usuário não é obrigado a seguir até o fim de forma linear. Conforme ilustrado nas [Figuras de Formulário], o sistema disponibiliza de forma fixa e visível os botões "Voltar". Isso permite que o usuário adotante retorne à página anterior para revisar suas respostas.
+
+   <img width="1440" height="1024" alt="Formulário de adoção 1" src="https://github.com/user-attachments/assets/0511cd45-9909-4b76-a906-9d6e1056f301" />
+   <img width="1440" height="1024" alt="Formulário de adoção 2 (termos de adoção)" src="https://github.com/user-attachments/assets/6145a79c-6d3b-4c08-b8f0-21e1abb67503" />
+   <img width="1440" height="1024" alt="Formulário de adoção 3" src="https://github.com/user-attachments/assets/f7530ae4-8f4d-418b-a3d6-24e54e938bee" />
+   <img width="1440" height="1024" alt="Formulário de adoção 4" src="https://github.com/user-attachments/assets/ba9acf47-01f6-49a2-a72c-56f6c7b821b6" />
+
+### 8. **Redução da carga de memória:** A interface deve ser direta e autoexplicativa, evitando que o usuário precise memorizar informações de telas anteriores para conseguir concluir a tarefa atual.
+
+   *Exemplo:* Conforme observado no fluxo das telas de "Cadastro", o sistema divide o processo de coleta de dados em etapas curtas e focadas (passo a passo), em vez de exibir um formulário longo em uma única página. Cada tela apresenta entre 3 e 5 campos objetivos (como E-mail, Senha e Repetir senha na segunda etapa). Isso reduz drasticamente a quantidade de informações que o usuário precisa processar e lembrar simultaneamente, respeitando o limite da memória de curto prazo (atendendo diretamente à Persona José Carlos).[Figuras Cadastro]
+
+   <img width="1440" height="1024" alt="Cadastro da Instituição - Instituição 8" src="https://github.com/user-attachments/assets/049c88a3-fdec-42bf-8bf8-e0189f343aa0" />
+   <img width="1440" height="1024" alt="Cadastro da Instituição - Instituição 7" src="https://github.com/user-attachments/assets/faae4897-a061-4964-bc4f-1158fe75df1b" />
+   <img width="1440" height="1024" alt="Cadastro da Instituição - Instituição 5" src="https://github.com/user-attachments/assets/ef7eec45-723e-4ffb-aebe-38116227de76" />
+   <img width="1440" height="1024" alt="Cadastro da Instituição - Instituição 6" src="https://github.com/user-attachments/assets/11acb847-ee1a-48a3-911c-360ca5c61387" />
 
 ### Recomendações Ergonômicas
 
@@ -218,16 +244,6 @@ Para combater a dor de "excesso de informação na tela" e o "medo de errar" rel
 Os protótipos de alta fidelidade permitem validar a estrutura das interfaces, a navegabilidade e o fluxo das principais funcionalidades antes da implementação definitiva. Além disso, servirão como base para a realização de testes com usuários, possibilitando identificar oportunidades de melhoria na experiência de uso e no atendimento às necessidades dos diferentes perfis envolvidos no processo de adoção responsável de animais.
 
 ## 4.4 Testes com Protótipos
-Nesta seção você deve apresentar os testes realizados com usuários utilizando os protótipos de alta fidelidade desenvolvidos na seção anterior. O objetivo é avaliar a usabilidade, a clareza das informações e a adequação do design às necessidades das personas definidas no projeto.
-
-Cada integrante do grupo deverá aplicar o teste com um usuário distinto, preferencialmente alinhado ao perfil das personas criadas. Devem ser definidas previamente as tarefas que o usuário deverá executar no protótipo (por exemplo: realizar um cadastro, buscar um produto, concluir uma compra).
-
-Durante a aplicação do teste, registre observações sobre comportamentos, dúvidas, erros e comentários feitos pelo usuário, bem como o tempo necessário para a execução de cada tarefa. Ao final, colete o feedback do participante, destacando pontos positivos e aspectos a serem melhorados.
-
-Os resultados obtidos por todos os integrantes devem ser consolidados, apresentando uma análise geral com os principais problemas encontrados, oportunidades de melhoria e as ações previstas para o projeto final. 
-
-Nesta seção são apresentados os resultados dos testes de usabilidade realizados com usuários utilizando os protótipos de alta fidelidade desenvolvidos no Figma. O objetivo foi avaliar a fluidez da navegação, a clareza das informações e identificar melhorias no fluxo para as personas definidas no projeto (Adotantes e ONGs).
-
 
 ### 1. Principais Problemas Encontrados (Usabilidade e Navegação)
 
