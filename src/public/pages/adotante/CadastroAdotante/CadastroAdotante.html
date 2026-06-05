@@ -1,239 +1,136 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abraço Peludo - Cadastro do Adotante</title>
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif;
-      }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
-      body {
-        width: 100%;
-        height: 100vh;
-      }
+    <link rel="icon" type="image/x-icon" href="../../../assets/img/logo-abraco-peludo-aba.svg">
+    <link rel="stylesheet" href="../../../assets/css/global.css">
+    <link rel="stylesheet" href="../../../assets/css/navbar/style.css">
+    <link rel="stylesheet" href="./cadastroAdotante.css">
+</head>
+<body>
 
-      /* HEADER */
-
-      header {
-        height: 128px;
-        background: #5b382d;
-
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-
-        padding-right: 80px;
-      }
-
-      nav {
-        display: flex;
-        gap: 90px;
-      }
-
-      nav a {
-        text-decoration: none;
-        color: white;
-        font-size: 18px;
-        transition: 0.3s;
-      }
-
-      nav a:hover {
-        opacity: 0.8;
-      }
-
-      /* CONTEÚDO */
-
-      .container {
-        display: flex;
-        height: calc(100vh - 128px);
-      }
-
-      /* IMAGEM */
-
-      .left-side {
-        width: 50%;
-      }
-
-      .left-side img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      /* FORMULÁRIO */
-
-      .right-side {
-        width: 50%;
-        background: #efe4c8;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .form-box {
-        width: 430px;
-        text-align: center;
-      }
-
-      .form-box h1 {
-        font-size: 60px;
-        color: #5b382d;
-        font-weight: 700;
-      }
-
-      .underline {
-        width: 240px;
-        height: 8px;
-        background: #f98b3d;
-        margin: 12px auto 35px;
-        border-radius: 10px;
-      }
-
-      .form-box p {
-        color: #5b382d;
-        font-size: 18px;
-        margin-bottom: 35px;
-        line-height: 1.3;
-      }
-
-      /* CAMPOS */
-
-      form {
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-      }
-
-      input {
-        width: 100%;
-        height: 48px;
-
-        border: none;
-        border-radius: 4px;
-
-        padding-left: 20px;
-
-        font-size: 16px;
-        outline: none;
-      }
-
-      input::placeholder {
-        color: #9a9a9a;
-      }
-
-      /* BOTÃO */
-
-      button {
-        width: 290px;
-        height: 54px;
-
-        margin: 15px auto 0;
-
-        border: none;
-        cursor: pointer;
-
-        background: #f98b3d;
-        color: white;
-
-        font-size: 20px;
-        transition: 0.3s;
-      }
-
-      button:hover {
-        opacity: 0.9;
-      }
-
-      /* RESPONSIVO */
-
-      @media (max-width: 900px) {
-        .container {
-          flex-direction: column;
-        }
-
-        .left-side,
-        .right-side {
-          width: 100%;
-        }
-
-        .left-side {
-          height: 300px;
-        }
-
-        .right-side {
-          padding: 50px 20px;
-        }
-
-        nav {
-          gap: 30px;
-        }
-
-        header {
-          justify-content: center;
-          padding-right: 0;
-        }
-
-        .form-box {
-          width: 100%;
-          max-width: 430px;
-        }
-
-        .form-box h1 {
-          font-size: 48px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">Login</a>
-        <a href="#">Faça seu Cadastro</a>
-      </nav>
-    </header>
-
-    <main class="container">
-      <section class="left-side">
-        <img
-          src="/src/public/assets/img/img-cadastro-adotante.svg"
-          alt="Mulher com cachorro"
-        />
-      </section>
-
-      <section class="right-side">
-        <div class="form-box">
-          <h1>Cadastro</h1>
-
-          <div class="underline"></div>
-
-          <p>Cadastre e comece a fazer a diferença na vida de um animal!</p>
-
-          <form>
-            <input type="text" placeholder="Nome completo" />
-
-            <input type="text" placeholder="CPF" />
-
-            <input type="text" placeholder="Data de nascimento" />
-
-            <input type="email" placeholder="Email" />
-
-            <input type="password" placeholder="Senha" />
-
-            <input type="password" placeholder="Repita a senha" />
-
-            <a href="/src/public/index.html">
-              <button type="submit">Próximo</button>
-            </a>
-          </form>
+    <div id="container-nav">
+        <div id="logo-abraco">
+            <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
         </div>
-      </section>
+
+        <div>
+            <a href="../../../index.html" class="active">Home</a>
+            <a href="../../login/login.html" class="active">Login</a>
+            <a href="../../registrationType/registrationType.html" class="active">Faça seu Cadastro</a>
+        </div>
+    </div>
+
+    <main class="cadastro-wrapper">
+
+        <section class="cadastro-image-side">
+            <img
+                src="/src/public/assets/img/img-cadastro-adotante.svg"
+                alt="Mulher com cachorro"
+            >
+        </section>
+
+        <section class="cadastro-form-side">
+            <div class="form-box">
+                <h1>Cadastro</h1>
+                <div class="underline"></div>
+
+                <p>Cadastre e comece a fazer a diferença na vida de um animal!</p>
+
+                <form id="formCadastroAdotante" class="cadastro-form" novalidate>
+                    <input
+                        type="text"
+                        id="nomeCompleto"
+                        name="nomeCompleto"
+                        placeholder="Nome completo"
+                        required
+                    >
+                    <span id="erro-nomeCompleto" class="form-error" role="alert"></span>
+
+                    <input
+                        type="text"
+                        id="cpf"
+                        name="cpf"
+                        placeholder="CPF"
+                        required
+                        maxlength="14"
+                        inputmode="numeric"
+                    >
+                    <span id="erro-cpf" class="form-error" role="alert"></span>
+
+                    <input
+                        type="date"
+                        id="dataNascimento"
+                        name="dataNascimento"
+                        required
+                    >
+                    <span id="erro-dataNascimento" class="form-error" role="alert"></span>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Email"
+                        required
+                        autocomplete="email"
+                    >
+                    <span id="erro-email" class="form-error" role="alert"></span>
+
+                    <div class="input-password-wrapper">
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Senha"
+                            required
+                            autocomplete="new-password"
+                        >
+                        <button type="button" class="btn-toggle-senha" data-target="senha" aria-label="Mostrar senha">
+                            <svg class="icon-eye" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                            </svg>
+                            <svg class="icon-eye-off" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78 3.15 3.15.27-.27c.63-.63.97-1.46.97-2.35 0-1.66-1.34-3-3-3-.89 0-1.72.34-2.35.97l-.27.27z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <span id="erro-senha" class="form-error" role="alert"></span>
+
+                    <div class="input-password-wrapper">
+                        <input
+                            type="password"
+                            id="confirmarSenha"
+                            name="confirmarSenha"
+                            placeholder="Repita a senha"
+                            required
+                            autocomplete="new-password"
+                        >
+                        <button type="button" class="btn-toggle-senha" data-target="confirmarSenha" aria-label="Mostrar senha">
+                            <svg class="icon-eye" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                            </svg>
+                            <svg class="icon-eye-off" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78 3.15 3.15.27-.27c.63-.63.97-1.46.97-2.35 0-1.66-1.34-3-3-3-.89 0-1.72.34-2.35.97l-.27.27z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <span id="erro-confirmarSenha" class="form-error" role="alert"></span>
+
+                    <button type="submit" class="btn-proximo">Próximo</button>
+                </form>
+            </div>
+        </section>
+
     </main>
-  </body>
+
+    <script src="../../../assets/js/adotante/cadastroAdotanteStorage.js"></script>
+    <script src="../../../assets/js/adotante/cadastroAdotante.js"></script>
+</body>
 </html>
