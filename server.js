@@ -75,7 +75,8 @@ function buscarUsuarioPorEmail(db, email) {
 }
 
 server.use(middlewares);
-server.use(jsonServer.bodyParser);
+server.use(require('body-parser').json({ limit: '15mb' }));
+server.use(require('body-parser').urlencoded({ extended: true, limit: '15mb' }));
 
 server.post('/recuperar-senha', async (req, res) => {
     const email = req.body?.email?.trim().toLowerCase();

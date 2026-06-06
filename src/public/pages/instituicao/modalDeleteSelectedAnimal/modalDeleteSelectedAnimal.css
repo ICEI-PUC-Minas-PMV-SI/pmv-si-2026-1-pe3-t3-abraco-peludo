@@ -2,7 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal-overlay,
+.modal-overlay * {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
 .modal-overlay {
@@ -56,43 +60,51 @@
 
 .modal-botoes {
   width: 100%;
+  max-width: 360px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 24px;
+}
+
+.btn-modal-cancelar,
+.btn-modal-deletar {
+  flex: 1;
+  min-width: 0;
+  max-width: 160px;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
 }
 
 .btn-modal-cancelar {
-  width: 140px;
-  height: 36px;
   background: transparent;
-  border: 1px solid #ff8a3d;
-  border-radius: 20px;
-  color: #ff8a3d;
-  font-size: 13px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
+  border: 2px solid #FF8C42;
+  color: #FF8C42;
 }
 
 .btn-modal-cancelar:hover {
-  background: rgba(255, 138, 61, 0.1);
+  background: rgba(255, 140, 66, 0.12);
 }
 
 .btn-modal-deletar {
-  width: 140px;
-  height: 36px;
-  background: #ff3b30;
-  border: none;
-  border-radius: 20px;
-  color: white;
-  font-size: 13px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
+  background: #FF3B30;
+  border: 2px solid #FF3B30;
+  color: #FFFFFF;
 }
 
 .btn-modal-deletar:hover {
-  background: #e02d24;
+  background: #E02D24;
+  border-color: #E02D24;
 }
 
 @media (max-width: 480px) {
@@ -119,7 +131,8 @@
   
   .btn-modal-cancelar,
   .btn-modal-deletar {
+    flex: none;
     width: 100%;
-    max-width: 200px;
+    max-width: 220px;
   }
 }

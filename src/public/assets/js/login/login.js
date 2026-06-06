@@ -2,7 +2,7 @@ const USUARIO_LOGADO_KEY = 'usuarioLogado';
 
 const REDIRECIONAMENTOS = {
     adotante: '../adotante/updateRegistration/updateRegistration.html',
-    instituicao: '../instituicao/configureAccount/configureAccount.html'
+    instituicao: '../instituicao/animalList/animalList.html'
 };
 
 function normalizarIdentificador(identificador) {

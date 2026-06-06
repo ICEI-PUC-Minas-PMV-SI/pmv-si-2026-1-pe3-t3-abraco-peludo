@@ -31,8 +31,8 @@
                 </a>
                 
                 <div id="dropdownHistoryContent" class="dropdown-menu">
-                    <a href="#">Histórico de doações realizadas <i class="fa-solid fa-folder-open"></i></a>
-                    <a href="#">Animais cadastrados <i class="fa-solid fa-cat"></i></a>
+                    <a href="../donationHistory/donationHistory.html">Histórico de doações realizadas <i class="fa-solid fa-folder-open"></i></a>
+                    <a href="../animalList/animalList.html">Animais cadastrados <i class="fa-solid fa-cat"></i></a>
                 </div>
             </div>
 
@@ -91,65 +91,69 @@
                     <form id="inputContainer">
                         <div>
                             <label for="nome">Nome do animal</label>
-                            <input type="text" input id="nome" placeholder="Nome do animal" required>
+                            <input type="text" id="nome" placeholder="Nome do animal" required>
                         </div>
                         <div>
                             <label for="descricao">Descrição do animal</label>
-                            <textarea type="text" input class="descricao" placeholder="Texto" required></textarea>
+                            <textarea id="descricao" class="descricao" placeholder="Texto" required></textarea>
                         </div>
                         <div>
                             <label for="raca">Raça</label>
-                            <input type="text" input id="raca" placeholder="Raça" required>
+                            <input type="text" id="raca" placeholder="Raça" required>
                         </div>
                         <div>
                             <label for="sexo">Sexo</label>
-                            <input type="text" input id="sexo" placeholder="Sexo" required>
+                            <input type="text" id="sexo" placeholder="Sexo" required>
                         </div>
                         <div>
                             <label for="idade">Idade</label>
-                            <input type="text" input id="idade" placeholder="Idade" required>
+                            <input type="text" id="idade" placeholder="Ex: 2 anos" required>
                         </div>
 
                         <div>
                             <label for="porte">Porte</label>
-                            <select id="porte" name="Porte">
-                                <option value="p">Pequeno</option>
-                                <option value="m">Médio</option>
-                                <option value="g">Grande</option>
+                            <select id="porte" name="porte">
+                                <option value="Pequeno">Pequeno</option>
+                                <option value="Médio">Médio</option>
+                                <option value="Grande">Grande</option>
                             </select>
                         </div>
 
                         <div id="saudeAnimal">
-                            <label for="saude">Saúde do animal</label>
+                            <label>Saúde do animal</label>
                             <div>
                                 <div>
-                                    <input type="radio" id="saudavel" class="radio" name="saudeAnimal" value="saudavel">
+                                    <input type="radio" id="saudavel" class="radio" name="saudeAnimal" value="Saudável">
                                     <label for="saudavel">Saudável</label>
                                 </div>
-                                <div>                                    
-                                    <input type="radio" id="tratamento" class="radio" name="saudeAnimal" value="tratamento">
+                                <div>
+                                    <input type="radio" id="tratamento" class="radio" name="saudeAnimal" value="Em tratamento">
                                     <label for="tratamento">Em tratamento</label>
                                 </div>
-                                <div>                                    
-                                    <input type="radio" id="doente" class="radio" name="saudeAnimal" value="doente">
+                                <div>
+                                    <input type="radio" id="doente" class="radio" name="saudeAnimal" value="Doente">
                                     <label for="doente">Doente</label>
                                 </div>
                             </div>
                         </div>
 
                         <div>
-                            <label for="descricao">Mais detalhes do animal</label>
-                            <textarea type="text" input class="descricao" placeholder="Texto" required></textarea>
+                            <label for="historico">Mais detalhes do animal</label>
+                            <textarea id="historico" class="descricao" placeholder="Texto" required></textarea>
                         </div>
-                        <div>
+                        <div class="foto-campo">
                             <label for="foto">Mídia</label>
+                            <img id="fotoPreview" class="foto-preview" src="" alt="Foto atual do animal" hidden>
+                            <p id="fotoNomeAtual" class="foto-nome-atual"></p>
                             <input id="foto" type="file" accept="image/*" class="inputFoto">
                         </div>
                     </form>
 
+                    <p id="editarErro" class="editar-erro" hidden>Animal não encontrado.</p>
+
                     <div id="submitBtn">
-                        <button class="btn btnCancelar">Cancelar</button>
-                        <button class="btn btnSalvar">Atualizar</button>
+                        <button type="button" class="btn btnCancelar" id="btnCancelar">Cancelar</button>
+                        <button type="button" class="btn btnSalvar" id="btnSalvar">Atualizar</button>
                     </div>
                 </div>
             </div>
@@ -157,6 +161,9 @@
 
     </div>
 
+    <script src="../../../assets/js/config/api.js"></script>
+    <script src="../../../assets/js/animais/animaisService.js"></script>
+    <script src="../../../assets/js/instituicao/updateAnimal.js"></script>
     <script src="../../../assets/js/modal/sairContaModal.js" data-home-url="../../../index.html"></script>
 </body>
 

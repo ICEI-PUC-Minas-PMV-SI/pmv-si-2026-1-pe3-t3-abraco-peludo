@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Doações Realizadas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="../../../assets/img/logo-abraco-peludo-aba.svg">
+    <link rel="stylesheet" href="./donationHistory.css">
+    <link rel="stylesheet" href="../../../assets/css/filtros/filtrosDropdown.css">
+    <link rel="stylesheet" href="../../../assets/css/navbar/style.css">
+    <link rel="stylesheet" href="../../../assets/css/dropDown/dropDown.css">
+    <link rel="stylesheet" href="../../../assets/css/modal/sairContaModal.css">
+
+    <script src="../../../assets/js/dropDown/dropDown.js"></script>
+    <script src="../../../assets/js/dropDown/dropDownHistory.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="container-nav">
+        <div id="logo-abraco">
+            <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
+        </div>
+
+        <div class="dropDown">
+            <div id="dropdownHistory">
+                <a href="#" id="dropdownButton" class="active dropBtn" onclick="toggleDropdownHistory()">
+                    Painel de Histórico
+                </a>
+
+                <div id="dropdownHistoryContent" class="dropdown-menu">
+                    <a href="./donationHistory.html">Histórico de doações realizadas <i class="fa-solid fa-folder-open"></i></a>
+                    <a href="../animalList/animalList.html">Animais cadastrados <i class="fa-solid fa-cat"></i></a>
+                </div>
+            </div>
+
+            <a href="#">Pedidos de Adoção</a>
+
+            <div id="userDropdown">
+                <a href="#" id="dropdownButtonMenu" class="dropBtn" onclick="toggleDropdownMenu()">
+                    <img src="../../../assets/img/icon-perfil-dog.svg" class="fa-dog" alt="Perfil">
+                </a>
+
+                <div id="dropdownMenuContent" class="dropdown-menu">
+                    <a href="#">Visualizar perfil ONG <i class="fa-regular fa-eye"></i></a>
+                    <a href="../configureAccount/configureAccount.html">
+                        Configurações da conta <i class="fa-solid fa-gear"></i>
+                    </a>
+                    <a href="../updadeProfile/updadeProfile.html">
+                        Atualizar perfil <i class="fa-solid fa-pen-to-square"></i>
+                    </a>
+                    <a href="#" id="btnLogout">
+                        Sair <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="historyDropdown" class="dropdown-menu" style="display: none;">
+        <a href="./donationHistory.html">Histórico de doações realizadas <i class="fa-solid fa-folder-open"></i></a>
+        <a href="../animalList/animalList.html">Animais cadastrados <i class="fa-solid fa-cat"></i></a>
+    </div>
+
+    <main class="doacoes-page">
+        <h1 class="doacoes-title">Histórico de Doações Realizadas</h1>
+
+        <div class="doacoes-toolbar">
+            <div class="doacoes-search-group">
+                <button type="button" class="doacoes-search-icon-btn" aria-label="Buscar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <input type="search" id="buscaDoacao" class="doacoes-search-input" placeholder="Buscar doação...">
+                <button type="button" id="btnSearch" class="doacoes-search-btn">Search</button>
+            </div>
+
+            <div class="filtros-dropdown-wrapper">
+                <button type="button" id="btnFiltros" class="btn-filtros-toggle">
+                    <i class="fa-solid fa-filter"></i>
+                    Filtros
+                </button>
+
+                <div id="filtrosDropdown" class="filtros-dropdown-panel" hidden>
+                    <div class="filtros-dropdown-header">
+                        <span class="filtros-icone-circulo">
+                            <i class="fa-solid fa-filter"></i>
+                        </span>
+                        <span>Filtros</span>
+                    </div>
+                    <div class="filtros-dropdown-body">
+                        <div class="filtro-campo">
+                            <label for="filtroIdade">Idade</label>
+                            <select id="filtroIdade">
+                                <option value="">Clique para selecionar</option>
+                            </select>
+                        </div>
+                        <div class="filtro-campo">
+                            <label for="filtroRaca">Raça</label>
+                            <select id="filtroRaca">
+                                <option value="">Clique para selecionar</option>
+                            </select>
+                        </div>
+                        <div class="filtro-campo">
+                            <label for="filtroSexo">Sexo</label>
+                            <select id="filtroSexo">
+                                <option value="">Clique para selecionar</option>
+                                <option value="Macho">Macho</option>
+                                <option value="Fêmea">Fêmea</option>
+                            </select>
+                        </div>
+                        <div class="filtro-campo">
+                            <label for="filtroLocalizacao">Localização</label>
+                            <select id="filtroLocalizacao">
+                                <option value="">Clique para selecionar</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="doacoesGrid" class="doacoes-grid"></div>
+        <p id="doacoesEmpty" class="doacoes-empty" hidden>Nenhuma doação encontrada.</p>
+    </main>
+
+    <script src="../../../assets/js/config/api.js"></script>
+    <script src="../../../assets/js/instituicao/donationHistory.js"></script>
+    <script src="../../../assets/js/modal/sairContaModal.js" data-home-url="../../../index.html"></script>
+</body>
+
+</html>

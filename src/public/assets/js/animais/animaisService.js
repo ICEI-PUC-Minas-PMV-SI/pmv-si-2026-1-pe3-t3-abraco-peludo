@@ -101,7 +101,9 @@ function filtrarAnimais(animais, filtros) {
 }
 
 function obterCaminhoFoto(foto) {
-    return `../../../assets/img/${foto || 'icon-pata.svg'}`;
+    if (!foto) return '../../../assets/img/icon-pata.svg';
+    if (foto.startsWith('data:')) return foto;
+    return `../../../assets/img/${foto}`;
 }
 
 function obterUsuarioLogado() {
