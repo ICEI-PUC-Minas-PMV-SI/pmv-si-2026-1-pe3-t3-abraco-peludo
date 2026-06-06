@@ -16,6 +16,7 @@
     <script src="../../../assets/js/dropDown/dropDownHistory.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../assets/css/modal/deleteAccountModal.css">
 </head>
 
 <body>
@@ -29,9 +30,10 @@
                 <a href="#" id="dropdownButton" class="active dropBtn" onclick="toggleDropdownHistory()">
                     Painel de Histórico
                 </a>
-                
+
                 <div id="dropdownHistoryContent" class="dropdown-menu">
-                    <a href="../donationHistory/donationHistory.html">Histórico de doações realizadas <i class="fa-solid fa-folder-open"></i></a>
+                    <a href="../donationHistory/donationHistory.html">Histórico de doações realizadas <i
+                            class="fa-solid fa-folder-open"></i></a>
                     <a href="../animalList/animalList.html">Animais cadastrados <i class="fa-solid fa-cat"></i></a>
                 </div>
             </div>
@@ -60,7 +62,8 @@
     </div>
 
     <div id="historyDropdown" class="dropdown-menu" style="display: none;">
-        <a href="../donationHistory/donationHistory.html">Histórico de doações realizadas <i class="fa-solid fa-folder-open"></i></a>
+        <a href="../donationHistory/donationHistory.html">Histórico de doações realizadas <i
+                class="fa-solid fa-folder-open"></i></a>
         <a href="../animalList/animalList.html">Animais cadastrados <i class="fa-solid fa-cat"></i></a>
     </div>
 
@@ -85,7 +88,7 @@
                         <p>Atualizar perfil</p>
                     </a>
 
-                    <a href="#" class="asideBtnText">
+                    <a href="#" class="asideBtnText" data-excluir-conta>
                         <i class="fa-regular fa-trash-can"></i>
                         <p>Excluir conta</p>
                     </a>
@@ -145,7 +148,7 @@
                         </div>
                         <div>
                             <label for="email">Email</label>
-                            <input type="text" input id="endereco" placeholder="Email" required>
+                            <input type="email" input id="email" placeholder="Email" required>
                         </div>
                         <div>
                             <label for="senha">Senha</label>
@@ -167,6 +170,8 @@
 
     </div>
 
+    <script src="../../../assets/js/configureAccount/configureAccount.js"></script>
+    <script src="../../../assets/js/modal/deleteAccountModal.js"></script>
     <script src="../../../assets/js/modal/sairContaModal.js" data-home-url="../../../index.html"></script>
 </body>
 
