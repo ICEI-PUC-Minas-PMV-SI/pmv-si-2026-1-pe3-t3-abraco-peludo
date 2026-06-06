@@ -1,5 +1,4 @@
 const CADASTRO_ADOTANTE_KEY = 'cadastroAdotante';
-const ADOTANTES_STORAGE_KEY = 'adotantes';
 
 function getCadastroAdotante() {
     const dados = sessionStorage.getItem(CADASTRO_ADOTANTE_KEY);
@@ -11,21 +10,6 @@ function salvarCadastroAdotante(dados, etapaAtual) {
     const cadastroAtualizado = { ...cadastroAtual, ...dados, etapaAtual };
     sessionStorage.setItem(CADASTRO_ADOTANTE_KEY, JSON.stringify(cadastroAtualizado));
     return cadastroAtualizado;
-}
-
-async function carregarAdotantesJson() {
-    try {
-        const response = await fetch('../../../data/adotantes.json');
-        if (!response.ok) return { adotantes: [] };
-        return await response.json();
-    } catch {
-        const dadosLocal = localStorage.getItem(ADOTANTES_STORAGE_KEY);
-        return dadosLocal ? JSON.parse(dadosLocal) : { adotantes: [] };
-    }
-}
-
-function salvarAdotantesLocal(dados) {
-    localStorage.setItem(ADOTANTES_STORAGE_KEY, JSON.stringify(dados));
 }
 
 function exibirErros(campos, erros) {
@@ -65,17 +49,24 @@ function formatarCpf(valor) {
         .replace(/\.(\d{3})(\d)/, '.$1-$2');
 }
 
+async function emailJaCadastrado(email) {
+    const adotantes = await apiGet('adotantes', { email });
+    return adotantes.length > 0;
+}
+
 async function finalizarCadastroAdotante(adotante) {
-    const dados = await carregarAdotantesJson();
-    const novoAdotante = {
-        id: Date.now().toString(),
+    const emailNormalizado = adotante.email.trim().toLowerCase();
+
+    if (await emailJaCadastrado(emailNormalizado)) {
+        throw new Error('E-mail já cadastrado');
+    }
+
+    const novoAdotante = await apiPost('adotantes', {
         ...adotante,
+        email: emailNormalizado,
         criadoEm: new Date().toISOString()
-    };
+    });
 
-    dados.adotantes.push(novoAdotante);
-    salvarAdotantesLocal(dados);
     sessionStorage.removeItem(CADASTRO_ADOTANTE_KEY);
-
     return novoAdotante;
 }

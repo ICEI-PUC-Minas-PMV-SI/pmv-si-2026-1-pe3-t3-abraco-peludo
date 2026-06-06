@@ -1,5 +1,4 @@
 const CADASTRO_INSTITUICAO_KEY = 'cadastroInstituicao';
-const INSTITUICOES_STORAGE_KEY = 'instituicoes';
 
 function getCadastroInstituicao() {
     const dados = sessionStorage.getItem(CADASTRO_INSTITUICAO_KEY);
@@ -11,21 +10,6 @@ function salvarCadastroInstituicao(dados, etapaAtual) {
     const cadastroAtualizado = { ...cadastroAtual, ...dados, etapaAtual };
     sessionStorage.setItem(CADASTRO_INSTITUICAO_KEY, JSON.stringify(cadastroAtualizado));
     return cadastroAtualizado;
-}
-
-async function carregarInstituicoesJson() {
-    try {
-        const response = await fetch('../../../data/instituicoes.json');
-        if (!response.ok) return { instituicoes: [] };
-        return await response.json();
-    } catch {
-        const dadosLocal = localStorage.getItem(INSTITUICOES_STORAGE_KEY);
-        return dadosLocal ? JSON.parse(dadosLocal) : { instituicoes: [] };
-    }
-}
-
-function salvarInstituicoesLocal(dados) {
-    localStorage.setItem(INSTITUICOES_STORAGE_KEY, JSON.stringify(dados));
 }
 
 function exibirErros(campos, erros) {
@@ -85,17 +69,24 @@ function lerArquivoComoBase64(arquivo) {
     });
 }
 
+async function emailInstituicaoJaCadastrado(email) {
+    const instituicoes = await apiGet('instituicoes', { email });
+    return instituicoes.length > 0;
+}
+
 async function finalizarCadastroInstituicao(instituicao) {
-    const dados = await carregarInstituicoesJson();
-    const novaInstituicao = {
-        id: Date.now().toString(),
+    const emailNormalizado = instituicao.email.trim().toLowerCase();
+
+    if (await emailInstituicaoJaCadastrado(emailNormalizado)) {
+        throw new Error('E-mail já cadastrado');
+    }
+
+    const novaInstituicao = await apiPost('instituicoes', {
         ...instituicao,
+        email: emailNormalizado,
         criadoEm: new Date().toISOString()
-    };
+    });
 
-    dados.instituicoes.push(novaInstituicao);
-    salvarInstituicoesLocal(dados);
     sessionStorage.removeItem(CADASTRO_INSTITUICAO_KEY);
-
     return novaInstituicao;
 }

@@ -82,9 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
             dataFundacao
         }, 2);
 
-        const dadosJson = await carregarInstituicoesJson();
-        salvarInstituicoesLocal(dadosJson);
-
         window.location.href = 'cadastroInstituicaoEtapa3.html';
     });
 });

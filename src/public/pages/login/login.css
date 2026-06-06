@@ -57,6 +57,43 @@
     background-color: var(--branco);
     margin-bottom: 15px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.input-group-senha .login-input-senha {
+    padding-right: 45px;
+}
+
+.btn-toggle-senha {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-toggle-senha svg {
+    width: 22px;
+    height: 22px;
+    fill: #9A9A9A;
+}
+
+.btn-toggle-senha .icon-eye-off {
+    display: none;
+}
+
+.btn-toggle-senha.senha-visivel .icon-eye {
+    display: none;
+}
+
+.btn-toggle-senha.senha-visivel .icon-eye-off {
+    display: block;
 }
 
 .input-icon-box {
@@ -86,6 +123,20 @@
 
 .login-input::placeholder {
     color: #A69483; 
+}
+
+.login-error {
+    display: none;
+    width: 100%;
+    margin-bottom: 15px;
+    font-family: "Inter", sans-serif;
+    font-size: 0.85rem;
+    color: #c0392b;
+    text-align: center;
+}
+
+.login-error.visible {
+    display: block;
 }
 
 .forgot-password {

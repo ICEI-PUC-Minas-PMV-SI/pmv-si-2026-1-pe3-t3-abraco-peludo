@@ -117,9 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
             fotoNome: fotoTexto.textContent
         }, 4);
 
-        const dadosJson = await carregarInstituicoesJson();
-        salvarInstituicoesLocal(dadosJson);
-
         window.location.href = 'cadastroInstituicaoEtapa5.html';
     });
 });

@@ -93,9 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
             cep: cep.trim()
         }, 3);
 
-        const dadosJson = await carregarInstituicoesJson();
-        salvarInstituicoesLocal(dadosJson);
-
         window.location.href = 'cadastroInstituicaoEtapa4.html';
     });
 });

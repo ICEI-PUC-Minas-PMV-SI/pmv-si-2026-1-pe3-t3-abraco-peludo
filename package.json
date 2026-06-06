@@ -1,0 +1,10 @@
+{
+  "name": "abraco-peludo",
+  "private": true,
+  "scripts": {
+    "api": "json-server --watch src/public/data/db.json --port 3000"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.4"
+  }
+}

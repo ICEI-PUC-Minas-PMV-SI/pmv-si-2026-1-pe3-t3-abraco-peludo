@@ -70,9 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
             senha
         }, 1);
 
-        const dadosJson = await carregarInstituicoesJson();
-        salvarInstituicoesLocal(dadosJson);
-
         window.location.href = 'cadastroInstituicaoEtapa2.html';
     });
 });

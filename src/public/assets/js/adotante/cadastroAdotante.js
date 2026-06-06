@@ -109,9 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
             senha
         }, 1);
 
-        const dadosJson = await carregarAdotantesJson();
-        salvarAdotantesLocal(dadosJson);
-
         window.location.href = 'cadastroAdotanteTermos.html';
     });
 });
