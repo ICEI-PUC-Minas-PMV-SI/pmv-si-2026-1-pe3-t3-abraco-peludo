@@ -9,6 +9,36 @@
       "aceitouTermos": true,
       "criadoEm": "2026-06-06T15:03:09.176Z",
       "id": 1
+    },
+    {
+      "nomeCompleto": "Raissa",
+      "cpf": "294.861.370-20",
+      "dataNascimento": "2026-06-01",
+      "email": "raissabarbierif@gmail.com",
+      "senha": "123456",
+      "aceitouTermos": true,
+      "criadoEm": "2026-06-06T15:19:49.231Z",
+      "id": 2
+    }
+  ],
+  "tokensRecuperacao": [
+    {
+      "token": "af80c5eb-306b-49b5-99a7-02faf91c6a0a",
+      "email": "raissabarbierif@gmail.com",
+      "tipo": "adotante",
+      "usuarioId": 2,
+      "expiraEm": "2026-06-06T16:19:56.749Z",
+      "usado": false,
+      "criadoEm": "2026-06-06T15:19:56.749Z"
+    },
+    {
+      "token": "9528c336-5ce5-4cda-83b8-d7bf4c9865dd",
+      "email": "raissabarbierif@gmail.com",
+      "tipo": "adotante",
+      "usuarioId": 2,
+      "expiraEm": "2026-06-06T16:23:12.566Z",
+      "usado": false,
+      "criadoEm": "2026-06-06T15:23:12.566Z"
     }
   ],
   "instituicoes": [

@@ -25,3 +25,19 @@ async function apiPost(recurso, dados) {
 
     return response.json();
 }
+
+async function apiPostEndpoint(endpoint, dados) {
+    const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(dados)
+    });
+
+    const resultado = await response.json();
+
+    if (!response.ok) {
+        throw new Error(resultado.mensagem || 'Erro na requisição.');
+    }
+
+    return resultado;
+}
