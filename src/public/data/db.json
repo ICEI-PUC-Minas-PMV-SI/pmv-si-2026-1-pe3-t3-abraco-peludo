@@ -233,24 +233,83 @@
     {
       "id": 1,
       "adotanteId": 1,
-      "nome": "Ruffe",
-      "idade": "2 anos",
-      "raca": "Vira-lata",
-      "sexo": "Macho",
-      "cidade": "Belo Horizonte",
-      "foto": "icon-cachorro.svg",
+      "instituicaoId": 1,
+      "nomeOng": "ONG Focinho Feliz",
+      "nomePet": "Ruffe",
+      "statusPet": "Concluída",
       "dataAdocao": "2025-10-10"
     },
     {
       "id": 2,
       "adotanteId": 1,
-      "nome": "Loro",
-      "idade": "18 meses",
-      "raca": "SRD",
-      "sexo": "Fêmea",
-      "cidade": "Ibirité",
-      "foto": "img-gato-4.svg",
+      "instituicaoId": 1,
+      "nomeOng": "ONG Focinho Feliz",
+      "nomePet": "Loro",
+      "statusPet": "Concluída",
       "dataAdocao": "2025-09-28"
+    },
+    {
+      "id": 3,
+      "adotanteId": 1,
+      "instituicaoId": 1,
+      "nomeOng": "ONG Focinho Feliz",
+      "nomePet": "Miau",
+      "statusPet": "Em andamento",
+      "dataAdocao": "2025-08-15"
+    },
+    {
+      "id": 4,
+      "adotanteId": 1,
+      "instituicaoId": 1,
+      "nomeOng": "ONG Focinho Feliz",
+      "nomePet": "Bob",
+      "statusPet": "Aguardando aprovação",
+      "dataAdocao": "2025-07-22"
+    },
+    {
+      "id": 5,
+      "adotanteId": 1,
+      "instituicaoId": 1,
+      "nomeOng": "ONG Focinho Feliz",
+      "nomePet": "Luna",
+      "statusPet": "Concluída",
+      "dataAdocao": "2025-06-10"
+    },
+    {
+      "id": 6,
+      "adotanteId": 1,
+      "instituicaoId": 1,
+      "nomeOng": "ONG Focinho Feliz",
+      "nomePet": "Thor",
+      "statusPet": "Cancelada",
+      "dataAdocao": "2025-05-03"
+    },
+    {
+      "id": 7,
+      "adotanteId": 1,
+      "instituicaoId": 1,
+      "nomeOng": "ONG Focinho Feliz",
+      "nomePet": "Mel",
+      "statusPet": "Concluída",
+      "dataAdocao": "2025-04-18"
+    },
+    {
+      "id": 8,
+      "adotanteId": 2,
+      "instituicaoId": 1,
+      "nomeOng": "ONG Focinho Feliz",
+      "nomePet": "Pingo",
+      "statusPet": "Em andamento",
+      "dataAdocao": "2025-09-05"
+    },
+    {
+      "id": 9,
+      "adotanteId": 2,
+      "instituicaoId": 1,
+      "nomeOng": "ONG Focinho Feliz",
+      "nomePet": "Docinho",
+      "statusPet": "Concluída",
+      "dataAdocao": "2025-03-28"
     }
   ]
 }

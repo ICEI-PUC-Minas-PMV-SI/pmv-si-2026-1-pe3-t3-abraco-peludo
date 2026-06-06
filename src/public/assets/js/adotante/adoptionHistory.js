@@ -1,25 +1,35 @@
-let todasAdocoes = [];
+const INSTITUICOES_FALLBACK = [
+    { id: 1, nome: 'ONG Focinho Feliz' }
+];
 
 const ADOCOES_FALLBACK = [
     {
         id: 1,
         adotanteId: 1,
-        nome: 'Ruffe',
-        idade: '2 anos',
-        raca: 'Vira-lata',
-        sexo: 'Macho',
-        cidade: 'Belo Horizonte',
-        foto: 'icon-cachorro.svg'
+        instituicaoId: 1,
+        nomeOng: 'ONG Focinho Feliz',
+        nomePet: 'Ruffe',
+        statusPet: 'Concluída',
+        dataAdocao: '2025-10-10'
+    },
+    {
+        id: 2,
+        adotanteId: 1,
+        instituicaoId: 1,
+        nomeOng: 'ONG Focinho Feliz',
+        nomePet: 'Loro',
+        statusPet: 'Concluída',
+        dataAdocao: '2025-09-28'
     }
 ];
 
-async function carregarAdocoes() {
+async function carregarRecurso(recurso, fallback = []) {
     try {
-        const response = await fetch(`${API_BASE_URL}/adocoes`);
-        if (!response.ok) return ADOCOES_FALLBACK;
+        const response = await fetch(`${API_BASE_URL}/${recurso}`);
+        if (!response.ok) return fallback;
         return await response.json();
     } catch {
-        return ADOCOES_FALLBACK;
+        return fallback;
     }
 }
 
@@ -28,153 +38,134 @@ function obterUsuarioLogado() {
     return dados ? JSON.parse(dados) : null;
 }
 
-function obterCaminhoFoto(foto) {
-    return `../../../assets/img/${foto || 'icon-pata.svg'}`;
+function formatarData(dataIso) {
+    if (!dataIso) return '—';
+
+    const [ano, mes, dia] = dataIso.split('-');
+    if (!ano || !mes || !dia) return '—';
+
+    return `${dia} / ${mes} / ${ano}`;
 }
 
-function normalizarTexto(valor) {
-    return (valor || '').toString().toLowerCase().trim();
+function obterNomePet(adocao) {
+    return adocao.nomePet || adocao.nome || '—';
 }
 
-function filtrarAdocoes(adocoes, filtros) {
-    const busca = normalizarTexto(filtros.busca);
+function criarMapaInstituicoes(instituicoes) {
+    const lista = instituicoes.length ? instituicoes : INSTITUICOES_FALLBACK;
 
-    return adocoes.filter((adocao) => {
-        if (filtros.adotanteId && adocao.adotanteId !== filtros.adotanteId) {
-            return false;
-        }
+    return new Map(
+        lista.map((instituicao) => [Number(instituicao.id), instituicao])
+    );
+}
 
-        if (filtros.idade && adocao.idade !== filtros.idade) {
-            return false;
-        }
+function criarMapaAnimaisPorNome(animais) {
+    return new Map(
+        animais.map((animal) => [animal.nome?.toLowerCase().trim(), animal])
+    );
+}
 
-        if (filtros.raca && adocao.raca !== filtros.raca) {
-            return false;
-        }
+function criarMapaAnimaisPorId(animais) {
+    return new Map(
+        animais.map((animal) => [Number(animal.id), animal])
+    );
+}
 
-        if (filtros.sexo && adocao.sexo !== filtros.sexo) {
-            return false;
-        }
+function resolverInstituicaoId(adocao, animaisPorNome, animaisPorId, instituicoesPorId) {
+    if (adocao.instituicaoId) {
+        return Number(adocao.instituicaoId);
+    }
 
-        if (filtros.cidade && adocao.cidade !== filtros.cidade) {
-            return false;
-        }
+    if (adocao.animalId) {
+        const animal = animaisPorId.get(Number(adocao.animalId));
+        if (animal?.instituicaoId) return Number(animal.instituicaoId);
+    }
 
-        if (busca) {
-            const texto = [
-                adocao.nome,
-                adocao.idade,
-                adocao.raca,
-                adocao.cidade
-            ].map(normalizarTexto).join(' ');
+    const nomePet = obterNomePet(adocao);
+    if (nomePet !== '—') {
+        const animal = animaisPorNome.get(nomePet.toLowerCase().trim());
+        if (animal?.instituicaoId) return Number(animal.instituicaoId);
+    }
 
-            if (!texto.includes(busca)) return false;
-        }
+    if (instituicoesPorId.size === 1) {
+        return Number(instituicoesPorId.keys().next().value);
+    }
 
-        return true;
+    return 1;
+}
+
+function obterNomeOng(adocao, instituicoesPorId, instituicaoId) {
+    if (adocao.nomeOng) return adocao.nomeOng;
+
+    const instituicao = instituicoesPorId.get(Number(instituicaoId));
+    if (instituicao?.nome) return instituicao.nome;
+
+    return INSTITUICOES_FALLBACK[0]?.nome || 'ONG parceira';
+}
+
+function obterStatusPet(adocao) {
+    return adocao.statusPet || 'Em andamento';
+}
+
+function enriquecerAdocoes(adocoes, instituicoes, animais) {
+    const instituicoesPorId = criarMapaInstituicoes(instituicoes);
+    const animaisPorNome = criarMapaAnimaisPorNome(animais);
+    const animaisPorId = criarMapaAnimaisPorId(animais);
+
+    return adocoes.map((adocao) => {
+        const instituicaoId = resolverInstituicaoId(
+            adocao,
+            animaisPorNome,
+            animaisPorId,
+            instituicoesPorId
+        );
+
+        return {
+            ...adocao,
+            instituicaoId,
+            nomeOng: obterNomeOng(adocao, instituicoesPorId, instituicaoId),
+            nomePet: obterNomePet(adocao),
+            statusPet: obterStatusPet(adocao)
+        };
     });
 }
 
-function renderizarCards(adocoes) {
-    const grid = document.getElementById('historicoGrid');
+function renderizarLista(adocoes) {
+    const lista = document.getElementById('historicoLista');
     const vazio = document.getElementById('historicoEmpty');
 
     if (!adocoes.length) {
-        grid.innerHTML = '';
+        lista.innerHTML = '';
         vazio.hidden = false;
         return;
     }
 
     vazio.hidden = true;
-    grid.innerHTML = adocoes.map((adocao) => `
-        <article class="historico-card">
-            <img src="${obterCaminhoFoto(adocao.foto)}" alt="${adocao.nome}" class="historico-card-photo">
-            <p class="historico-card-label">${adocao.nome} - ${adocao.idade} - ${adocao.cidade}</p>
+    lista.innerHTML = adocoes.map((adocao) => `
+        <article class="historico-linha">
+            <span class="historico-col" data-label="Data">${formatarData(adocao.dataAdocao)}</span>
+            <span class="historico-col" data-label="Nome da ONG">${adocao.nomeOng}</span>
+            <span class="historico-col" data-label="Nome do pet">${adocao.nomePet}</span>
+            <span class="historico-col" data-label="Status do pet">${adocao.statusPet}</span>
         </article>
     `).join('');
 }
 
-function preencherSelect(selectId, valores) {
-    const select = document.getElementById(selectId);
-
-    select.innerHTML = '<option value="">Clique para selecionar</option>';
-
-    valores.forEach((valor) => {
-        const option = document.createElement('option');
-        option.value = valor;
-        option.textContent = valor;
-        select.appendChild(option);
-    });
-}
-
-function aplicarFiltros() {
-    const sessao = obterUsuarioLogado();
-    const adotanteId = sessao?.usuario?.id || 1;
-
-    const filtrados = filtrarAdocoes(todasAdocoes, {
-        adotanteId: Number(adotanteId),
-        busca: document.getElementById('buscaHistorico').value,
-        idade: document.getElementById('filtroIdade').value,
-        raca: document.getElementById('filtroRaca').value,
-        sexo: document.getElementById('filtroSexo').value,
-        cidade: document.getElementById('filtroLocalizacao').value
-    });
-
-    renderizarCards(filtrados);
-}
-
-function initFiltrosDropdown() {
-    const btnFiltros = document.getElementById('btnFiltros');
-    const painel = document.getElementById('filtrosDropdown');
-
-    btnFiltros.addEventListener('click', (event) => {
-        event.stopPropagation();
-        const aberto = !painel.classList.contains('aberto');
-        painel.classList.toggle('aberto', aberto);
-        painel.hidden = !aberto;
-        btnFiltros.classList.toggle('ativo', aberto);
-    });
-
-    document.addEventListener('click', (event) => {
-        if (!event.target.closest('.filtros-dropdown-wrapper')) {
-            painel.classList.remove('aberto');
-            painel.hidden = true;
-            btnFiltros.classList.remove('ativo');
-        }
-    });
-
-    painel.addEventListener('click', (event) => event.stopPropagation());
-}
-
-function initSelectsEstilo() {
-    document.querySelectorAll('.filtro-campo select').forEach((select) => {
-        select.addEventListener('change', () => {
-            select.classList.toggle('opcao-selecionada', Boolean(select.value));
-            aplicarFiltros();
-        });
-    });
-}
-
 document.addEventListener('DOMContentLoaded', async () => {
-    todasAdocoes = await carregarAdocoes();
-
     const sessao = obterUsuarioLogado();
-    const adotanteId = sessao?.usuario?.id || 1;
-    const adocoesAdotante = todasAdocoes.filter((a) => a.adotanteId === Number(adotanteId));
+    const adotanteId = Number(sessao?.usuario?.id || 1);
 
-    preencherSelect('filtroIdade', [...new Set(adocoesAdotante.map((a) => a.idade))]);
-    preencherSelect('filtroRaca', [...new Set(adocoesAdotante.map((a) => a.raca))]);
-    preencherSelect('filtroLocalizacao', [...new Set(adocoesAdotante.map((a) => a.cidade))]);
+    const [todasAdocoes, instituicoes, animais] = await Promise.all([
+        carregarRecurso('adocoes', ADOCOES_FALLBACK),
+        carregarRecurso('instituicoes', INSTITUICOES_FALLBACK),
+        carregarRecurso('animais', [])
+    ]);
 
-    initFiltrosDropdown();
-    initSelectsEstilo();
+    const adocoesAdotante = enriquecerAdocoes(
+        todasAdocoes.filter((adocao) => Number(adocao.adotanteId) === adotanteId),
+        instituicoes,
+        animais
+    ).sort((a, b) => new Date(b.dataAdocao) - new Date(a.dataAdocao));
 
-    document.getElementById('buscaHistorico').addEventListener('input', aplicarFiltros);
-    document.getElementById('buscaHistorico').addEventListener('keydown', (event) => {
-        if (event.key === 'Enter') {
-            event.preventDefault();
-            aplicarFiltros();
-        }
-    });
-    aplicarFiltros();
+    renderizarLista(adocoesAdotante);
 });
