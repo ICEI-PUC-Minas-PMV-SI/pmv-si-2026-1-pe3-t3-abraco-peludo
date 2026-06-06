@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atualizar perfil</title>
 
-    <link rel="icon" type="image/x-icon" href="../../../assets/img/logo-abraco-peludo-aba.svg">    
+    <link rel="icon" type="image/x-icon" href="../../../assets/img/logo-abraco-peludo-aba.svg">
     <link rel="stylesheet" href="./updadeProfile.css">
     <link rel="stylesheet" href="../../../assets/css/navbar/style.css">
 
@@ -16,6 +16,7 @@
     <script src="../../../assets/js/dropDown/dropDownHistory.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../assets/css/modal/deleteAccountModal.css">
 </head>
 
 <body>
@@ -29,9 +30,10 @@
                 <a href="#" id="dropdownButton" class="active dropBtn" onclick="toggleDropdownHistory()">
                     Painel de Histórico
                 </a>
-                
+
                 <div id="dropdownHistoryContent" class="dropdown-menu">
-                    <a href="../donationHistory/donationHistory.html">Histórico de doações realizadas <i class="fa-solid fa-folder-open"></i></a>
+                    <a href="../donationHistory/donationHistory.html">Histórico de doações realizadas <i
+                            class="fa-solid fa-folder-open"></i></a>
                     <a href="../animalList/animalList.html">Animais cadastrados <i class="fa-solid fa-cat"></i></a>
                 </div>
             </div>
@@ -58,7 +60,7 @@
             </div>
         </div>
     </div>
-    
+
 
     <div id="main">
         <aside>
@@ -80,8 +82,8 @@
                         <i class="fa-solid fa-brush"></i>
                         <p>Atualizar perfil</p>
                     </a>
-
-                    <a href="#" class="asideBtnText">
+                    
+                    <a href="#" class="asideBtnText" data-excluir-conta>
                         <i class="fa-regular fa-trash-can"></i>
                         <p>Excluir conta</p>
                     </a>
@@ -106,6 +108,8 @@
                         <div>
                             <label for="foto">Mídia</label>
                             <input id="foto" type="file" accept="image/*" class="inputFoto">
+                            <img id="fotoPreview" hidden style="max-width: 200px; margin-top: 8px; border-radius: 8px;">
+                            <p id="fotoNomeAtual" style="font-size: 0.85rem; color: #666;"></p>
                         </div>
                     </form>
 
@@ -118,8 +122,10 @@
         </div>
 
     </div>
-
+    
+    <script src="../../../assets/js/updateProfile/updateProfile.js"></script>
     <script src="../../../assets/js/modal/sairContaModal.js" data-home-url="../../../index.html"></script>
+    <script src="../../../assets/js/modal/deleteAccountModal.js"></script>
 </body>
 
 </html>
