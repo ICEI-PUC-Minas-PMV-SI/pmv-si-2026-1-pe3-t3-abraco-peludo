@@ -48,6 +48,11 @@ body {
     font-size: 20px;
     font-weight: 700;
     text-decoration: underline;
+    cursor: pointer;
+}
+
+.perfil-ong-titulo:hover {
+    color: #7C3E12;
 }
 
 .perfil-ong-titulo img {

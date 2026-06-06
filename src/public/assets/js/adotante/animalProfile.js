@@ -51,6 +51,9 @@ function preencherPerfil(animal, instituicao) {
     document.getElementById('perfilHistorico').textContent = animal.historico || '';
 
     document.getElementById('perfilOngNome').textContent = instituicao?.nome || 'ONG parceira';
+    document.getElementById('perfilOngLink').href = instituicao?.id
+        ? `../ongProfile/ongProfile.html?id=${instituicao.id}`
+        : '#';
     document.getElementById('perfilOngDescricao').textContent = instituicao?.descricao || '';
     document.getElementById('perfilOngTelefone').textContent = instituicao?.telefone || 'Telefone não informado';
 

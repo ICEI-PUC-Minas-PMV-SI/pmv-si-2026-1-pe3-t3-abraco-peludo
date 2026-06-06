@@ -45,12 +45,28 @@
     animation-timing-function: linear;
 }
 
-#container-nav > div > a {
+#container-nav > div > a,
+#container-nav #dropdownButton,
+#container-nav .dropBtn {
     color: var(--branco);
     text-decoration: none;
     font-family: "Inter", sans-serif;
     font-weight: 500;
     font-size: 1.1rem;
+}
+
+#container-nav #dropdownButton:visited,
+#container-nav .dropBtn:visited {
+    color: var(--branco);
+}
+
+#container-nav #dropdownHistory,
+#container-nav #userDropdown {
+    position: relative;
+}
+
+#container-nav #dropdownButton {
+    position: relative;
 }
 
 .active{
