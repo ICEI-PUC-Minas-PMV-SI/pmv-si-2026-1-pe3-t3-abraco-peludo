@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação de Solicitação de Adoção - Abraço Peludo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="../../../assets/img/logo-abraco-peludo-aba.svg">
+    
+    <link rel="stylesheet" href="./adoptionRequest.css">
+    <link rel="stylesheet" href="../../../assets/css/navbar/style.css">
+    <link rel="stylesheet" href="../../../assets/css/dropDown/dropDown.css">
+    <link rel="stylesheet" href="../../../assets/css/modal/sairContaModal.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <script src="../../../assets/js/dropDown/dropDown.js"></script>
+    <script src="../../../assets/js/dropDown/dropDownHistory.js"></script>
+</head>
+
+<body>
+
+    <div id="container-nav">
+        <div id="logo-abraco">
+            <a href="../../../index.html">
+                <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
+            </a>
+        </div>
+
+        <div class="dropDown">
+            <div id="dropdownHistory">
+                <a href="#" id="dropdownButton" class="dropBtn" onclick="toggleDropdownHistory()">
+                    Painel de Histórico
+                </a>
+                <div id="dropdownHistoryContent" class="dropdown-menu">
+                    <a href="../donationHistory/donationHistory.html">Histórico de doações realizadas <i class="fa-solid fa-folder-open"></i></a>
+                    <a href="../animalList/animalList.html">Animais cadastrados <i class="fa-solid fa-cat"></i></a>
+                </div>
+            </div>
+
+            <a href="../pedidosAdocao/pedidosAdocao.html" class="active">Pedidos de Adoção</a>
+
+            <div id="userDropdown">
+                <a href="#" id="dropdownButtonMenu" class="dropBtn" onclick="toggleDropdownMenu()">
+                    <img src="../../../assets/img/icon-perfil-dog.svg" class="fa-dog" alt="Perfil">
+                </a>
+                <div id="dropdownMenuContent" class="dropdown-menu">
+                    <a href="../ongProfile/ongProfile.html">Visualizar perfil ONG <i class="fa-regular fa-eye"></i></a>
+                    <a href="../configureAccount/configureAccount.html">Configurações da conta <i class="fa-solid fa-gear"></i></a>
+                    <a href="../updadeProfile/updadeProfile.html">Atualizar perfil <i class="fa-solid fa-pen-to-square"></i></a>
+                    <a href="#" id="btnLogout">Sair <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="solicitacao-page">
+        <h1 class="solicitacao-titulo">Solicitação de Adoção</h1>
+
+        <div class="solicitacao-container">
+            
+            <section class="animal-sidebar-card">
+                <img src="../../../assets/img/img-cao-1.svg" class="animal-foto-detalhe" alt="Foto do Ruffus">
+                
+                <div class="animal-ong-info">
+                    <div class="ong-header-inline">
+                        <i class="fa-solid fa-house-chimney icon-ong-home"></i>
+                        <h2>ONG Focinho Feliz</h2>
+                    </div>
+                    <p>A Focinho Feliz é uma ONG dedicada a transformar a vida de animais em situação de abandono, conectando cães e gatos a famílias que possam oferecer amor, cuidado e um novo lar. Nosso objetivo é incentivar a adoção responsável, promover o bem-estar animal e mostrar que cada adoção é uma nova chance de felicidade.</p>
+                </div>
+
+                <div class="animal-perfil-dados">
+                    <h3 class="animal-nome-titulo">Ruffe</h3>
+                    
+                    <div class="animal-tags-caracteristicas">
+                        <span class="tag-item"> <img src="../../../assets/img/icon-macho.svg" class="tag-icon-img" alt="Ícone Macho">  Macho
+                         <span class="tag-item"> <img src="../../../assets/img/icon-calendario.svg" class="tag-icon-img" alt="Ícone Idade">  2 anos
+                         <span class="tag-item"> <img src="../../../assets/img/icon-pata.svg" class="tag-icon-img" alt="Ícone Porte">  Grande
+                    </div>
+
+                    <div class="animal-descricao-bloco">
+                        <h4>Sobre o Ruffe</h4>
+                        <p>Dobermann dócil, demanda bastante espaço e caminhadas diárias. Brincalhão, deve se alimentar com ração para cães de grande porte, como a Pitucão XG.</p>
+                    </div>
+
+                    <div class="animal-saude-lista">
+                        <div class="saude-item item-vacinado">
+                            <img src="../../../assets/img/icon-castrado.svg" class="animal-icon-castrado" alt="castrado">
+                            Castrado
+                        </div>
+                        <div class="saude-item item-castrado">
+                           <img src="../../../assets/img/icon-vacinado.svg" class="animal-icon-vacinado" alt="vacinado">
+                           Vacinado
+                        </div>
+                        <div class="saude-item item-vermifugado">
+                            <img src="../../../assets/img/icon-vermifugado.svg" class="animal-icon-vermifugado" alt="vermifugado">
+                            Vermifugado
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="adotante-dados-painel">
+                
+                <div class="form-secao">
+                    <h3 class="secao-subtitulo">Dados do Adotante</h3>
+                    
+                    <div class="form-group-full">
+                        <label>Nome Completo</label>
+                        <input type="text" class="solicitacao-input-readonly" value="Nome adotante" readonly>
+                    </div>
+
+                    <div class="form-group-full">
+                        <label>CPF</label>
+                        <input type="text" class="solicitacao-input-readonly" value="000.000.000-00" readonly>
+                    </div>
+
+                    <div class="form-group-full">
+                        <label>Data de Nascimento</label>
+                        <input type="text" class="solicitacao-input-readonly" value="00/00/0000" readonly>
+                    </div>
+
+                    <div class="form-group-full">
+                        <label>Email</label>
+                        <input type="email" class="solicitacao-input-readonly" value="Email adotante" readonly>
+                    </div>
+                </div>
+
+                <div class="form-secao">
+                    <h3 class="secao-subtitulo">Respostas do formulário</h3>
+
+                    <div class="form-linha-dupla">
+                        <div class="form-group-half">
+                            <label>Estado</label>
+                            <input type="text" class="solicitacao-input-readonly" value="Resposta adotante" readonly>
+                        </div>
+                        <div class="form-group-half">
+                            <label>Cidade</label>
+                            <input type="text" class="solicitacao-input-readonly" value="Resposta adotante" readonly>
+                        </div>
+                    </div>
+
+                    <div class="form-group-full">
+                        <label>Tem criança em casa?</label>
+                        <input type="text" class="solicitacao-input-readonly" value="Resposta adotante" readonly>
+                    </div>
+
+                    <div class="form-group-full">
+                        <label>Todos em casa estão cientes e de acordo com a adoção?</label>
+                        <input type="text" class="solicitacao-input-readonly" value="Resposta adotante" readonly>
+                    </div>
+
+                    <div class="form-group-full">
+                        <label>O pet é para você mesmo ou é um presente para alguém?</label>
+                        <input type="text" class="solicitacao-input-readonly" value="Resposta adotante" readonly>
+                    </div>
+
+                    <div class="form-linha-dupla">
+                        <div class="form-group-half">
+                            <label>Casa com telas?</label>
+                            <input type="text" class="solicitacao-input-readonly" value="Resposta adotante" readonly>
+                        </div>
+                        <div class="form-group-half">
+                            <label>Casa sem telas?</label>
+                            <input type="text" class="solicitacao-input-readonly" value="Resposta adotante" readonly>
+                        </div>
+                    </div>
+
+                    <div class="form-linha-dupla">
+                        <div class="form-group-half">
+                            <label>Apartamento com telas?</label>
+                            <input type="text" class="solicitacao-input-readonly" value="Resposta adotante" readonly>
+                        </div>
+                        <div class="form-group-half">
+                            <label>Apartamento sem telas?</label>
+                            <input type="text" class="solicitacao-input-readonly" value="Resposta adotante" readonly>
+                        </div>
+                    </div>
+
+                    <div class="form-linha-dupla">
+                        <div class="form-group-half">
+                            <label>Cobertura com telas?</label>
+                            <input type="text" class="solicitacao-input-readonly" value="Resposta adotante" readonly>
+                        </div>
+                        <div class="form-group-half">
+                            <label>Cobertura sem telas?</label>
+                            <input type="text" class="solicitacao-input-readonly" value="Resposta adotante" readonly>
+                        </div>
+                    </div>
+
+                    <div class="form-linha-dupla">
+                        <div class="form-group-half">
+                            <label>Térreo com telas?</label>
+                            <input type="text" class="solicitacao-input-readonly" value="Resposta adotante" readonly>
+                        </div>
+                        <div class="form-group-half">
+                            <label>Térreo sem telas?</label>
+                            <input type="text" class="solicitacao-input-readonly" value="Resposta adotante" readonly>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solicitacao-botoes-container">
+                    <button type="button" class="btn-solicitacao btn-recusar" id="btnRecusarPedido">Recusar</button>
+                    <button type="button" class="btn-solicitacao btn-aceitar" id="btnAceitarPedido">Aceitar</button>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <script src="../../../assets/js/modal/sairContaModal.js" data-home-url="../../../index.html"></script>
+    <script src="./../../../assets/js/instituicao/adoptionRequest.js"></script>
+</body>
