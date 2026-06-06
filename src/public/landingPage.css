@@ -139,6 +139,14 @@ body {
     text-align: justify; 
     color: var(--text-body);
     line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 30px 0 15px;
+    color: var(--text-body);
 }
 
 
