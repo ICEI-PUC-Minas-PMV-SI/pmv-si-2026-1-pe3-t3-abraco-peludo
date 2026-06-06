@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos de Adoção - Abraço Peludo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="../../../assets/img/logo-abraco-peludo-aba.svg">
+    
+    <link rel="stylesheet" href="./additionRequests.css">
+    <link rel="stylesheet" href="../../../assets/css/navbar/style.css">
+    <link rel="stylesheet" href="../../../assets/css/dropDown/dropDown.css">
+    <link rel="stylesheet" href="../../../assets/css/modal/sairContaModal.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <script src="../../../assets/js/dropDown/dropDown.js"></script>
+    <script src="../../../assets/js/dropDown/dropDownHistory.js"></script>
+</head>
+
+<body>
+
+    <div id="container-nav">
+        <div id="logo-abraco">
+            <a href="../../../index.html">
+                <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
+            </a>
+        </div>
+
+        <div class="dropDown">
+            <div id="dropdownHistory">
+                <a href="#" id="dropdownButton" class="dropBtn" onclick="toggleDropdownHistory()">
+                    Painel de Histórico
+                </a>
+
+                <div id="dropdownHistoryContent" class="dropdown-menu">
+                    <a href="../donationHistory/donationHistory.html">Histórico de doações realizadas <i class="fa-solid fa-folder-open"></i></a>
+                    <a href="../animalList/animalList.html">Animais cadastrados <i class="fa-solid fa-cat"></i></a>
+                </div>
+            </div>
+
+            <a href="#" class="active">Pedidos de Adoção</a>
+
+            <div id="userDropdown">
+                <a href="#" id="dropdownButtonMenu" class="dropBtn" onclick="toggleDropdownMenu()">
+                    <img src="../../../assets/img/icon-perfil-dog.svg" class="fa-dog" alt="Perfil">
+                </a>
+
+                <div id="dropdownMenuContent" class="dropdown-menu">
+                    <a href="../ongProfile/ongProfile.html">Visualizar perfil ONG <i class="fa-regular fa-eye"></i></a>
+                    <a href="../configureAccount/configureAccount.html">Configurações da conta <i class="fa-solid fa-gear"></i></a>
+                    <a href="../updadeProfile/updadeProfile.html">Atualizar perfil <i class="fa-solid fa-pen-to-square"></i></a>
+                    <a href="#" id="btnLogout">Sair <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="pedidos-page">
+        <h1 class="pedidos-titulo">Pedidos de Adoção</h1>
+
+        <div class="pedidos-lista">
+            
+            <div class="pedido-item">
+                <span class="pedido-dado pedido-data">12 / 05 / 2026</span>
+                <span class="pedido-dado pedido-adotante">José Carlos da Silva</span>
+                <span class="pedido-dado pedido-pet">Ruffus</span>
+                <a href="../detalhesPedido/detalhesPedido.html" class="pedido-btn">Ver solicitação</a>
+            </div>
+
+            <div class="pedido-item">
+                <span class="pedido-dado pedido-data">08 / 05 / 2026</span>
+                <span class="pedido-dado pedido-adotante">Maria Eduarda Santos</span>
+                <span class="pedido-dado pedido-pet">Luna</span>
+                <a href="../detalhesPedido/detalhesPedido.html" class="pedido-btn">Ver solicitação</a>
+            </div>
+
+            <div class="pedido-item">
+                <span class="pedido-dado pedido-data">05 / 05 / 2026</span>
+                <span class="pedido-dado pedido-adotante">Antônio Marcos Ferreira</span>
+                <span class="pedido-dado pedido-pet">Bob</span>
+                <a href="../detalhesPedido/detalhesPedido.html" class="pedido-btn">Ver solicitação</a>
+            </div>
+
+            <div class="pedido-item">
+                <span class="pedido-dado pedido-data">28 / 04 / 2026</span>
+                <span class="pedido-dado pedido-adotante">Clara Costa Lima</span>
+                <span class="pedido-dado pedido-pet">Miau</span>
+                <a href="../detalhesPedido/detalhesPedido.html" class="pedido-btn">Ver solicitação</a>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="../../../assets/js/modal/sairContaModal.js" data-home-url="../../../index.html"></script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+/* Reset Geral */
+* {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF2D7; /* Cor de fundo bege clara padrão */
+    min-height: 100vh;
+}
+
+/* Container do Conteúdo Principal */
+.pedidos-page {
+    padding: 48px 80px 64px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Título da Página */
+.pedidos-titulo {
+    color: #4D3227; /* Marrom escuro */
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+/* Caixa que agrupa a lista de pedidos */
+.pedidos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Espaço entre cada registro */
+    width: 100%;
+}
+
+/* Linha de Pedido Individual */
+.pedido-item {
+    background-color: #FFD9AA; /* Bege escuro idêntico ao protótipo */
+    border-radius: 16px;       /* Cantos levemente arredondados */
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efeito Hover na Linha */
+.pedido-item:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(77, 50, 39, 0.08);
+}
+
+/* Textos da Listagem */
+.pedido-dado {
+    color: #4D3227;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Distribuição das colunas para alinhamento vertical perfeito */
+.pedido-data {
+    flex: 0 0 160px; /* Mantém o tamanho da data fixo */
+    opacity: 0.85;
+}
+
+.pedido-adotante {
+    flex: 2; /* Pega a maior parte do espaço disponível */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pedido-pet {
+    flex: 1; /* Espaço proporcional para o nome do animal */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Botão Laranja "Ver solicitação" */
+.pedido-btn {
+    background-color: #FF8C42; /* Laranja oficial */
+    color: #FFFFFF;            /* Texto branco para leitura */
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 999px;      /* Totalmente oval cápsula */
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-align: center;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.pedido-btn:hover {
+    background-color: #e57a35;
+}
+
+.pedido-btn:active {
+    transform: scale(0.98);
+}
+
+/* --- Responsividade para Telas Menores (Celular) --- */
+@media (max-width: 850px) {
+    .pedidos-page {
+        padding: 32px 24px;
+    }
+    
+    .pedido-item {
+        flex-direction: column; /* Transforma as colunas em linhas verticais */
+        align-items: flex-start;
+        gap: 12px;
+        padding: 20px;
+    }
+    
+    .pedido-data, .pedido-adotante, .pedido-pet {
+        flex: none;
+        width: 100%;
+    }
+    
+    .pedido-btn {
+        width: 100%; /* Botão ocupa a largura inteira da linha */
+        margin-top: 8px;
+    }
+}
