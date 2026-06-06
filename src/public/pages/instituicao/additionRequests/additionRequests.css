@@ -1,4 +1,4 @@
-/* Reset Geral */
+
 * {
     font-family: "Inter", sans-serif;
     margin: 0;
@@ -7,11 +7,11 @@
 }
 
 body {
-    background-color: #FFF2D7; /* Cor de fundo bege clara padrão */
+    background-color: #FFF2D7; 
     min-height: 100vh;
 }
 
-/* Container do Conteúdo Principal */
+
 .pedidos-page {
     padding: 48px 80px 64px;
     max-width: 1200px;
@@ -19,26 +19,26 @@ body {
     width: 100%;
 }
 
-/* Título da Página */
+
 .pedidos-titulo {
-    color: #4D3227; /* Marrom escuro */
+    color: #4D3227; 
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 32px;
 }
 
-/* Caixa que agrupa a lista de pedidos */
+
 .pedidos-lista {
     display: flex;
     flex-direction: column;
-    gap: 16px; /* Espaço entre cada registro */
+    gap: 16px;
     width: 100%;
 }
 
-/* Linha de Pedido Individual */
+
 .pedido-item {
-    background-color: #FFD9AA; /* Bege escuro idêntico ao protótipo */
-    border-radius: 16px;       /* Cantos levemente arredondados */
+    background-color: #FFD9AA; 
+    border-radius: 16px;       
     padding: 16px 24px;
     display: flex;
     align-items: center;
@@ -48,46 +48,46 @@ body {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Efeito Hover na Linha */
+
 .pedido-item:hover {
     transform: translateX(4px);
     box-shadow: 0 4px 12px rgba(77, 50, 39, 0.08);
 }
 
-/* Textos da Listagem */
+
 .pedido-dado {
     color: #4D3227;
     font-size: 18px;
     font-weight: 600;
 }
 
-/* Distribuição das colunas para alinhamento vertical perfeito */
+
 .pedido-data {
-    flex: 0 0 160px; /* Mantém o tamanho da data fixo */
-    opacity: 0.85;
+    flex: 0 0 150px; 
+    opacity: 0.8;
 }
 
 .pedido-adotante {
-    flex: 2; /* Pega a maior parte do espaço disponível */
+    flex: 2; 
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .pedido-pet {
-    flex: 1; /* Espaço proporcional para o nome do animal */
+    flex: 1; 
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-/* Botão Laranja "Ver solicitação" */
+
 .pedido-btn {
-    background-color: #FF8C42; /* Laranja oficial */
-    color: #FFFFFF;            /* Texto branco para leitura */
-    text-decoration: none;
+    background-color: #FF8C42; 
+    color: #FFFFFF;            
+    text-decoration: none;     
     padding: 12px 28px;
-    border-radius: 999px;      /* Totalmente oval cápsula */
+    border-radius: 999px;      
     font-size: 16px;
     font-weight: 600;
     white-space: nowrap;
@@ -104,14 +104,14 @@ body {
     transform: scale(0.98);
 }
 
-/* --- Responsividade para Telas Menores (Celular) --- */
+
 @media (max-width: 850px) {
     .pedidos-page {
         padding: 32px 24px;
     }
     
     .pedido-item {
-        flex-direction: column; /* Transforma as colunas em linhas verticais */
+        flex-direction: column; 
         align-items: flex-start;
         gap: 12px;
         padding: 20px;
@@ -123,7 +123,7 @@ body {
     }
     
     .pedido-btn {
-        width: 100%; /* Botão ocupa a largura inteira da linha */
+        width: 100%; 
         margin-top: 8px;
     }
 }
