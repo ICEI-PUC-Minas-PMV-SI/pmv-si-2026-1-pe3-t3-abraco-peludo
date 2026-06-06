@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do animal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="../../../assets/img/logo-abraco-peludo-aba.svg">
+    <link rel="stylesheet" href="./animalProfile.css">
+    <link rel="stylesheet" href="../../../assets/css/navbar/style.css">
+    <link rel="stylesheet" href="../../../assets/css/dropDown/dropDown.css">
+    <link rel="stylesheet" href="../../../assets/css/modal/sairContaModal.css">
+
+    <script src="../../../assets/js/dropDown/dropDown.js"></script>
+</head>
+
+<body>
+    <div id="container-nav">
+        <div id="logo-abraco">
+            <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
+        </div>
+
+        <div>
+            <a href="../animalListing/animalListing.html" class="active">Home</a>
+            <a href="../adoptionHistory/adoptionHistory.html">Histórico de Adoções</a>
+
+            <div id="userDropdown">
+                <a href="#" id="dropdownButtonMenu" class="dropBtn" onclick="toggleDropdownMenu()">
+                    <img src="../../../assets/img/icon-perfil.svg" class="user-icon">
+                </a>
+
+                <div id="dropdownMenuContent" class="dropdown-menu">
+                    <a href="../updateRegistration/updateRegistration.html">Configurações da conta <i class="fa-solid fa-gear"></i></a>
+                    <a href="#" id="btnLogout">Sair <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="perfil-page">
+        <div id="perfilConteudo" class="perfil-layout" hidden>
+            <aside class="perfil-card-ong">
+                <img id="perfilFoto" src="" alt="" class="perfil-foto-animal">
+
+                <div class="perfil-ong-titulo">
+                    <img src="../../../assets/img/icon-perfil-ong.svg" alt="">
+                    <span id="perfilOngNome"></span>
+                </div>
+
+                <p id="perfilOngDescricao" class="perfil-ong-descricao"></p>
+
+                <div class="perfil-ong-contatos">
+                    <span class="perfil-pill-verde">
+                        <img src="../../../assets/img/icon-telefone.svg" alt="">
+                        <span id="perfilOngTelefone"></span>
+                    </span>
+                    <span class="perfil-pill-verde">
+                        <img src="../../../assets/img/icon-localizacao.svg" alt="">
+                        <span id="perfilOngLocal"></span>
+                    </span>
+                </div>
+
+                <a id="perfilBtnAdotar" href="#" class="perfil-btn-adotar">Quero adotar</a>
+            </aside>
+
+            <section class="perfil-detalhes">
+                <h1 id="perfilNome"></h1>
+
+                <div class="perfil-info-bar">
+                    <div class="perfil-info-item">
+                        <img id="perfilSexoIcone" src="../../../assets/img/icon-macho.svg" alt="">
+                        <span id="perfilSexo"></span>
+                    </div>
+                    <div class="perfil-info-item">
+                        <img src="../../../assets/img/icon-calendario.svg" alt="">
+                        <span id="perfilIdade"></span>
+                    </div>
+                    <div class="perfil-info-item">
+                        <img src="../../../assets/img/icon-pata.svg" alt="">
+                        <span id="perfilPorte"></span>
+                    </div>
+                </div>
+
+                <h2 id="perfilSobreTitulo" class="perfil-secao-titulo"></h2>
+                <p id="perfilDescricao" class="perfil-secao-texto"></p>
+                <p id="perfilHistorico" class="perfil-secao-texto"></p>
+
+                <div id="perfilSaudeLista" class="perfil-saude-lista"></div>
+            </section>
+        </div>
+
+        <p id="perfilErro" class="perfil-erro" hidden>Animal não encontrado.</p>
+    </main>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="../../../assets/js/config/api.js"></script>
+    <script src="../../../assets/js/animais/animaisService.js"></script>
+    <script src="../../../assets/js/adotante/animalProfile.js"></script>
+    <script src="../../../assets/js/modal/sairContaModal.js" data-home-url="../../../index.html"></script>
+</body>
+
+</html>

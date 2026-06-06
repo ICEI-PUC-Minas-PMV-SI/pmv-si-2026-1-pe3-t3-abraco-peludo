@@ -45,6 +45,14 @@
     animation-timing-function: linear;
 }
 
+#container-nav > div > a {
+    color: var(--branco);
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
 .active{
     color: var(--branco);
     text-decoration: none;

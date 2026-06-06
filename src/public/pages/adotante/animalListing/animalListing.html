@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animais para adoção</title>
+
+    <link rel="icon" type="image/x-icon" href="../../../assets/img/logo-abraco-peludo-aba.svg">
+    <link rel="stylesheet" href="./animalListing.css">
+    <link rel="stylesheet" href="../../../assets/css/filtros/filtrosDropdown.css">
+    <link rel="stylesheet" href="../../../assets/css/navbar/style.css">
+    <link rel="stylesheet" href="../../../assets/css/dropDown/dropDown.css">
+    <link rel="stylesheet" href="../../../assets/css/modal/sairContaModal.css">
+
+    <script src="../../../assets/js/dropDown/dropDown.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="container-nav">
+        <div id="logo-abraco">
+            <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
+        </div>
+
+        <div>
+            <a href="./animalListing.html" class="active">Home</a>
+            <a href="../adoptionHistory/adoptionHistory.html">Histórico de Adoções</a>
+
+            <div id="userDropdown">
+                <a href="#" id="dropdownButtonMenu" class="dropBtn" onclick="toggleDropdownMenu()">
+                    <img src="../../../assets/img/icon-perfil.svg" class="user-icon">
+                </a>
+
+                <div id="dropdownMenuContent" class="dropdown-menu">
+                    <a href="../updateRegistration/updateRegistration.html">Configurações da conta <i class="fa-solid fa-gear"></i></a>
+                    <a href="#" id="btnLogout">Sair <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="adotante-list-page">
+        <div class="adotante-list-toolbar">
+            <div class="adotante-search-group">
+                <i class="fa-solid fa-magnifying-glass adotante-search-icon" aria-hidden="true"></i>
+                <input type="search" id="buscaAnimal" class="adotante-search-input" placeholder="Buscar animal...">
+            </div>
+
+            <div class="filtros-dropdown-wrapper">
+                <button type="button" id="btnFiltros" class="btn-filtros-toggle">
+                    <i class="fa-solid fa-filter"></i>
+                    Filtros
+                </button>
+
+                <div id="filtrosDropdown" class="filtros-dropdown-panel" hidden>
+                    <div class="filtros-dropdown-header">
+                        <span class="filtros-icone-circulo">
+                            <i class="fa-solid fa-filter"></i>
+                        </span>
+                        <span>Filtros</span>
+                    </div>
+                    <div class="filtros-dropdown-body">
+                        <div class="filtro-campo">
+                            <label for="filtroIdade">Idade</label>
+                            <select id="filtroIdade">
+                                <option value="">Clique para selecionar</option>
+                            </select>
+                        </div>
+                        <div class="filtro-campo">
+                            <label for="filtroRaca">Raça</label>
+                            <select id="filtroRaca">
+                                <option value="">Clique para selecionar</option>
+                            </select>
+                        </div>
+                        <div class="filtro-campo">
+                            <label for="filtroSexo">Sexo</label>
+                            <select id="filtroSexo">
+                                <option value="">Clique para selecionar</option>
+                                <option value="Macho">Macho</option>
+                                <option value="Fêmea">Fêmea</option>
+                            </select>
+                        </div>
+                        <div class="filtro-campo">
+                            <label for="filtroLocalizacao">Localização</label>
+                            <select id="filtroLocalizacao">
+                                <option value="">Clique para selecionar</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="animalGrid" class="adotante-animal-grid"></div>
+        <p id="animalEmpty" class="adotante-animal-empty" hidden>Nenhum animal disponível no momento.</p>
+    </main>
+
+    <script src="../../../assets/js/config/api.js"></script>
+    <script src="../../../assets/js/animais/animaisService.js"></script>
+    <script src="../../../assets/js/animais/animalListAdotante.js"></script>
+    <script src="../../../assets/js/modal/sairContaModal.js" data-home-url="../../../index.html"></script>
+</body>
+
+</html>

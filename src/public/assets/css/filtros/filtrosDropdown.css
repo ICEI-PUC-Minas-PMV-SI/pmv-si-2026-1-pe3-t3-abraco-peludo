@@ -1,0 +1,112 @@
+.filtros-dropdown-wrapper {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.btn-filtros-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #FF8C42;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+    padding: 0 28px;
+    min-height: 56px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+
+.btn-filtros-toggle:hover,
+.btn-filtros-toggle.ativo {
+    background-color: #e57a35;
+}
+
+.filtros-dropdown-panel {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(77, 50, 39, 0.25);
+    z-index: 1100;
+}
+
+.filtros-dropdown-panel.aberto {
+    display: block;
+}
+
+.filtros-dropdown-header {
+    background-color: #FF8C42;
+    color: #4D3227;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.filtros-dropdown-header .filtros-icone-circulo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #FFF2D7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.filtros-dropdown-header .filtros-icone-circulo i {
+    font-size: 16px;
+    color: #4D3227;
+}
+
+.filtros-dropdown-body {
+    background-color: #FFD9AA;
+    padding: 22px 20px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.filtro-campo label {
+    display: block;
+    color: #4D3227;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.filtro-campo select {
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #FFF2D7;
+    border: none;
+    border-radius: 999px;
+    padding: 14px 20px;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    color: #9B9B9B;
+    outline: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234D3227' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+}
+
+.filtro-campo select.opcao-selecionada {
+    color: #4D3227;
+}
+
+.filtro-campo select option {
+    color: #4D3227;
+}

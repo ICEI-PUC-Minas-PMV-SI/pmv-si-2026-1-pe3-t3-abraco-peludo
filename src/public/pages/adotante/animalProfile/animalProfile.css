@@ -1,0 +1,208 @@
+* {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF2D7;
+    min-height: 100vh;
+}
+
+.perfil-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 60px 64px;
+}
+
+.perfil-layout {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.perfil-card-ong {
+    background-color: #FFD9AA;
+    border-radius: 24px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.perfil-foto-animal {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 20px;
+    background: #FFF2D7;
+}
+
+.perfil-ong-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #4D3227;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.perfil-ong-titulo img {
+    width: 22px;
+    height: 22px;
+}
+
+.perfil-ong-descricao {
+    color: #4D3227;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.perfil-ong-contatos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.perfil-pill-verde {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #3CB371;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 999px;
+}
+
+.perfil-pill-verde img {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+}
+
+.perfil-btn-adotar {
+    display: block;
+    text-align: center;
+    background-color: #FF8C42;
+    color: #4D3227;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 16px 24px;
+    border-radius: 16px;
+    text-decoration: none;
+    margin-top: 8px;
+    transition: background-color 0.2s;
+}
+
+.perfil-btn-adotar:hover {
+    background-color: #e57a35;
+    color: #FFFFFF;
+}
+
+.perfil-detalhes h1 {
+    font-family: "Poppins", sans-serif;
+    color: #4D3227;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.perfil-info-bar {
+    display: flex;
+    background-color: #FFD9AA;
+    border-radius: 999px;
+    padding: 14px 24px;
+    margin-bottom: 32px;
+    gap: 0;
+}
+
+.perfil-info-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #4D3227;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 12px;
+}
+
+.perfil-info-item:not(:last-child) {
+    border-right: 2px solid rgba(77, 50, 39, 0.2);
+}
+
+.perfil-info-item img {
+    width: 22px;
+    height: 22px;
+}
+
+.perfil-secao-titulo {
+    font-family: "Poppins", sans-serif;
+    color: #4D3227;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.perfil-secao-texto {
+    color: #4D3227;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.perfil-saude-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 28px;
+}
+
+.perfil-saude-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #4D3227;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.perfil-saude-item img {
+    width: 28px;
+    height: 28px;
+}
+
+.perfil-erro {
+    text-align: center;
+    color: #4D3227;
+    font-size: 20px;
+    padding: 80px 20px;
+}
+
+@media (max-width: 960px) {
+    .perfil-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .perfil-page {
+        padding: 24px 20px 48px;
+    }
+
+    .perfil-info-bar {
+        flex-direction: column;
+        border-radius: 20px;
+        gap: 12px;
+    }
+
+    .perfil-info-item:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid rgba(77, 50, 39, 0.15);
+        padding-bottom: 12px;
+    }
+}
