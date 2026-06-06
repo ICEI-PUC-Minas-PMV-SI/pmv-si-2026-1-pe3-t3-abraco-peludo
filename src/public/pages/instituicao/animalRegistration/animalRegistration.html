@@ -29,7 +29,7 @@
                 <a href="#" id="dropdownButton" class="active dropBtn" onclick="toggleDropdownHistory()">
                     Painel de Histórico
                 </a>
-                
+
                 <div id="dropdownHistoryContent" class="dropdown-menu">
                     <a href="#">Histórico de doações realizadas <i class="fa-solid fa-folder-open"></i></a>
                     <a href="#">Animais cadastrados <i class="fa-solid fa-cat"></i></a>
@@ -107,7 +107,7 @@
                         </div>
                         <div>
                             <label for="idade">Idade</label>
-                            <input type="text" input id="idade" placeholder="Idade" required>
+                            <input type="number" min="0" max="99" step="1" pattern="[0-9]*" inputmode="numeric" placeholder="Idade" required>
                         </div>
 
                         <div>
@@ -126,11 +126,12 @@
                                     <input type="radio" id="saudavel" class="radio" name="saudeAnimal" value="saudavel">
                                     <label for="saudavel">Saudável</label>
                                 </div>
-                                <div>                                    
-                                    <input type="radio" id="tratamento" class="radio" name="saudeAnimal" value="tratamento">
+                                <div>
+                                    <input type="radio" id="tratamento" class="radio" name="saudeAnimal"
+                                        value="tratamento">
                                     <label for="tratamento">Em tratamento</label>
                                 </div>
-                                <div>                                    
+                                <div>
                                     <input type="radio" id="doente" class="radio" name="saudeAnimal" value="doente">
                                     <label for="doente">Doente</label>
                                 </div>
@@ -146,7 +147,6 @@
                             <input id="foto" type="file" accept="image/*" class="inputFoto">
                         </div>
                     </form>
-
                     <div id="submitBtn">
                         <button class="btn btnCancelar">Cancelar</button>
                         <button class="btn btnSalvar">Cadastar</button>
