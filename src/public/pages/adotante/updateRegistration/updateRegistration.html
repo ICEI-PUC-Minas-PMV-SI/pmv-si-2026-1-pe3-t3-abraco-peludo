@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="../../../assets/css/dropDown/dropDown.css">
     <link rel="stylesheet" href="../../../assets/css/modal/sairContaModal.css">
     <script src="../../../assets/js/dropDown/dropDown.js"></script>
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../assets/css/modal/deleteAccountModal.css">
 </head>
 
 <body>
@@ -23,9 +24,9 @@
             <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
         </div>
 
-        <div>            
+        <div>
             <a href="#" class="active">Home</a>
-			<a href="#" class="active">Histórico de Adoções</a>
+            <a href="#" class="active">Histórico de Adoções</a>
 
             <div id="userDropdown">
                 <a href="#" id="dropdownButtonMenu" class="dropBtn" onclick="toggleDropdownMenu()">
@@ -33,7 +34,8 @@
                 </a>
 
                 <div id="dropdownMenuContent" class="dropdown-menu">
-                    <a href="../updateRegistration/updateRegistration.html">Configurações da conta <i class="fa-solid fa-gear"></i></a>
+                    <a href="../updateRegistration/updateRegistration.html">Configurações da conta <i
+                            class="fa-solid fa-gear"></i></a>
                     <a href="#" id="btnLogout">Sair <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
                 </div>
             </div>
@@ -56,7 +58,7 @@
                         <p>Atualizar dados</p>
                     </a>
 
-                    <a href="#" class="asideBtnText">
+                    <a href="#" class="asideBtnText" data-excluir-conta>
                         <i class="fa-regular fa-trash-can"></i>
                         <p>Excluir conta</p>
                     </a>
@@ -106,7 +108,9 @@
 
     </div>
 
+    <script src="../../../assets/js/adotante/updateRegistration.js"></script>
     <script src="../../../assets/js/modal/sairContaModal.js" data-home-url="../../../index.html"></script>
+    <script src="../../../assets/js/modal/deleteAccountModal.js"></script>
 </body>
 
 </html>

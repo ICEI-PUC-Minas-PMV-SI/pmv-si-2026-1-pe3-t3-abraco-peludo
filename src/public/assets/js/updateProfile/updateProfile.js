@@ -4,9 +4,6 @@ const API_URL = 'http://localhost:3000';
 let novaFotoBase64 = null;
 let novaFotoNome   = null;
 
-// =====================
-// Sessão
-// =====================
 function getSessao() {
     const sessao = sessionStorage.getItem(USUARIO_LOGADO_KEY);
     if (!sessao) {
@@ -16,9 +13,6 @@ function getSessao() {
     return JSON.parse(sessao);
 }
 
-// =====================
-// Preview de foto
-// =====================
 function atualizarPreviewFoto(src, nomeArquivo) {
     const preview   = document.getElementById('fotoPreview');
     const nomeAtual = document.getElementById('fotoNomeAtual');
@@ -34,9 +28,6 @@ function atualizarPreviewFoto(src, nomeArquivo) {
     nomeAtual.textContent = nomeArquivo ? `Arquivo: ${nomeArquivo}` : '';
 }
 
-// =====================
-// Comprimir imagem (igual ao animal)
-// =====================
 function comprimirImagem(arquivo, maxLado = 800, qualidade = 0.82) {
     return new Promise((resolve, reject) => {
         const imagem = new Image();
@@ -72,9 +63,6 @@ function comprimirImagem(arquivo, maxLado = 800, qualidade = 0.82) {
     });
 }
 
-// =====================
-// Preencher formulário
-// =====================
 function preencherFormulario(usuario) {
     setValue('nome',      usuario.nome);
     setValue('descricao', usuario.descricao);
@@ -96,9 +84,6 @@ function getValue(id) {
     return el ? el.value.trim() : '';
 }
 
-// =====================
-// Salvar alterações (PUT /instituicoes/:id)
-// =====================
 async function salvarAlteracoes(sessao) {
     const nome      = getValue('nome');
     const descricao = getValue('descricao');
@@ -140,9 +125,6 @@ async function salvarAlteracoes(sessao) {
     }
 }
 
-// =====================
-// Inicialização
-// =====================
 document.addEventListener('DOMContentLoaded', () => {
     const sessao = getSessao();
     if (!sessao) return;
@@ -170,12 +152,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Botão Atualizar
     document.querySelector('.btnSalvar').addEventListener('click', () => {
         salvarAlteracoes(sessao);
     });
 
-    // Botão Cancelar — restaura valores originais
     document.querySelector('.btnCancelar').addEventListener('click', () => {
         novaFotoBase64 = null;
         novaFotoNome   = null;

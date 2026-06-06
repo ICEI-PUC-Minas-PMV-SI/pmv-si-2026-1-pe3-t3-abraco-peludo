@@ -29,7 +29,6 @@ function abrirModalDeleteAccount() {
     modal.hidden = false;
     document.body.style.overflow = 'hidden';
 
-    // Limpa estado anterior
     document.getElementById('senhaDelete').value = '';
     document.getElementById('deleteAccountErro').textContent = '';
     document.getElementById('senhaDelete').focus();
@@ -54,7 +53,6 @@ async function confirmarExclusao() {
     }
 
     try {
-        // Busca o registro completo (com senha) para validar
         const resGet = await fetch(`${API_URL}/instituicoes/${sessao.usuario.id}`);
         if (!resGet.ok) throw new Error('Erro ao buscar dados');
         const registro = await resGet.json();
@@ -86,7 +84,6 @@ function initDeleteAccountModal() {
 
     const modal = document.getElementById('modalDeleteAccount');
 
-    // Abre ao clicar no botão "Excluir conta" do aside
     document.querySelectorAll('[data-excluir-conta]').forEach((trigger) => {
         trigger.addEventListener('click', (e) => {
             e.preventDefault();
@@ -97,17 +94,14 @@ function initDeleteAccountModal() {
     document.getElementById('btnCancelarDelete').addEventListener('click', fecharModalDeleteAccount);
     document.getElementById('btnConfirmarDelete').addEventListener('click', confirmarExclusao);
 
-    // Fecha ao clicar fora
     modal.addEventListener('click', (e) => {
         if (e.target === modal) fecharModalDeleteAccount();
     });
 
-    // Fecha com Escape
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && !modal.hidden) fecharModalDeleteAccount();
     });
 
-    // Confirma com Enter no input
     document.getElementById('senhaDelete').addEventListener('keydown', (e) => {
         if (e.key === 'Enter') confirmarExclusao();
     });
