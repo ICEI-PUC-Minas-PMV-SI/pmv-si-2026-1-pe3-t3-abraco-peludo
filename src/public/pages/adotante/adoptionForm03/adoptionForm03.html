@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulário de Adoção - Perguntas</title>
+
   <link rel="stylesheet" href="adoptionForm03.css">
   <link rel="stylesheet" href="../../../assets/css/modal/sairContaModal.css">
+  <link rel="stylesheet" href="adoptionForm02.css">
+  <link rel="icon" type="image/x-icon" href="../../../assets/img/logo-abraco-peludo-aba.svg">
+  <link rel="stylesheet" href="../../../assets/css/navbar/style.css">
+  <link rel="stylesheet" href="../../../assets/css/dropDown/dropDown.css">
+
+  <script src="../../../assets/js/dropDown/dropDown.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
+
+  <div id="container-nav">
+    <div id="logo-abraco">
+      <a href="../animalListing/animalListing.html">
+        <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
+      </a>
+    </div>
+
+    <div>
+      <a href="../animalListing/animalListing.html" class="active">Lista de Animais</a>
+      <a href="../adoptionHistory/adoptionHistory.html" class="active">Histórico de Adoções</a>
+
+      <div id="userDropdown">
+        <a href="#" id="dropdownButtonMenu" class="dropBtn" onclick="toggleDropdownMenu()">
+          <img src="../../../assets/img/icon-perfil.svg" class="user-icon">
+        </a>
+
+        <div id="dropdownMenuContent" class="dropdown-menu">
+          <a href="../updateRegistration/updateRegistration.html">Configurações da conta <i
+              class="fa-solid fa-gear"></i></a>
+          <a href="#" id="btnLogout">Sair <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="container">
     <div class="conteudo">
-
-      <header class="topo">
-        <div class="logo">
-          <img src="../../../assets/img/logo-abraco-peludo-aba.svg" alt="Logo">
-        </div>
-
-        <nav class="menu">
-          <a href="home.html">Home</a>
-          <a href="historico.html">Histórico de Adoções</a>
-        </nav>
-
-        <div class="perfil-area">
-          <div class="perfil">
-            <img src="../../../assets/img/icon-login.svg" alt="Perfil">
-          </div>
-
-          <div class="menu-perfil">
-            <a href="configuracoes.html">
-              Configurações da conta
-              <img src="../../../assets/img/icon-configuracao.svg" alt="Configurações">
-            </a>
-            <a href="#" id="btnLogout" data-sair-conta>
-              Sair
-              <img src="../../../assets/img/icon-sair.svg" alt="Sair">
-            </a>
-          </div>
-        </div>
-      </header>
 
       <div class="area-externa">
         <section class="area-form">
