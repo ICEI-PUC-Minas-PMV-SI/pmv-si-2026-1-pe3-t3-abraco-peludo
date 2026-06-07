@@ -21,9 +21,6 @@ button {
     cursor: pointer;
 }
 
-/* --------------------------------------------------------- */
-/* Aside */
-
 aside {
     background-color: #FFD9AA;
     min-height: 100dvh;
@@ -82,9 +79,6 @@ aside {
     border-radius: 5px;
 }
 
-/* --------------------------------------------------------- */
-/* Container Right */
-
 #editContainer {
     margin: 50px 0;
     width: calc(100% - 25%);
@@ -141,7 +135,6 @@ aside {
     cursor: pointer;
 }
 
-/* --------------------------------------------------------- */
 input,
 textarea, 
 select {
@@ -220,8 +213,42 @@ select {
     height: 35px;
 }
 
-/* ---------------------------------------------------------------- */
-/* Media Query */
+#cuidadosVet {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+}
+
+#cuidadosVet > div {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 20px !important;
+}
+
+#cuidadosVet > div > div {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 20px !important;
+}
+
+.checkbox {
+    accent-color: #e96c1f;
+    width: 35px !important;
+    height: 35px !important;
+    min-width: 35px;
+    cursor: pointer;
+}
+
+#cuidadosVet label {
+    font-size: inherit;
+    color: #9B9B9B;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
 @media (max-width: 1220px) {
     aside {
         display: none;
@@ -246,5 +273,11 @@ select {
 
     .btn {
         width: 150px;
+    }
+
+    #cuidadosVet {
+        flex-direction: column !important;
+        align-items: flex-start;
+        gap: 10px !important;
     }
 }
