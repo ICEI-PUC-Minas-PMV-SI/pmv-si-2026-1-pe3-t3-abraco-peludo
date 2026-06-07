@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cadastro = getCadastroAdotante();
 
     if (!cadastroCompleto(cadastro)) {
-        window.location.href = 'cadastroAdotante.html';
+        window.location.href = 'registrationAdopter.html';
         return;
     }
 
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             aceitouTermos: checkboxTermos.checked
         }, 2);
 
-        window.location.href = 'cadastroAdotante.html';
+        window.location.href = 'registrationAdopter.html';
     });
 
     const form = document.getElementById('formCadastroAdotanteTermos');

@@ -109,6 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
             senha
         }, 1);
 
-        window.location.href = 'cadastroAdotanteTermos.html';
+        window.location.href = 'registrationAdopterTerms.html';
     });
 });
