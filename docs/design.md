@@ -167,19 +167,22 @@ Para estruturar o diálogo e as interações do Abraço Peludo, aplicou-se o con
    
    *Exemplo:* A consistência se manifesta na identidade visual e no comportamento dos elementos interativos. Os botões de avanço e submissão primária adotam sempre a cor laranja, enquanto ações críticas, destrutivas ou de cancelamento definitivo (como a deleção ou interrupção de um fluxo) adotam o padrão visual vermelho. Essa uniformidade visual reduz o tempo de reação e a incerteza do usuário ao navegar por diferentes módulos da aplicação. [Figuras botão cancelar e botão avançar]
 
+<img width="1440" height="235" alt="botões" src="https://github.com/user-attachments/assets/a27097cb-a876-411f-aef9-e08f174b5187" />
    
    
 ### 2. **Atalhos para usuários frequentes:** À medida que o usuário se familiariza com a interface, ele busca executar as ações com maior rapidez. O sistema deve oferecer mecanismos que reduzam o número de interações necessárias para atingir um objetivo comum.
    
    *Exemplo:* Para otimizar o tempo de voluntários e representantes de ONGs que interagem com a plataforma recorrentemente, a interface do sistema Desktop disponibiliza menus estruturados e links de ação rápida localizados de forma fixa no topo/lateral da aplicação. Em vez de obrigar o usuário experiente a navegar por caminhos longos ou retornar à página inicial para gerenciar as informações, ele consegue acessar diretamente abas essenciais como "Cadastrar Animal" ou "Visualizar Perfil" com apenas um clique a partir de qualquer ponto do sistema, acelerando drasticamente o fluxo de trabalho diário. [ dropdown]
 
-   
+<img width="1440" height="217" alt="nav ONG" src="https://github.com/user-attachments/assets/6885a3d2-3f8c-47a9-9222-fe31a04b4d4e" />
+
    
 ### 3. **Oferecer Feedback Informativo:** Para cada ação, o sistema responde visualmente.
 
    *Exemplo:* Na tela de "Sucesso", ao enviar um formulário de adoção, é direcionado a outra tela com a mensagem clara: "Formulário enviado com sucesso! Obrigado por fazer a diferença na vida de um animal." [Figura Sucesso]
 
    <img width="1440" height="1024" alt="Tela de sucesso" src="https://github.com/user-attachments/assets/27070760-214e-4831-a9c1-dcaa4c926c53" />
+
 
 ### 4. **Diálogos com Fechamento (Início, Meio e Fim):** As sequências de ações do sistema devem ser organizadas em grupos com início, meio e fim, oferecendo ao usuário a sensação de dever cumprido e um sinal claro de conclusão ao término do fluxo. 
 
@@ -194,6 +197,9 @@ Para estruturar o diálogo e as interações do Abraço Peludo, aplicou-se o con
 ### 5. **Prevenção de Erros:** O sistema foi projetado para antecipar possíveis falhas operacionais do usuário, impedindo que o erro aconteça antes mesmo da submissão dos dados.
 
    *Exemplo:* Na tela "Cadastro de Animais" (utilizada pela Persona José Carlos, que possui dificuldades com sistemas), o campo numérico de  "Idade" do animal rejeita automaticamente a digitação de caracteres alfabéticos ou símbolos. [Figura idade animal]
+
+   <img width="1440" height="235" alt="idade" src="https://github.com/user-attachments/assets/7c3e7cdc-0426-4f86-8cf0-75be1cbaddf3" />
+
    
 ### 6. **Facilidade de reversão:** Esta regra aplica-se a situações onde o usuário já executou uma ação, mas o sistema oferece uma maneira simples e imediata de mitigar o impacto e "voltar atrás".
 
