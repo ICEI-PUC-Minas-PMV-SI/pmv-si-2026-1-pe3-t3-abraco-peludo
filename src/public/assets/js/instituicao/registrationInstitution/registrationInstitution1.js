@@ -70,6 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
             senha
         }, 1);
 
-        window.location.href = 'cadastroInstituicaoEtapa2.html';
+        window.location.href = 'registrationInstitution2.html';
     });
 });

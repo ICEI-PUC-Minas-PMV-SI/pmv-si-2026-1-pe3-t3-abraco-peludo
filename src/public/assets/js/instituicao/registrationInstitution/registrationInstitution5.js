@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         !etapa3Completa(cadastro) ||
         !etapa4Completa(cadastro)
     ) {
-        window.location.href = 'cadastroInstituicao.html';
+        window.location.href = 'registrationInstitution1.html';
         return;
     }
 
@@ -44,10 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
             aceitouTermos: checkboxTermos.checked
         }, 5);
 
-        window.location.href = 'cadastroInstituicaoEtapa4.html';
+        window.location.href = 'registrationInstitution4.html';
     });
 
-    const form = document.getElementById('formCadastroInstituicaoEtapa5');
+    const form = document.getElementById('formregistrationInstitution5');
 
     form.addEventListener('submit', async (event) => {
         event.preventDefault();

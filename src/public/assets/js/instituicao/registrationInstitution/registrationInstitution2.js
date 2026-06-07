@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cadastro = getCadastroInstituicao();
 
     if (!cadastro.email || !cadastro.senha) {
-        window.location.href = 'cadastroInstituicao.html';
+        window.location.href = 'registrationInstitution1.html';
         return;
     }
 
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.getElementById('btnVoltar').addEventListener('click', () => {
-        window.location.href = 'cadastroInstituicao.html';
+        window.location.href = 'registrationInstitution.html';
     });
 
     const form = document.getElementById('formCadastroInstituicaoEtapa2');
@@ -82,6 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
             dataFundacao
         }, 2);
 
-        window.location.href = 'cadastroInstituicaoEtapa3.html';
+        window.location.href = 'registrationInstitution3.html';
     });
 });

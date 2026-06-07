@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cadastro = getCadastroInstituicao();
 
     if (!cadastro.email || !cadastro.senha || !etapa2Completa(cadastro) || !etapa3Completa(cadastro)) {
-        window.location.href = 'cadastroInstituicao.html';
+        window.location.href = 'registrationInstitution1.html';
         return;
     }
 
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fotoNome: fotoTexto.textContent !== 'Foto' ? fotoTexto.textContent : ''
         }, 4);
 
-        window.location.href = 'cadastroInstituicaoEtapa3.html';
+        window.location.href = 'registrationInstitution3.html';
     });
 
     const form = document.getElementById('formCadastroInstituicaoEtapa4');
@@ -117,6 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
             fotoNome: fotoTexto.textContent
         }, 4);
 
-        window.location.href = 'cadastroInstituicaoEtapa5.html';
+        window.location.href = 'registrationInstitution5.html';
     });
 });
