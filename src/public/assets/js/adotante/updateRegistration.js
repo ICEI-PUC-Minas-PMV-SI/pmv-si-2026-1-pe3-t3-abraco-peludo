@@ -83,9 +83,7 @@ async function salvarAlteracoes(sessao) {
     }
 }
 
-// =====================
-// Inicialização
-// =====================
+
 document.addEventListener('DOMContentLoaded', () => {
     const sessao = getSessao();
     if (!sessao) return;
@@ -94,12 +92,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     preencherFormulario(sessao.usuario);
 
-    // Botão Atualizar
     document.querySelector('.btnSalvar').addEventListener('click', () => {
         salvarAlteracoes(sessao);
     });
 
-    // Botão Cancelar — restaura valores originais
+
     document.querySelector('.btnCancelar').addEventListener('click', () => {
         preencherFormulario(sessao.usuario);
         setValue('senha', '');

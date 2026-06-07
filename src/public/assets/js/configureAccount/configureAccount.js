@@ -1,9 +1,7 @@
 const USUARIO_LOGADO_KEY = 'usuarioLogado';
 const API_URL = 'http://localhost:3000';
 
-// =====================
-// Sessão
-// =====================
+
 function getSessao() {
     const sessao = sessionStorage.getItem(USUARIO_LOGADO_KEY);
     if (!sessao) {
@@ -13,9 +11,7 @@ function getSessao() {
     return JSON.parse(sessao);
 }
 
-// =====================
-// Preencher formulário
-// =====================
+
 function preencherFormulario(usuario) {
     setValue('CNPJ',             usuario.cnpj);
     setValue('cargoResponsavel', usuario.cargoResponsavel);
@@ -43,9 +39,7 @@ function getValue(id) {
     return el ? el.value.trim() : '';
 }
 
-// =====================
-// Salvar alterações (PUT /instituicoes/:id)
-// =====================
+
 async function salvarAlteracoes(sessao) {
     const novaSenha      = getValue('senha');
     const confirmarSenha = getValue('confirmarSenha');

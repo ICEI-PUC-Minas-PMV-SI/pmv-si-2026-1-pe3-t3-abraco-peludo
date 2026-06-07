@@ -70,7 +70,6 @@ function carregarPedidos() {
 
 /**
  * Função acionada ao clicar em "Ver solicitação"
- * Salva o ID selecionado e redireciona para a página de detalhes
  * @param {string} id 
  */
 function verSolicitacao(id) {

@@ -1,13 +1,12 @@
 :root {
-    /* Cores da Navbar */
+
     --bg-navbar: #4D3227;
     --text-navbar: #D9D9D9;
 
-    /* Cores do Body, Fundo e Texto */
     --bg-body: #FFF2D7;
     --text-body: #4D3227;
     
-    /* Cores dos Badges / Botões */
+
     --btn-animais-adotados: #3CB371;
     --num-animais-adotados: #01892B;
     --btn-animais-cadastrados: #FF8C42;
