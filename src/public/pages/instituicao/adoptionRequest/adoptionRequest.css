@@ -1,18 +1,16 @@
-
 * {
+    font-family: "Inter", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
     background-color: #FFF2D7; 
     min-height: 100vh;
 }
 
 .solicitacao-titulo {
-    font-family: "Inter", sans-serif;
     color: #4D3227;
     font-size: 32px;
     font-weight: 700;
@@ -23,7 +21,6 @@ body {
 .animal-nome-titulo,
 .animal-descricao-bloco h4,
 .secao-subtitulo {
-    font-family: "Inter", sans-serif;
     color: #4D3227;
 }
 
@@ -57,7 +54,6 @@ label {
 }
 
 .solicitacao-input-readonly {
-    font-family: "Poppins", sans-serif; 
     width: 100%;
     background-color: #FFFFFF;
     border: none;
