@@ -1,4 +1,9 @@
-const API_BASE_URL = 'https://pmv-si-2026-1-pe3-t3-abraco-peludo-nine.vercel.app';
+
+const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+const API_BASE_URL = isLocalhost 
+  ? 'http://localhost:3000' 
+  : 'https://pmv-si-2026-1-pe3-t3-abraco-peludo-nine.vercel.app';
 
 async function apiGet(recurso, params = {}) {
     const query = new URLSearchParams(params).toString();
