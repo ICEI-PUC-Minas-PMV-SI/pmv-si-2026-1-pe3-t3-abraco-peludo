@@ -12,7 +12,7 @@
     <link rel="icon" type="image/x-icon" href="../../../assets/img/logo-abraco-peludo-aba.svg">
     <link rel="stylesheet" href="../../../assets/css/global.css">
     <link rel="stylesheet" href="../../../assets/css/navbar/style.css">
-    <link rel="stylesheet" href="./cadastroInstituicao.css">
+    <link rel="stylesheet" href="./registrationInstitution.css">
 </head>
 <body>
 
@@ -44,48 +44,64 @@
 
                 <p>Cadastre e comece a fazer a diferença na vida de um animal!</p>
 
-                <form id="formCadastroInstituicaoEtapa2" class="cadastro-form" novalidate>
+                <form id="formCadastroInstituicaoEtapa3" class="cadastro-form" novalidate>
                     <input
                         type="text"
-                        id="cnpj"
-                        name="cnpj"
-                        placeholder="CNPJ"
+                        id="endereco"
+                        name="endereco"
+                        placeholder="Endereço"
                         required
-                        maxlength="18"
+                    >
+                    <span id="erro-endereco" class="form-error" role="alert"></span>
+
+                    <input
+                        type="text"
+                        id="cidade"
+                        name="cidade"
+                        placeholder="Cidade"
+                        required
+                    >
+                    <span id="erro-cidade" class="form-error" role="alert"></span>
+
+                    <input
+                        type="text"
+                        id="bairro"
+                        name="bairro"
+                        placeholder="Bairro"
+                        required
+                    >
+                    <span id="erro-bairro" class="form-error" role="alert"></span>
+
+                    <input
+                        type="text"
+                        id="numero"
+                        name="numero"
+                        placeholder="Número"
+                        required
                         inputmode="numeric"
                     >
-                    <span id="erro-cnpj" class="form-error" role="alert"></span>
+                    <span id="erro-numero" class="form-error" role="alert"></span>
 
                     <input
                         type="text"
-                        id="cargoResponsavel"
-                        name="cargoResponsavel"
-                        placeholder="Cargo Responsável"
+                        id="cep"
+                        name="cep"
+                        placeholder="CEP"
                         required
+                        maxlength="9"
+                        inputmode="numeric"
                     >
-                    <span id="erro-cargoResponsavel" class="form-error" role="alert"></span>
-
-                    <input
-                        type="text"
-                        id="responsavelLegal"
-                        name="responsavelLegal"
-                        placeholder="Responsável legal"
-                        required
-                    >
-                    <span id="erro-responsavelLegal" class="form-error" role="alert"></span>
-
-                    <input
-                        type="date"
-                        id="dataFundacao"
-                        name="dataFundacao"
-                        placeholder="Data da Fundação"
-                        required
-                    >
-                    <span id="erro-dataFundacao" class="form-error" role="alert"></span>
+                    <span id="erro-cep" class="form-error" role="alert"></span>
 
                     <div class="form-buttons">
-                        <button type="submit" class="btn-proximo">Próximo</button>
-                        <button type="button" id="btnVoltar" class="btn-voltar">Voltar</button>
+                        <button type="submit" class="btn-proximo">
+                            <link rel="stylesheet" href="./registrationInstitution4.html">
+                            Próximo
+                        </button>
+                        <button type="button" id="btnVoltar" class="btn-voltar">
+                            <link rel="stylesheet" href="./registrationInstitution2.html">
+                            Voltar
+                        </button>
                     </div>
                 </form>
             </div>
@@ -95,6 +111,6 @@
 
     <script src="../../../assets/js/config/api.js"></script>
     <script src="../../../assets/js/instituicao/cadastroInstituicaoStorage.js"></script>
-    <script src="../../../assets/js/instituicao/cadastroInstituicaoEtapa2.js"></script>
+    <script src="../../../assets/js/instituicao/cadastroInstituicaoEtapa3.js"></script>
 </body>
 </html>
