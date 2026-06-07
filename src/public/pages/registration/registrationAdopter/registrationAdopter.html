@@ -12,19 +12,21 @@
     <link rel="icon" type="image/x-icon" href="../../../assets/img/logo-abraco-peludo-aba.svg">
     <link rel="stylesheet" href="../../../assets/css/global.css">
     <link rel="stylesheet" href="../../../assets/css/navbar/style.css">
-    <link rel="stylesheet" href="./cadastroAdotante.css">
+    <link rel="stylesheet" href="./registrationAdopter.css">
 </head>
 <body>
 
     <div id="container-nav">
         <div id="logo-abraco">
-            <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
+            <a href="../../../index.html">
+                <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
+            </a>
         </div>
 
         <div>
             <a href="../../../index.html" class="active">Home</a>
-            <a href="../../login/login.html" class="active">Login</a>
-            <a href="../../registrationType/registrationType.html" class="active">Faça seu Cadastro</a>
+            <a href="../../../pages/login/login.html" class="active">Login</a>
+            <a href="../../../pages/registration/registrationType/registrationType.html" class="active">Faça seu Cadastro</a>
         </div>
     </div>
 
@@ -123,7 +125,10 @@
                     </div>
                     <span id="erro-confirmarSenha" class="form-error" role="alert"></span>
 
-                    <button type="submit" class="btn-proximo">Próximo</button>
+                    <button type="submit" class="btn-proximo">
+                        <link rel="stylesheet" href="./registrationAdopterTerms.html">
+                        Próximo
+                    </button>
                 </form>
             </div>
         </section>
@@ -131,7 +136,7 @@
     </main>
 
     <script src="../../../assets/js/config/api.js"></script>
-    <script src="../../../assets/js/adotante/cadastroAdotanteStorage.js"></script>
-    <script src="../../../assets/js/adotante/cadastroAdotante.js"></script>
+    <script src="../../../assets/js/adotante/registrationAdopter/registrationAdopterStorage.js"></script>
+    <script src="../../../assets/js/adotante/registrationAdopter/registrationAdopter.js"></script>
 </body>
 </html>

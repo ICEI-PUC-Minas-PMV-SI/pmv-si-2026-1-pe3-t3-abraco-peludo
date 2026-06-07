@@ -12,19 +12,21 @@
     <link rel="icon" type="image/x-icon" href="../../../assets/img/logo-abraco-peludo-aba.svg">
     <link rel="stylesheet" href="../../../assets/css/global.css">
     <link rel="stylesheet" href="../../../assets/css/navbar/style.css">
-    <link rel="stylesheet" href="./cadastroInstituicao.css">
+    <link rel="stylesheet" href="./registrationInstitution.css">
 </head>
 <body>
 
     <div id="container-nav">
         <div id="logo-abraco">
-            <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
+            <a href="../../../index.html">
+                <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
+            </a>
         </div>
 
         <div>
             <a href="../../../index.html" class="active">Home</a>
-            <a href="../../login/login.html" class="active">Login</a>
-            <a href="../../registrationType/registrationType.html" class="active">Faça seu Cadastro</a>
+            <a href="../../../pages/login/login.html" class="active">Login</a>
+            <a href="../../../pages/registration/registrationType/registrationType.html" class="active">Faça seu Cadastro</a>
         </div>
     </div>
 
@@ -84,8 +86,14 @@
                     <span id="erro-dataFundacao" class="form-error" role="alert"></span>
 
                     <div class="form-buttons">
-                        <button type="submit" class="btn-proximo">Próximo</button>
-                        <button type="button" id="btnVoltar" class="btn-voltar">Voltar</button>
+                        <button type="submit" class="btn-proximo">
+                            <link rel="stylesheet" href="./registrationInstitution3.html">
+                            Próximo
+                        </button>
+                        <button type="button" id="btnVoltar" class="btn-voltar">
+                            <link rel="stylesheet" href="./registrationInstitution1.html">
+                            Voltar
+                        </button>
                     </div>
                 </form>
             </div>
@@ -94,7 +102,7 @@
     </main>
 
     <script src="../../../assets/js/config/api.js"></script>
-    <script src="../../../assets/js/instituicao/cadastroInstituicaoStorage.js"></script>
-    <script src="../../../assets/js/instituicao/cadastroInstituicaoEtapa2.js"></script>
+    <script src="../../../assets/js/instituicao/registrationInstitution/registrationInstitution2.js"></script>
+    <script src="../../../assets/js/instituicao/registrationInstitution/registrationInstitutionStorage.js"></script>
 </body>
 </html>

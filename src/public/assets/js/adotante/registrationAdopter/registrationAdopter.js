@@ -1,5 +1,21 @@
-function validarEtapa1(email, senha, confirmarSenha) {
+function validarCadastro(nomeCompleto, cpf, dataNascimento, email, senha, confirmarSenha) {
     const erros = {};
+
+    if (!nomeCompleto.trim()) {
+        erros.nomeCompleto = 'O nome completo é obrigatório.';
+    }
+
+    if (!cpf.trim()) {
+        erros.cpf = 'O CPF é obrigatório.';
+    } else if (!validarCpf(cpf)) {
+        erros.cpf = 'Informe um CPF válido.';
+    }
+
+    if (!dataNascimento) {
+        erros.dataNascimento = 'A data de nascimento é obrigatória.';
+    } else if (new Date(dataNascimento) > new Date()) {
+        erros.dataNascimento = 'A data de nascimento não pode ser futura.';
+    }
 
     if (!email.trim()) {
         erros.email = 'O e-mail é obrigatório.';
@@ -23,8 +39,17 @@ function validarEtapa1(email, senha, confirmarSenha) {
 }
 
 function preencherFormulario() {
-    const cadastro = getCadastroInstituicao();
+    const cadastro = getCadastroAdotante();
 
+    if (cadastro.nomeCompleto) {
+        document.getElementById('nomeCompleto').value = cadastro.nomeCompleto;
+    }
+    if (cadastro.cpf) {
+        document.getElementById('cpf').value = cadastro.cpf;
+    }
+    if (cadastro.dataNascimento) {
+        document.getElementById('dataNascimento').value = cadastro.dataNascimento;
+    }
     if (cadastro.email) {
         document.getElementById('email').value = cadastro.email;
     }
@@ -51,25 +76,39 @@ document.addEventListener('DOMContentLoaded', () => {
     preencherFormulario();
     initToggleSenha();
 
-    const form = document.getElementById('formCadastroInstituicao');
+    const inputCpf = document.getElementById('cpf');
+    inputCpf.addEventListener('input', () => {
+        inputCpf.value = formatarCpf(inputCpf.value);
+    });
+
+    const form = document.getElementById('formCadastroAdotante');
 
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
 
+        const nomeCompleto = document.getElementById('nomeCompleto').value;
+        const cpf = document.getElementById('cpf').value;
+        const dataNascimento = document.getElementById('dataNascimento').value;
         const email = document.getElementById('email').value;
         const senha = document.getElementById('senha').value;
         const confirmarSenha = document.getElementById('confirmarSenha').value;
 
-        const erros = validarEtapa1(email, senha, confirmarSenha);
-        exibirErros(['email', 'senha', 'confirmarSenha'], erros);
+        const erros = validarCadastro(nomeCompleto, cpf, dataNascimento, email, senha, confirmarSenha);
+        exibirErros(
+            ['nomeCompleto', 'cpf', 'dataNascimento', 'email', 'senha', 'confirmarSenha'],
+            erros
+        );
 
         if (Object.keys(erros).length > 0) return;
 
-        salvarCadastroInstituicao({
+        salvarCadastroAdotante({
+            nomeCompleto: nomeCompleto.trim(),
+            cpf: cpf.trim(),
+            dataNascimento,
             email: email.trim(),
             senha
         }, 1);
 
-        window.location.href = 'cadastroInstituicaoEtapa2.html';
+        window.location.href = 'registrationAdopterTerms.html';
     });
 });
