@@ -1,0 +1,223 @@
+* {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF2D7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.ong-perfil-page {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 60px 56px;
+    width: 100%;
+}
+
+.ong-perfil-topo {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 48px;
+    align-items: start;
+    margin-bottom: 48px;
+}
+
+.ong-perfil-logo-card {
+    background-color: #FFFFFF;
+    border-radius: 24px;
+    padding: 32px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    box-shadow: 0 4px 20px rgba(77, 50, 39, 0.08);
+}
+
+.ong-perfil-logo-card img {
+    max-width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+}
+
+.ong-perfil-info h1 {
+    font-family: "Poppins", sans-serif;
+    color: #4D3227;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.ong-perfil-descricao {
+    color: #4D3227;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.ong-perfil-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.ong-perfil-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #3CB371;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 999px;
+}
+
+.ong-perfil-pill img {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+}
+
+.ong-perfil-pill-linha {
+    width: 100%;
+    display: flex;
+}
+
+.ong-perfil-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    margin-bottom: 40px;
+}
+
+.ong-perfil-animal-card {
+    background-color: #FFD9AA;
+    border-radius: 24px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.ong-perfil-animal-card:hover {
+    transform: translateY(-3px);
+}
+
+.ong-perfil-animal-photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 20px;
+    background: #FFF2D7;
+}
+
+.ong-perfil-animal-label {
+    background-color: #FF8C42;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 18px;
+    border-radius: 999px;
+    width: 100%;
+}
+
+.ong-perfil-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.ong-perfil-stat {
+    display: flex;
+    align-items: stretch;
+    border-radius: 999px;
+    overflow: hidden;
+    min-height: 48px;
+}
+
+.ong-perfil-stat-label {
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+
+.ong-perfil-stat-valor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 72px;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.ong-perfil-stat-adotados .ong-perfil-stat-label {
+    background-color: #1E88E5;
+}
+
+.ong-perfil-stat-adotados .ong-perfil-stat-valor {
+    background-color: #1565C0;
+}
+
+.ong-perfil-stat-cadastrados .ong-perfil-stat-label {
+    background-color: #FF8C42;
+}
+
+.ong-perfil-stat-cadastrados .ong-perfil-stat-valor {
+    background-color: #4D3227;
+}
+
+.ong-perfil-erro {
+    text-align: center;
+    color: #4D3227;
+    font-size: 20px;
+    padding: 80px 20px;
+}
+
+@media (max-width: 1000px) {
+    .ong-perfil-topo {
+        grid-template-columns: 1fr;
+    }
+
+    .ong-perfil-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .ong-perfil-page {
+        padding: 24px 20px 40px;
+    }
+
+    .ong-perfil-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ong-perfil-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .ong-perfil-grid {
+        grid-template-columns: 1fr;
+    }
+}
