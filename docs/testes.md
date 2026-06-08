@@ -1,3 +1,143 @@
+## Relatório de Teste com Usuário — Brenda Linhares Freitas
+
+Este relatório documenta os resultados do teste de usabilidade do sistema Abraço Peludo, plataforma voltada para a adoção responsável de animais. O teste foi conduzido pela avaliadora Brenda Linhares no dia 07/06/2026 com o Participante nº 3, tendo como objetivo verificar a usabilidade do sistema e a satisfação geral do usuário.
+
+Foram propostas seis tarefas cobrindo os principais fluxos da plataforma: cadastro, login, solicitação de adoção, cadastro de instituição e visualização de pedidos. Ao final, o participante respondeu a um questionário qualitativo. Os resultados obtidos subsidiam melhorias no design e na experiência do usuário com base em evidências reais de uso.
+
+Os testes foram feitos utilizando o sistema em máquina local. (localhost:3000)
+
+### Informações Gerais
+
+| Campo | Dados |
+|---|---|
+| **Projeto** | Abraço Peludo |
+| **Equipe** | Brenda Linhares Freitas, Bruno de Almeida Gomes Pardini, Camila Santos Gomes, Júlia Maria Coutinho Corrêa, Raíssa Barbieri Fernandes Silva e Rômulo Ruggiero |
+| **Avaliador** | Brenda Linhares |
+| **Data** | 07/06/2026 |
+| **Participante Nº** | 3 |
+
+---
+
+### Proposta
+
+A proposta deste teste é verificar o entendimento e a usabilidade do projeto desenvolvido a partir das interações de um usuário representativo do público-alvo. O teste também avalia a satisfação geral do uso pelo usuário.
+
+---
+
+### Questões Introdutórias
+
+**Você já ouviu falar desse tipo de sistema?**
+
+- [ ] Sim
+- [x] Não
+
+**Que tipo de informação você acha que poderia obter dele?**
+
+> O participante identificou que o sistema apresenta informações sobre animais disponíveis para adoção, instituições responsáveis e formas de iniciar um processo de adoção.
+
+**Para quem você acha que esse sistema foi desenvolvido?**
+
+> Para quem gosta de animal e luta pela causa da adoção responsável.
+
+**Quem você acha que é o responsável por esse sistema?**
+
+> Empresa privada (ONG).
+
+---
+
+### Tarefas
+
+#### Tarefa 1 — Cadastro de Usuário
+
+| Caminho | Sucesso | Observações |
+|---|:---:|---|
+| Tela de home → Cadastrar-se → Formulário de cadastro → Inserir dados → Aprovar termo de uso | ✅ 2 | O sistema de cadastro é simples e intuitivo. |
+
+---
+
+#### Tarefa 2 — Login
+
+| Caminho | Sucesso | Observações |
+|---|:---:|---|
+| Home → Login | ✅ 2 | O usuário não sentiu dificuldades e nem solicitou auxílio para a plataforma. |
+
+---
+
+#### Tarefa 3 — Solicitação de Adoção
+
+| Caminho | Sucesso | Observações |
+|---|:---:|---|
+| Login → Lista de animais → Perfil do pet → Quero adotar → Questionário de adoção | ✅ 2 | Não sentiu necessidade de auxílio ao completar a tarefa de solicitação de adoção. |
+
+---
+
+#### Tarefa 4 — Cadastro de Instituição e Animal
+
+| Caminho | Sucesso | Observações |
+|---|:---:|---|
+| Home → Cadastrar-se → Instituição → Inserir dados da ONG → Aprovar termos de uso → Login → Cadastrar animal | ✅ 2 | Não teve dificuldade em cadastrar um novo animal. |
+
+---
+
+#### Tarefa 5 — Visualizar Pedidos de Adoção
+
+| Caminho | Sucesso | Observações |
+|---|:---:|---|
+| Home → Login → Pedidos de adoção | ✅ 2 | Não mostrou dificuldade em acessar a tela para visualizar os pedidos de adoção. |
+
+---
+
+#### Tarefa 6 — Detalhe de Pedido de Adoção
+
+| Caminho | Sucesso | Observações |
+|---|:---:|---|
+| Home → Login → Pedidos de adoção → Visualizar pedido de adoção | ✅ 2 | Teve fácil acesso ao formulário respondido pela solicitação de adoção, além das informações do pet. |
+
+---
+
+### Questionário Final
+
+**Qual foi a sua impressão geral do sistema?**
+
+> Fácil e intuitivo.
+
+**Qual foi a sua impressão sobre as atividades propostas?**
+
+> Foram fáceis de concluir.
+
+**Você acha que este sistema é atual? Por quê?**
+
+> Sim, porque nenhum outro sistema como esse existe.
+
+**O que você mais gostou neste sistema?**
+
+> A facilidade em concluir todas as atividades, tanto como adotante quanto como instituição.
+
+**O que você menos gostou neste sistema?**
+
+> A home tem muito texto informativo, mas não garante facilidade de uso.
+
+**Há alguma coisa que está faltando no sistema?**
+
+> Melhorar os conteúdos da página inicial, pois há muito texto informativo e não é muito agradável.
+
+**Se você fosse descrever este sistema para um colega em uma ou duas frases, o que diria?**
+
+> Intuitivo.
+
+---
+
+### Conclusões do Avaliador
+
+O usuário concluiu todas as atividades muito bem. Relatou questões quanto à tela inicial, considerando que, mesmo com textos informativos presentes, a home poderia ser melhorada. Nos demais fluxos, não sentiu dificuldade e concluiu todas as tarefas sem esforço ou dúvidas.
+
+### Pontos de Atenção
+
+- **Ponto positivo:** Fluxos de cadastro, login, adoção e gestão de animais foram considerados intuitivos e de fácil navegação.
+- **Ponto de melhoria:** A página inicial (home) contém excesso de texto informativo, o que pode prejudicar a experiência do usuário.
+
+---
+
 ## Relatório de Teste com Usuário — Bruno de Almeida Gomes Pardini
 
 Este relatório documenta os resultados do teste de usabilidade do sistema Abraço Peludo, plataforma voltada para a adoção responsável de animais. O teste foi conduzido pelo avaliador Bruno de Almeida Gomes Pardini no dia 07/06/2026 com o Participante nº 1, tendo como objetivo verificar a usabilidade do sistema e a satisfação geral do usuário.
@@ -583,3 +723,151 @@ O participante conseguiu realizar todas as tarefas propostas, porém apresentou 
 
 - **Ponto positivo:** O sistema transmite organização e segurança ao usuário interessado em adoção.
 - **Ponto de melhoria:** Tornar o acompanhamento do pedido mais visível e avaliar a divisão do questionário em etapas menores.
+
+---
+
+## Relatório de Teste com Usuário — Rômulo Ruggiero
+
+Este relatório documenta os resultados do teste de usabilidade do sistema Abraço Peludo, plataforma voltada para a adoção responsável de animais. O teste foi conduzido pelo avaliador Rômulo Ruggiero no dia 07/06/2026 com o Participante nº 6, tendo como objetivo verificar a usabilidade do sistema e a satisfação geral do usuário.
+
+Foram propostas seis tarefas cobrindo os principais fluxos da plataforma no perfil de instituição: cadastro de instituição, login, cadastro de animal, atualização de dados do pet, visualização de pedidos de adoção e consulta dos detalhes de uma solicitação. Ao final, o participante respondeu a um questionário qualitativo. Os resultados obtidos subsidiam melhorias no design e na experiência do usuário com base em evidências reais de uso.
+
+Os testes foram feitos utilizando o sistema em máquina local. (localhost:3000)
+
+### Informações Gerais
+
+| Campo | Dados |
+|---|---|
+| **Projeto** | Abraço Peludo |
+| **Equipe** | Brenda Linhares Freitas, Bruno de Almeida Gomes Pardini, Camila Santos Gomes, Júlia Maria Coutinho Corrêa, Raíssa Barbieri Fernandes Silva e Rômulo Ruggiero |
+| **Avaliador** | Rômulo Ruggiero |
+| **Data** | 07/06/2026 |
+| **Participante Nº** | 6 |
+
+---
+
+### Proposta
+
+A proposta deste teste é verificar o entendimento e a usabilidade do projeto desenvolvido a partir das interações de um usuário representativo do público-alvo. O teste também avalia a satisfação geral do uso pelo usuário.
+
+---
+
+### Questões Introdutórias
+
+**Você já ouviu falar desse tipo de sistema?**
+
+- [x] Sim
+- [ ] Não
+
+**Caso sim, diga-me o que você sabe sobre.**
+
+> O participante relatou que já conhecia páginas de adoção em redes sociais e formulários usados por ONGs, mas que não conhecia uma plataforma que centralizasse cadastro de animais e acompanhamento dos pedidos.
+
+**Que tipo de informação você acha que poderia obter dele?**
+
+> O participante respondeu que o sistema parece permitir consultar animais disponíveis, cadastrar informações de pets, visualizar dados de instituições e acompanhar solicitações de adoção.
+
+**Para quem você acha que esse sistema foi desenvolvido?**
+
+> Para ONGs, protetores de animais e pessoas interessadas em adotar de forma responsável.
+
+**Quem você acha que é o responsável por esse sistema?**
+
+> O participante acredita que o sistema seja responsabilidade de uma ONG, grupo de proteção animal ou equipe parceira da causa animal.
+
+---
+
+### Tarefas
+
+#### Tarefa 1 — Cadastro de Instituição
+
+| Caminho | Sucesso | Observações |
+|---|:---:|---|
+| Home → Cadastrar-se → Instituição → Inserir dados da ONG → Aprovar termos de uso | ✅ 2 | O participante realizou o cadastro da instituição sem dificuldade. Os campos foram considerados compreensíveis. |
+
+---
+
+#### Tarefa 2 — Login da Instituição
+
+| Caminho | Sucesso | Observações |
+|---|:---:|---|
+| Home → Login → Inserir e-mail e senha → Acessar painel da instituição | ✅ 2 | O participante acessou o painel rapidamente e entendeu que estava na área administrativa da instituição. |
+
+---
+
+#### Tarefa 3 — Cadastro de Animal
+
+| Caminho | Sucesso | Observações |
+|---|:---:|---|
+| Painel da instituição → Cadastrar animal → Inserir dados do pet → Adicionar foto → Salvar cadastro | ✅ 2 | O participante conseguiu cadastrar o animal sem auxílio. Comentou que o formulário é útil para padronizar as informações dos animais. |
+
+---
+
+#### Tarefa 4 — Atualizar Informações de Animal
+
+| Caminho | Sucesso | Observações |
+|---|:---:|---|
+| Painel da instituição → Animais cadastrados → Selecionar animal → Editar dados → Salvar alterações | ⚠️ 1 | O participante concluiu a edição, mas ficou em dúvida se a alteração havia sido salva. Sentiu falta de uma mensagem de confirmação mais evidente. |
+
+---
+
+#### Tarefa 5 — Visualizar Pedidos de Adoção
+
+| Caminho | Sucesso | Observações |
+|---|:---:|---|
+| Painel da instituição → Pedidos de adoção → Visualizar solicitações recebidas | ✅ 2 | O participante acessou a tela de pedidos sem dificuldade e compreendeu a organização da lista. |
+
+---
+
+#### Tarefa 6 — Analisar Detalhe de Pedido de Adoção
+
+| Caminho | Sucesso | Observações |
+|---|:---:|---|
+| Pedidos de adoção → Selecionar pedido → Visualizar dados do adotante, respostas do questionário e dados do animal | ✅ 2 | O participante conseguiu visualizar as informações necessárias para análise da solicitação. Considerou importante que os dados do adotante e do pet estejam reunidos em uma única tela. |
+
+---
+
+### Questionário Final
+
+**Qual foi a sua impressão geral do sistema?**
+
+> O sistema é organizado e pode ajudar bastante instituições que precisam controlar vários animais e pedidos de adoção.
+
+**Qual foi a sua impressão sobre as atividades propostas?**
+
+> As atividades foram coerentes com a rotina de uma ONG e fáceis de executar.
+
+**Você acha que este sistema é atual? Por quê?**
+
+> Sim, porque substitui processos manuais e conversas espalhadas por uma plataforma mais centralizada.
+
+**O que você mais gostou neste sistema?**
+
+> A organização dos animais cadastrados e dos pedidos de adoção em um mesmo ambiente.
+
+**O que você menos gostou neste sistema?**
+
+> A falta de uma confirmação mais clara ao salvar alterações.
+
+**Há alguma coisa que está faltando no sistema?**
+
+> Um histórico de alterações e uma opção para exportar dados dos animais e pedidos.
+
+**Se você fosse descrever este sistema para um colega em uma ou duas frases, o que diria?**
+
+> É uma plataforma para ONGs cadastrarem animais, divulgarem pets disponíveis e acompanharem pedidos de adoção com mais organização.
+
+**Você gostaria de fazer algum comentário final ou pergunta?**
+
+> O participante sugeriu que o sistema tivesse notificações para avisar a ONG quando uma nova solicitação fosse recebida.
+
+---
+
+### Conclusões do Avaliador
+
+O participante concluiu todas as tarefas propostas e demonstrou facilidade nos fluxos principais do perfil instituição. A experiência foi considerada positiva, principalmente pela centralização das informações de animais e pedidos de adoção. O principal ponto de melhoria observado foi a necessidade de feedback mais claro após salvar alterações.
+
+### Pontos de Atenção
+
+- **Ponto positivo:** O sistema facilita a gestão de animais e solicitações de adoção em uma única plataforma.
+- **Ponto de melhoria:** Inserir mensagens de confirmação após ações importantes, criar histórico de alterações e considerar notificações para novas solicitações.
