@@ -5,6 +5,8 @@
 Este relatório documenta os resultados do teste de usabilidade do sistema Abraço Peludo, plataforma voltada para a adoção responsável de animais. O teste foi conduzido pela avaliadora Brenda Linhares no dia 07/06/2026 com o Participante nº 3, tendo como objetivo verificar a usabilidade do sistema e a satisfação geral do usuário.
 Foram propostas seis tarefas cobrindo os principais fluxos da plataforma: cadastro, login, solicitação de adoção, cadastro de instituição e visualização de pedidos. Ao final, o participante respondeu a um questionário qualitativo. Os resultados obtidos subsidiam melhorias no design e na experiência do usuário com base em evidências reais de uso.
 
+Os testes foram feitos utilizando o sistema em máquina local. (localhost:3000)
+
 ## Informações Gerais
 
 | Campo | Dados |
