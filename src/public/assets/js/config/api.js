@@ -1,4 +1,16 @@
-const API_BASE_URL = 'http://localhost:3000';
+const API_PRODUCAO = 'https://abraco-peludo-api.onrender.com';
+
+function obterBaseUrlApi() {
+    const { hostname, protocol } = window.location;
+
+    if (hostname === 'localhost' || hostname === '127.0.0.1' || protocol === 'file:') {
+        return 'http://localhost:3000';
+    }
+
+    return API_PRODUCAO;
+}
+
+const API_BASE_URL = obterBaseUrlApi();
 
 async function apiGet(recurso, params = {}) {
     const query = new URLSearchParams(params).toString();
