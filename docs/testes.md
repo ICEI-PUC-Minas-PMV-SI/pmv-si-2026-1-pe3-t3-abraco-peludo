@@ -1,5 +1,3 @@
----
-
 ## Relatório de Teste com Usuário — Bruno de Almeida Gomes Pardini
 
 Este relatório documenta os resultados do teste de usabilidade do sistema Abraço Peludo, plataforma voltada para a adoção responsável de animais. O teste foi conduzido pelo avaliador Bruno de Almeida Gomes Pardini no dia 07/06/2026 com o Participante nº 1, tendo como objetivo verificar a usabilidade do sistema e a satisfação geral do usuário.
