@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: abraco-peludo-api
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: APP_URL
+        value: https://pmv-si-2026-1-pe3-t3-abraco-peludo-abracopeludo.vercel.app
+      - key: NODE_VERSION
+        value: 20.11.0

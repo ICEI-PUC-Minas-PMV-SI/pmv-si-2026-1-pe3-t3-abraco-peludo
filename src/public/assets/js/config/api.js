@@ -1,9 +1,16 @@
+const API_PRODUCAO = 'https://abraco-peludo-api.onrender.com';
 
-const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+function obterBaseUrlApi() {
+    const { hostname, protocol } = window.location;
 
-const API_BASE_URL = isLocalhost 
-  ? 'http://localhost:3000' 
-  : 'https://pmv-si-2026-1-pe3-t3-abraco-peludo-eight.vercel.app';
+    if (hostname === 'localhost' || hostname === '127.0.0.1' || protocol === 'file:') {
+        return 'http://localhost:3000';
+    }
+
+    return API_PRODUCAO;
+}
+
+const API_BASE_URL = obterBaseUrlApi();
 
 async function apiGet(recurso, params = {}) {
     const query = new URLSearchParams(params).toString();

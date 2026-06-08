@@ -5,7 +5,8 @@ const path = require('path');
 const jsonServer = require('json-server');
 const nodemailer = require('nodemailer');
 
-const APP_URL = process.env.APP_URL || 'http://127.0.0.1:5500';
+const APP_URL = process.env.APP_URL || 'https://pmv-si-2026-1-pe3-t3-abraco-peludo-abracopeludo.vercel.app';
+const PORT = process.env.PORT || 3000;
 const RESET_PATH = '/pages/login/resetPassword/resetPassword.html';
 const DB_PATH = path.join(__dirname, 'src/public/data/db.json');
 
@@ -73,6 +74,16 @@ function buscarUsuarioPorEmail(db, email) {
 
     return null;
 }
+
+server.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE,OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    if (req.method === 'OPTIONS') {
+        return res.sendStatus(204);
+    }
+    next();
+});
 
 server.use(middlewares);
 server.use(require('body-parser').json({ limit: '15mb' }));
@@ -171,8 +182,8 @@ server.post('/redefinir-senha', (req, res) => {
 
 server.use(router);
 
-server.listen(3000, () => {
-    console.log('API Abraço Peludo rodando em http://localhost:3000');
+server.listen(PORT, () => {
+    console.log(`API Abraço Peludo rodando na porta ${PORT}`);
 
     if (!process.env.SMTP_USER) {
         console.log('SMTP não configurado. Links de recuperação serão exibidos no terminal (modo dev).');

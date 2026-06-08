@@ -2,7 +2,8 @@
   "name": "abraco-peludo",
   "private": true,
   "scripts": {
-    "api": "node server.js"
+    "api": "node server.js",
+    "start": "node server.js"
   },
   "dependencies": {
     "cors": "^2.8.6",
