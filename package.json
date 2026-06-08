@@ -5,6 +5,7 @@
     "api": "node server.js"
   },
   "dependencies": {
+    "cors": "^2.8.6",
     "dotenv": "^16.4.7",
     "json-server": "^0.17.4",
     "nodemailer": "^6.10.0"
