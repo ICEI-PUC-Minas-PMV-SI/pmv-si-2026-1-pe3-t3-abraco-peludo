@@ -1,167 +1,238 @@
+// adoptionRequest.js
+// Busca os dados do pedido de adoção selecionado diretamente do db.json (json-server)
 
-const detalhesPedidosMock = {
-    "1": {
-        animal: {
-            nome: "Ruffe",
-            foto: "../../../assets/img/ruffus-detalhe.jpg",
-            ong: "ONG Focinho Feliz",
-            ongDescricao: "A Focinho Feliz é uma ONG dedicada a transformar a vida de animais em situação de abandono, conectando cães e gatos a famílias que possam oferecer amor, cuidado e um novo lar. Nosso objetivo é incentivar a adoção responsável, promover o bem-estar animal e mostrar que cada adoção é uma nova chance de felicidade.",
-            genero: "Macho",
-            idade: "2 anos",
-            porte: "Grande",
-            sobre: "Dobermann dócil, demanda bastante espaço e caminhadas diárias. Brincalhão, deve se alimentar com ração para cães de grande porte, como a Pitucão XG.",
-            saude: { vacinado: true, castrado: true, vermifugado: true }
-        },
-        adotante: {
-            nomeCompleto: "José Carlos da Silva",
-            cpf: "123.456.789-00",
-            dataNascimento: "14/08/1992",
-            email: "jose.carlos@email.com",
-            respostas: {
-                estado: "MG",
-                cidade: "Belo Horizonte",
-                crianca: "Não possui crianças em casa.",
-                cientes: "Sim, todos estão cientes e de acordo.",
-                presente: "O pet é para mim mesmo.",
-                casaComTelas: "Sim, todas as janelas possuem redes.",
-                casaSemTelas: "Não se aplica.",
-                apComTelas: "Não se aplica.",
-                apSemTelas: "Não se aplica.",
-                coberturaComTelas: "Não se aplica.",
-                coberturaSemTelas: "Não se aplica.",
-                terreoComTelas: "Não se aplica.",
-                terreoSemTelas: "Não se aplica."
-            }
-        }
-    },
-    "2": {
-        animal: {
-            nome: "Luna",
-            foto: "../../../assets/img/luna-detalhe.jpg",
-            ong: "ONG Focinho Feliz",
-            ongDescricao: "A Focinho Feliz é uma ONG dedicada a transformar a vida de animais...",
-            genero: "Fêmea",
-            idade: "1 ano",
-            porte: "Médio",
-            sobre: "Gatinha muito dócil e carinhosa, ideal para apartamento.",
-            saude: { vacinado: true, castrado: true, vermifugado: false }
-        },
-        adotante: {
-            nomeCompleto: "Maria Eduarda Santos",
-            cpf: "987.654.321-11",
-            dataNascimento: "22/03/1998",
-            email: "maria.eduarda@email.com",
-            respostas: {
-                estado: "MG",
-                cidade: "Contagem",
-                crianca: "Sim, um filho de 7 anos.",
-                cientes: "Sim, todos de acordo.",
-                presente: "O pet é para mim e minha família.",
-                casaComTelas: "Não se aplica.",
-                casaSemTelas: "Não se aplica.",
-                apComTelas: "Sim, apartamento totalmente telado.",
-                apSemTelas: "Não se aplica.",
-                coberturaComTelas: "Não se aplica.",
-                coberturaSemTelas: "Não se aplica.",
-                terreoComTelas: "Não se aplica.",
-                terreoSemTelas: "Não se aplica."
-            }
+const API_URL = 'http://localhost:3000';
+
+// ── Helpers ────────────────────────────────────────────────────────────────────
+
+function formatarData(dataISO) {
+    if (!dataISO) return '—';
+    // Suporta "YYYY-MM-DD" e ISO completo
+    const [ano, mes, dia] = dataISO.split('T')[0].split('-');
+    return `${dia}/${mes}/${ano}`;
+}
+
+function traduzirMoradia(moradia) {
+    const mapa = {
+        casaComTela:       'Casa com telas em todas as janelas',
+        casaSemTela:       'Casa sem telas nas janelas',
+        apComTela:         'Apartamento com telas em todas as janelas',
+        apSemTela:         'Apartamento sem telas nas janelas',
+        coberturaComTela:  'Cobertura com telas',
+        coberturaSemTela:  'Cobertura sem telas',
+        terreoComTela:     'Térreo com telas',
+        terreoSemTela:     'Térreo sem telas',
+    };
+    return mapa[moradia] || moradia || '—';
+}
+
+function traduzirSimNao(valor) {
+    if (!valor) return '—';
+    const v = valor.toString().toLowerCase();
+    if (v === 'sim' || v === 'true') return 'Sim';
+    if (v === 'nao' || v === 'não' || v === 'false') return 'Não';
+    return valor;
+}
+
+// ── Busca de dados ─────────────────────────────────────────────────────────────
+
+async function buscarAdocao(id) {
+    const res = await fetch(`${API_URL}/adocoes/${id}`);
+    if (!res.ok) throw new Error(`Adoção ${id} não encontrada`);
+    return res.json();
+}
+
+async function buscarAnimal(id) {
+    const res = await fetch(`${API_URL}/animais/${id}`);
+    if (!res.ok) return null;
+    return res.json();
+}
+
+async function buscarAdotante(id) {
+    const res = await fetch(`${API_URL}/adotantes/${id}`);
+    if (!res.ok) return null;
+    return res.json();
+}
+
+async function buscarInstituicao(id) {
+    const res = await fetch(`${API_URL}/instituicoes/${id}`);
+    if (!res.ok) return null;
+    return res.json();
+}
+
+// ── Renderização ───────────────────────────────────────────────────────────────
+
+function preencherInput(seletor, valor) {
+    const el = document.querySelector(seletor);
+    if (el) el.value = valor ?? '—';
+}
+
+function renderizarDadosDoPedido(adocao, animal, adotante, instituicao) {
+
+    // ── Animal ──────────────────────────────────────────────────────────────────
+
+    const fotoEl = document.querySelector('.animal-foto-detalhe');
+    if (fotoEl) {
+        // Se a foto for base64 ou caminho de arquivo, usa direto
+        fotoEl.src = animal?.foto?.startsWith('data:')
+            ? animal.foto
+            : `../../../assets/img/${animal?.foto || 'icon-cachorro.svg'}`;
+        fotoEl.alt = animal?.nome || 'Foto do pet';
+    }
+
+    const nomeAnimalEl = document.querySelector('.animal-nome-titulo');
+    if (nomeAnimalEl) nomeAnimalEl.textContent = animal?.nome || '—';
+
+    const sobreEl = document.querySelector('.animal-descricao-bloco p');
+    if (sobreEl) sobreEl.textContent = animal?.descricao || '—';
+
+    const sobreTituloEl = document.querySelector('.animal-descricao-bloco h4');
+    if (sobreTituloEl) sobreTituloEl.textContent = `Sobre ${animal?.nome || 'o pet'}`;
+
+    // Tags: gênero, idade, porte
+    // Cada .tag-item tem um <span class="tag-texto"> com o valor
+    const tags = document.querySelectorAll('.tag-item');
+
+    function preencherTag(tag, valor) {
+        if (!tag) return;
+        const textoEl = tag.querySelector('.tag-texto');
+        if (textoEl) {
+            textoEl.textContent = valor;
+        } else {
+            // fallback: substitui nó de texto direto preservando o ícone
+            const textoNode = [...tag.childNodes].find(n => n.nodeType === Node.TEXT_NODE && n.textContent.trim());
+            if (textoNode) textoNode.textContent = ' ' + valor;
         }
     }
-};
 
+    preencherTag(tags[0], animal?.sexo  || '—');
+    preencherTag(tags[1], animal?.idade || '—');
+    preencherTag(tags[2], animal?.porte || '—');
 
-document.addEventListener("DOMContentLoaded", () => {
+    // Saúde
+    const itemVacinado    = document.querySelector('.item-vacinado');
+    const itemCastrado    = document.querySelector('.item-castrado');
+    const itemVermifugado = document.querySelector('.item-vermifugado');
+    if (itemVacinado)    itemVacinado.style.display    = animal?.vacinado    ? 'flex' : 'none';
+    if (itemCastrado)    itemCastrado.style.display    = animal?.castrado    ? 'flex' : 'none';
+    if (itemVermifugado) itemVermifugado.style.display = animal?.vermifugado ? 'flex' : 'none';
 
-    const idPedido = localStorage.getItem("idPedidoSelecionado") || "1"; 
+    // ── ONG ─────────────────────────────────────────────────────────────────────
 
+    const nomeOngEl = document.querySelector('.ong-header-inline h2');
+    if (nomeOngEl) nomeOngEl.textContent = instituicao?.nome || adocao?.nomeOng || '—';
 
-    renderizarDadosDoPedido(idPedido);
+    const descOngEl = document.querySelector('.animal-ong-info p');
+    if (descOngEl) descOngEl.textContent = instituicao?.descricao || '—';
 
+    // ── Adotante ─────────────────────────────────────────────────────────────────
 
-    configurarBotoesAcao(idPedido);
-});
+    const inputs = document.querySelectorAll('.solicitacao-input-readonly');
 
+    // Dados pessoais (inputs 0-3)
+    if (inputs[0]) inputs[0].value = adotante?.nomeCompleto  || '—';
+    if (inputs[1]) inputs[1].value = adotante?.cpf           || '—';
+    if (inputs[2]) inputs[2].value = formatarData(adotante?.dataNascimento) || '—';
+    if (inputs[3]) inputs[3].value = adotante?.email         || '—';
 
-function renderizarDadosDoPedido(id) {
-    const dados = detalhesPedidosMock[id];
+    // Respostas do formulário de adoção (inputs 4-8)
+    if (inputs[4]) inputs[4].value = adocao?.estado          || '—';
+    if (inputs[5]) inputs[5].value = adocao?.cidade          || '—';
+    if (inputs[6]) inputs[6].value = traduzirSimNao(adocao?.temCriancas)    || '—';
+    if (inputs[7]) inputs[7].value = traduzirSimNao(adocao?.familiaCiente)  || '—';
+    if (inputs[8]) inputs[8].value = adocao?.petParaPresente || '—';
 
-    if (!dados) {
-        alert("Pedido não encontrado!");
-        window.location.href = "../pedidosAdocao/pedidosAdocao.html";
+    // Moradia (input 9)
+    // O campo "moradia" do db.json guarda um único valor (ex: "casaSemTela")
+    // O HTML pode ter 8 campos de moradia como no mock; preenchemos apenas o relevante
+    const nomesMoradia = [
+        'casaComTela', 'casaSemTela', 'apComTela', 'apSemTela',
+        'coberturaComTela', 'coberturaSemTela', 'terreoComTela', 'terreoSemTela'
+    ];
+    if (inputs[9]) {
+        // Se só há 1 campo de moradia, escreve o texto traduzido
+        inputs[9].value = traduzirMoradia(adocao?.moradia);
+    }
+    // Se o HTML tiver os 8 campos de moradia (inputs 9-16), preenche cada um
+    nomesMoradia.forEach((chave, i) => {
+        const input = inputs[9 + i];
+        if (input) {
+            input.value = adocao?.moradia === chave ? 'Sim' : 'Não se aplica';
+        }
+    });
+}
+
+// ── Botões de ação ─────────────────────────────────────────────────────────────
+
+async function configurarBotoesAcao(adocaoId) {
+    const btnRecusar = document.getElementById('btnRecusarPedido');
+    const btnAceitar = document.getElementById('btnAceitarPedido');
+
+    if (btnRecusar) {
+        btnRecusar.addEventListener('click', async () => {
+            const confirmacao = confirm('Tem certeza de que deseja recusar este pedido de adoção?');
+            if (!confirmacao) return;
+
+            try {
+                await fetch(`${API_URL}/adocoes/${adocaoId}`, {
+                    method: 'PATCH',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ statusPet: 'Recusado' }),
+                });
+                window.location.href = '../recusaPedido/recusaPedido.html';
+            } catch (err) {
+                console.error('Erro ao recusar pedido:', err);
+                alert('Não foi possível recusar o pedido. Tente novamente.');
+            }
+        });
+    }
+
+    if (btnAceitar) {
+        btnAceitar.addEventListener('click', async () => {
+            try {
+                await fetch(`${API_URL}/adocoes/${adocaoId}`, {
+                    method: 'PATCH',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ statusPet: 'Aprovado' }),
+                });
+                window.location.href = '../sucessoPedido/sucessoPedido.html';
+            } catch (err) {
+                console.error('Erro ao aceitar pedido:', err);
+                alert('Não foi possível aceitar o pedido. Tente novamente.');
+            }
+        });
+    }
+}
+
+// ── Inicialização ──────────────────────────────────────────────────────────────
+
+document.addEventListener('DOMContentLoaded', async () => {
+    const params = new URLSearchParams(window.location.search);
+    const idPedido = params.get('id') || localStorage.getItem('idPedidoSelecionado');
+
+    if (!idPedido) {
+        alert('Nenhum pedido selecionado.');
+        window.location.href = '../additionRequests/additionRequests.html';
         return;
     }
 
+    try {
+        // Busca a adoção primeiro
+        const adocao = await buscarAdocao(idPedido);
 
-    document.querySelector(".animal-foto-detalhe").src = dados.animal.foto;
-    document.querySelector(".ong-header-inline h2").innerText = dados.animal.ong;
-    document.querySelector(".animal-ong-info p").innerText = dados.animal.ongDescricao;
-    document.querySelector(".animal-nome-titulo").innerText = dados.animal.nome;
-    document.querySelector(".animal-descricao-bloco p").innerText = dados.animal.sobre;
+        // Busca animal, adotante e instituição em paralelo
+        const [animal, adotante, instituicao] = await Promise.all([
+            buscarAnimal(adocao.animalId),
+            buscarAdotante(adocao.adotanteId),
+            buscarInstituicao(adocao.instituicaoId),
+        ]);
 
-    
-    const tags = document.querySelectorAll(".tag-item");
-    tags[0].innerHTML = `<img src="../../../assets/img/icon-mars.svg" class="tag-icon-img" alt="Gênero"> ${dados.animal.genero}`;
-    tags[1].innerHTML = `<img src="../../../assets/img/icon-calendar.svg" class="tag-icon-img" alt="Idade"> ${dados.animal.idade}`;
-    tags[2].innerHTML = `<img src="../../../assets/img/icon-paw.svg" class="tag-icon-img" alt="Porte"> ${dados.animal.porte}`;
+        renderizarDadosDoPedido(adocao, animal, adotante, instituicao);
+        configurarBotoesAcao(idPedido);
 
-
-    document.querySelector(".animal-descricao-bloco h4").innerText = `Sobre o ${dados.animal.nome}`;
-
-
-    document.querySelector(".item-vacinado").style.display = dados.animal.saude.vacinado ? "flex" : "none";
-    document.querySelector(".item-castrado").style.display = dados.animal.saude.castrado ? "flex" : "none";
-    document.querySelector(".item-vermifugado").style.display = dados.animal.saude.vermifugado ? "flex" : "none";
-
-
-
-    const inputs = document.querySelectorAll(".solicitacao-input-readonly");
-    
-  
-    inputs[0].value = dados.adotante.nomeCompleto;
-    inputs[1].value = dados.adotante.cpf;
-    inputs[2].value = dados.adotante.dataNascimento;
-    inputs[3].value = dados.adotante.email;
-    
-    inputs[4].value = dados.adotante.respostas.estado;
-    inputs[5].value = dados.adotante.respostas.city || dados.adotante.respostas.cidade;
-    inputs[6].value = dados.adotante.respostas.crianca;
-    inputs[7].value = dados.adotante.respostas.cientes;
-    inputs[8].value = dados.adotante.respostas.presente;
-    
-    inputs[9].value = dados.adotante.respostas.casaComTelas;
-    inputs[10].value = dados.adotante.respostas.casaSemTelas;
-    inputs[11].value = dados.adotante.respostas.apComTelas;
-    inputs[12].value = dados.adotante.respostas.apSemTelas;
-    inputs[13].value = dados.adotante.respostas.coberturaComTelas;
-    inputs[14].value = dados.adotante.respostas.coberturaSemTelas;
-    inputs[15].value = dados.adotante.respostas.terreoComTelas;
-    inputs[16].value = dados.adotante.respostas.terreoSemTelas;
-}
-
-
-function configurarBotoesAcao(id) {
-    const btnRecusar = document.getElementById("btnRecusarPedido");
-    const btnAceitar = document.getElementById("btnAceitarPedido");
-
-
-    if (btnRecusar) {
-        btnRecusar.addEventListener("click", () => {
-            const confirmacao = confirm("Tem certeza de que deseja recusar este pedido de adoção?");
-            if (confirmacao) {
-
-                
-             
-                window.location.href = "../recusaPedido/recusaPedido.html"; 
-            }
-        });
+    } catch (err) {
+        console.error('Erro ao carregar dados do pedido:', err);
+        alert('Pedido não encontrado ou erro ao carregar dados.');
+        window.location.href = '../additionRequests/additionRequests.html';
     }
-
-
-    if (btnAceitar) {
-        btnAceitar.addEventListener("click", () => {
-
-            window.location.href = "../sucessoPedido/sucessoPedido.html";
-        });
-    }
-}
+});

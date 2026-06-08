@@ -54,7 +54,7 @@ function renderizarPedidos(pedidos) {
 
 function verSolicitacao(id) {
     localStorage.setItem('idPedidoSelecionado', id);
-    window.location.href = '../detalhesPedido/detalhesPedido.html';
+    window.location.href = `../adoptionRequest/adoptionRequest.html?id=${id}`;
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
