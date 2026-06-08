@@ -1,92 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulário de Adoção - Moradia</title>
+
   <link rel="stylesheet" href="adoptionForm04.css">
   <link rel="stylesheet" href="../../../assets/css/modal/sairContaModal.css">
+  <link rel="stylesheet" href="adoptionForm02.css">
+  <link rel="icon" type="image/x-icon" href="../../../assets/img/logo-abraco-peludo-aba.svg">
+  <link rel="stylesheet" href="../../../assets/css/navbar/style.css">
+  <link rel="stylesheet" href="../../../assets/css/dropDown/dropDown.css">
+
+  <script src="../../../assets/js/dropDown/dropDown.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
-<div class="container">
-  <div class="conteudo">
-
-    <header class="topo">
-      <div class="logo">
-        <img src="../../../assets/img/logo-abraco-peludo-aba.svg" alt="Logo">
-      </div>
-
-      <nav class="menu">
-        <a href="home.html">Home</a>
-        <a href="historico.html">Histórico de Adoções</a>
-      </nav>
-
-      <div class="perfil-area">
-        <div class="perfil">
-          <img src="../../../assets/img/icon-login.svg" alt="Perfil">
-        </div>
-
-        <div class="menu-perfil">
-          <a href="configuracoes.html">
-            <span>Configurações da conta</span>
-            <img src="../../../assets/img/icon-configuracao.svg" alt="Configurações">
-          </a>
-          <a href="#" id="btnLogout" data-sair-conta>
-            <span>Sair</span>
-            <img src="../../../assets/img/icon-sair.svg" alt="Sair">
-          </a>
-        </div>
-      </div>
-    </header>
-
-    <div class="area-externa">
-      <section class="area-form">
-        <div class="card">
-
-          <h1 class="titulo">Formulário de adoção</h1>
-          <div class="linha"></div>
-
-          <label class="pergunta">Você mora em:</label>
-
-          <div class="opcoes">
-            <input type="radio" name="moradia" id="casaTela">
-            <label for="casaTela" class="opcao">Casa com telas</label>
-
-            <input type="radio" name="moradia" id="casaSemTela">
-            <label for="casaSemTela" class="opcao">Casa sem telas</label>
-
-            <input type="radio" name="moradia" id="aptTela">
-            <label for="aptTela" class="opcao">Apartamento com telas</label>
-
-            <input type="radio" name="moradia" id="aptSemTela">
-            <label for="aptSemTela" class="opcao">Apartamento sem telas</label>
-
-            <input type="radio" name="moradia" id="cobTela">
-            <label for="cobTela" class="opcao">Cobertura com telas</label>
-
-            <input type="radio" name="moradia" id="cobSemTela">
-            <label for="cobSemTela" class="opcao">Cobertura sem telas</label>
-
-            <input type="radio" name="moradia" id="terreoTela">
-            <label for="terreoTela" class="opcao">Térreo com telas</label>
-
-            <input type="radio" name="moradia" id="terreoSemTela">
-            <label for="terreoSemTela" class="opcao">Térreo sem telas</label>
-          </div>
-
-          <div class="botoes-grupo">
-            <a href="../adoptionForm03/adoptionForm03.html" class="btn-voltar">Voltar</a>
-            <button class="btn-continuar" id="btn-continuar">Continuar</button>
-          </div>
-
-        </div>
-      </section>
+  <div id="container-nav">
+    <div id="logo-abraco">
+      <a href="../animalListing/animalListing.html">
+        <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
+      </a>
     </div>
 
-  </div>
-</div>
+    <div>
+      <a href="../animalListing/animalListing.html" class="active">Lista de Animais</a>
+      <a href="../adoptionHistory/adoptionHistory.html" class="active">Histórico de Adoções</a>
 
-<script src="../../../assets/js/modal/sairContaModal.js" data-home-url="../../../index.html"></script>
+      <div id="userDropdown">
+        <a href="#" id="dropdownButtonMenu" class="dropBtn" onclick="toggleDropdownMenu()">
+          <img src="../../../assets/img/icon-perfil.svg" class="user-icon">
+        </a>
+
+        <div id="dropdownMenuContent" class="dropdown-menu">
+          <a href="../updateRegistration/updateRegistration.html">Configurações da conta <i
+              class="fa-solid fa-gear"></i></a>
+          <a href="#" id="btnLogout">Sair <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="conteudo">
+
+      <div class="area-externa">
+        <section class="area-form">
+          <div class="card">
+
+            <h1 class="titulo">Formulário de adoção</h1>
+            <div class="linha"></div>
+
+            <label class="pergunta">Você mora em:</label>
+
+            <div class="opcoes">
+              <input type="radio" name="moradia" id="casaTela">
+              <label for="casaTela" class="opcao">Casa com telas</label>
+
+              <input type="radio" name="moradia" id="casaSemTela">
+              <label for="casaSemTela" class="opcao">Casa sem telas</label>
+
+              <input type="radio" name="moradia" id="aptTela">
+              <label for="aptTela" class="opcao">Apartamento com telas</label>
+
+              <input type="radio" name="moradia" id="aptSemTela">
+              <label for="aptSemTela" class="opcao">Apartamento sem telas</label>
+
+              <input type="radio" name="moradia" id="cobTela">
+              <label for="cobTela" class="opcao">Cobertura com telas</label>
+
+              <input type="radio" name="moradia" id="cobSemTela">
+              <label for="cobSemTela" class="opcao">Cobertura sem telas</label>
+
+              <input type="radio" name="moradia" id="terreoTela">
+              <label for="terreoTela" class="opcao">Térreo com telas</label>
+
+              <input type="radio" name="moradia" id="terreoSemTela">
+              <label for="terreoSemTela" class="opcao">Térreo sem telas</label>
+            </div>
+
+            <div class="botoes-grupo">
+              <a href="../adoptionForm03/adoptionForm03.html" class="btn-voltar">Voltar</a>
+              <button class="btn-continuar" id="btn-continuar">Continuar</button>
+            </div>
+
+          </div>
+        </section>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../../../assets/js/modal/sairContaModal.js" data-home-url="../../../index.html"></script>
+  <script src="../../../assets/js/adotante/adoption/adoptionForm04.js"></script>
 </body>
+
 </html>

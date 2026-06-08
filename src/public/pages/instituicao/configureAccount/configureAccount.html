@@ -16,12 +16,15 @@
     <script src="../../../assets/js/dropDown/dropDownHistory.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../assets/css/modal/deleteAccountModal.css">
 </head>
 
 <body>
     <div id="container-nav">
         <div id="logo-abraco">
-            <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
+            <a href="../animalList/animalList.html">
+                <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
+            </a>
         </div>
 
         <div class="dropDown">
@@ -36,7 +39,7 @@
                 </div>
             </div>
 
-            <a href="#" class="active">Pedidos de Adoção</a>
+            <a href="../additionRequests/additionRequests.html" class="active">Pedidos de Adoção</a>
 
             <div id="userDropdown">
                 <a href="#" id="dropdownButtonMenu" class="dropBtn" onclick="toggleDropdownMenu()">
@@ -60,7 +63,8 @@
     </div>
 
     <div id="historyDropdown" class="dropdown-menu" style="display: none;">
-        <a href="../donationHistory/donationHistory.html">Histórico de doações realizadas <i class="fa-solid fa-folder-open"></i></a>
+        <a href="../donationHistory/donationHistory.html">Histórico de doações realizadas <i
+                class="fa-solid fa-folder-open"></i></a>
         <a href="../animalList/animalList.html">Animais cadastrados <i class="fa-solid fa-cat"></i></a>
     </div>
 
@@ -85,7 +89,7 @@
                         <p>Atualizar perfil</p>
                     </a>
 
-                    <a href="#" class="asideBtnText">
+                    <a href="#" class="asideBtnText" data-excluir-conta>
                         <i class="fa-regular fa-trash-can"></i>
                         <p>Excluir conta</p>
                     </a>
@@ -145,7 +149,7 @@
                         </div>
                         <div>
                             <label for="email">Email</label>
-                            <input type="text" input id="endereco" placeholder="Email" required>
+                            <input type="email" input id="email" placeholder="Email" required>
                         </div>
                         <div>
                             <label for="senha">Senha</label>
@@ -167,6 +171,8 @@
 
     </div>
 
+    <script src="../../../assets/js/configureAccount/configureAccount.js"></script>
+    <script src="../../../assets/js/modal/deleteAccountModal.js"></script>
     <script src="../../../assets/js/modal/sairContaModal.js" data-home-url="../../../index.html"></script>
 </body>
 

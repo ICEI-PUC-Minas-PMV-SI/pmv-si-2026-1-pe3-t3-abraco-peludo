@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Pet - Abraço Peludo</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <link rel="icon" type="image/x-icon" href="../../../assets/img/logo-abraco-peludo-aba.svg">
+    
+  
+    <link rel="stylesheet" href="./petProfile.css">
+    <link rel="stylesheet" href="../../../assets/css/navbar/style.css">
+    <link rel="stylesheet" href="../../../assets/css/dropDown/dropDown.css">
+    <link rel="stylesheet" href="../../../assets/css/modal/sairContaModal.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <script src="../../../assets/js/dropDown/dropDown.js"></script>
+</head>
+
+<body>
+
+    <div id="container-nav">
+        <div id="logo-abraco">
+            <a href="../animalListing/animalListing.html">
+                <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
+            </a>
+        </div>
+
+        <div>
+            <a href="../animalListing/animalListing.html" class="active">Lista de Animais</a>
+            <a href="../adoptionHistory/adoptionHistory.html" class="active">Histórico de Adoções</a> 
+
+            <div id="userDropdown">
+                <a href="#" id="dropdownButtonMenu" class="dropBtn" onclick="toggleDropdownMenu()">
+                    <img src="../../../assets/img/icon-perfil.svg" class="user-icon">
+                </a>
+
+                <div id="dropdownMenuContent" class="dropdown-menu">
+                    <a href="../updateRegistration/updateRegistration.html">Configurações da conta <i
+                            class="fa-solid fa-gear"></i></a>
+                    <a href="#" id="btnLogout">Sair <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="perfil-pet-page">
+        <div class="perfil-pet-container">
+            
+
+            <section class="pet-left-sidebar">
+                <img src="../../../assets/img/img-cao-1.svg" class="pet-foto-principal" alt="Foto do Pet">
+                
+                <div class="pet-ong-box">
+                    <div class="ong-title-inline">
+                        <img src="../../../assets/img/icon-casinha.svg" class="ong-home-icon" alt="Ícone Casa">
+                        <h2>ONG Focinho Feliz</h2>
+                    </div>
+                    <p>A Focinho Feliz é uma ONG dedicada a transformar a vida de animais em situação de abandono, conectando cães e gatos a famílias que possam oferecer amor, cuidado e um novo lar. Nosso objetivo é incentivar a adoção responsável, promover o bem-estar animal e mostrar que cada adoção é uma nova chance de felicidade.</p>
+                    
+                    <div class="ong-badges-container">
+                        <span class="ong-badge-item"><img src="../../../assets/img/icon-telefone.svg" alt="Check"> (11) 98877-6655</span>
+                        <span class="ong-badge-item"><img src="../../../assets/img/icon-localizacao.svg" alt="Check"> Belo Horizonte - MG</span>
+                    </div>
+                </div>
+
+                <button type="button" class="btn-quero-adotar" id="btnQueroAdotar">Quero adotar</button>
+            </section>
+
+            <section class="pet-right-details">
+                <h1 class="pet-nome-main">Ruffe</h1>
+                
+                <div class="pet-tags-caracteristicas">
+                    <span class="tag-item">
+                        <img src="../../../assets/img/icon-macho.svg" alt="Ícone Gênero"> Macho
+                    </span>
+                    <span class="tag-item">
+                        <img src="../../../assets/img/icon-calendario.svg" alt="Ícone Idade"> 2 anos
+                    </span>
+                    <span class="tag-item">
+                        <img src="../../../assets/img/icon-pata.svg" alt="Ícone Porte"> Grande
+                    </span>
+                </div>
+
+                <div class="pet-about-section">
+                    <h2>Sobre o Ruffe</h2>
+                    <p>Dobermann dócil, demanda bastante espaço e caminhadas diárias. Brincalhão, deve se alimentar com ração para cães de grande porte, como a Pitucão XG.</p>
+                </div>
+
+                <div class="pet-health-status-list">
+                    <div class="health-row-item item-vacina">
+                        <img src="../../../assets/img/icon-vacinado.svg" alt="Vacina"> Vacinado
+                    </div>
+                    <div class="health-row-item item-castra">
+                        <img src="../../../assets/img/icon-castrado.svg" alt="Castrado"> Castrado
+                    </div>
+                    <div class="health-row-item item-vermifuga">
+                        <img src="../../../assets/img/icon-vermifugado.svg" alt="Vermifugado"> Vermifugado
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="../../../assets/js/modal/sairContaModal.js" data-home-url="../../../index.html"></script>
+    <script src="./../../../assets/js/adotante/petProfile.js"></script>
+</body>
+</html>

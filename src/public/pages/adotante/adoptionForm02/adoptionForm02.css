@@ -6,20 +6,19 @@
 }
 
 body {
-  min-height: 100vh;
+  max-height: 100vh;
   background-color: #ffffff;
 }
 
 .container {
   width: 100%;
-  min-height: 100vh;
+  max-height: 100vh;
 }
 
 .conteudo {
   width: 100%;
-  min-height: 100vh;
+  max-height: 100vh;
 }
-
 
 .topo {
   width: 100%;
@@ -151,9 +150,7 @@ body {
 
 .area-externa {
   background-color: #f0cfaa;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
 }
 
 /* FORMULÁRIO COM CORES PADRONIZADAS */

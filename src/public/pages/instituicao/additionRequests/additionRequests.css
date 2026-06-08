@@ -1,0 +1,125 @@
+* {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF2D7;
+    min-height: 100vh;
+}
+
+/* ── Página ── */
+.pedidos-page {
+    padding: 48px 80px 64px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.pedidos-titulo {
+    color: #4D3227;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+
+/* ── Lista ── */
+.pedidos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+/* ── Card individual ── */
+.pedido-item {
+    background-color: #FFD9AA;
+    border-radius: 14px;
+    padding: 14px 24px;
+    display: grid;
+    /* data | adotante | pet | botão */
+    grid-template-columns: 160px 1fr 1fr auto;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pedido-item:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(77, 50, 39, 0.10);
+}
+
+/* ── Textos ── */
+.pedido-dado {
+    color: #4D3227;
+    font-size: 17px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pedido-data {
+    opacity: 0.85;
+    font-size: 16px;
+}
+
+/* ── Botão "Ver solicitação" ── */
+.pedido-btn {
+    background-color: #FF8C42;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-align: center;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 2px 6px rgba(255, 140, 66, 0.30);
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+}
+
+.pedido-btn:hover {
+    background-color: #e57a35;
+}
+
+.pedido-btn:active {
+    transform: scale(0.97);
+}
+
+/* ── Estado vazio ── */
+.pedidos-vazio {
+    text-align: center;
+    color: #4D3227;
+    opacity: 0.6;
+    font-size: 18px;
+    margin-top: 48px;
+}
+
+/* ── Responsivo ── */
+@media (max-width: 850px) {
+    .pedidos-page {
+        padding: 32px 20px;
+    }
+
+    .pedido-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 18px 20px;
+    }
+
+    .pedido-dado {
+        white-space: normal;
+    }
+
+    .pedido-btn {
+        width: 100%;
+        margin-top: 4px;
+    }
+}

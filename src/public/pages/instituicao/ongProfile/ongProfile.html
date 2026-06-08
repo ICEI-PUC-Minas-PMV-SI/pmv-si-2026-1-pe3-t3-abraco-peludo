@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
     <link rel="icon" type="image/x-icon" href="../../../assets/img/logo-abraco-peludo-aba.svg">
-    <link rel="stylesheet" href="../../../assets/css/ongProfile/ongProfile.css">
+    <link rel="stylesheet" href="./ongProfile.css">
+    
     <link rel="stylesheet" href="../../../assets/css/navbar/style.css">
     <link rel="stylesheet" href="../../../assets/css/dropDown/dropDown.css">
     <link rel="stylesheet" href="../../../assets/css/modal/sairContaModal.css">
@@ -26,22 +27,24 @@
 <body data-perfil-animal-base="../../adotante/animalProfile/animalProfile.html">
     <div id="container-nav">
         <div id="logo-abraco">
-            <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
+            <a href="../animalList/animalList.html">
+                <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
+            </a>
         </div>
 
         <div class="dropDown">
             <div id="dropdownHistory">
-                <a href="#" id="dropdownButton" class="dropBtn" onclick="toggleDropdownHistory()">
+                <a href="#" id="dropdownButton" class="active dropBtn" onclick="toggleDropdownHistory()">
                     Painel de Histórico
                 </a>
-
+                
                 <div id="dropdownHistoryContent" class="dropdown-menu">
                     <a href="../donationHistory/donationHistory.html">Histórico de doações realizadas <i class="fa-solid fa-folder-open"></i></a>
                     <a href="../animalList/animalList.html">Animais cadastrados <i class="fa-solid fa-cat"></i></a>
                 </div>
             </div>
 
-            <a href="#">Pedidos de Adoção</a>
+            <a href="../additionRequests/additionRequests.html" class="active">Pedidos de Adoção</a>
 
             <div id="userDropdown">
                 <a href="#" id="dropdownButtonMenu" class="dropBtn" onclick="toggleDropdownMenu()">

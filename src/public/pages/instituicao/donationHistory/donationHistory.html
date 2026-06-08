@@ -12,6 +12,7 @@
 
     <link rel="icon" type="image/x-icon" href="../../../assets/img/logo-abraco-peludo-aba.svg">
     <link rel="stylesheet" href="./donationHistory.css">
+    
     <link rel="stylesheet" href="../../../assets/css/filtros/filtrosDropdown.css">
     <link rel="stylesheet" href="../../../assets/css/navbar/style.css">
     <link rel="stylesheet" href="../../../assets/css/dropDown/dropDown.css">
@@ -25,8 +26,10 @@
 
 <body>
     <div id="container-nav">
-        <div id="logo-abraco">
-            <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
+       <div id="logo-abraco">
+            <a href="../animalList/animalList.html">
+                <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
+            </a>
         </div>
 
         <div class="dropDown">
@@ -34,14 +37,14 @@
                 <a href="#" id="dropdownButton" class="active dropBtn" onclick="toggleDropdownHistory()">
                     Painel de Histórico
                 </a>
-
+                
                 <div id="dropdownHistoryContent" class="dropdown-menu">
-                    <a href="./donationHistory.html">Histórico de doações realizadas <i class="fa-solid fa-folder-open"></i></a>
+                    <a href="../donationHistory/donationHistory.html">Histórico de doações realizadas <i class="fa-solid fa-folder-open"></i></a>
                     <a href="../animalList/animalList.html">Animais cadastrados <i class="fa-solid fa-cat"></i></a>
                 </div>
             </div>
 
-            <a href="#">Pedidos de Adoção</a>
+            <a href="../additionRequests/additionRequests.html" class="active">Pedidos de Adoção</a>
 
             <div id="userDropdown">
                 <a href="#" id="dropdownButtonMenu" class="dropBtn" onclick="toggleDropdownMenu()">

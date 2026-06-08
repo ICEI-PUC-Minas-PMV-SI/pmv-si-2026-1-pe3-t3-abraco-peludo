@@ -21,7 +21,9 @@
 <body>
     <div id="container-nav">
         <div id="logo-abraco">
-            <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
+            <a href="../animalList/animalList.html">
+                <img src="../../../assets/img/logo_abraco_peludo.svg" alt="logo abraço peludo">
+            </a>
         </div>
 
         <div class="dropDown">
@@ -29,14 +31,14 @@
                 <a href="#" id="dropdownButton" class="active dropBtn" onclick="toggleDropdownHistory()">
                     Painel de Histórico
                 </a>
-
+                
                 <div id="dropdownHistoryContent" class="dropdown-menu">
                     <a href="../donationHistory/donationHistory.html">Histórico de doações realizadas <i class="fa-solid fa-folder-open"></i></a>
                     <a href="../animalList/animalList.html">Animais cadastrados <i class="fa-solid fa-cat"></i></a>
                 </div>
             </div>
 
-            <a href="#" class="active">Pedidos de Adoção</a>
+            <a href="../additionRequests/additionRequests.html" class="active">Pedidos de Adoção</a>
 
             <div id="userDropdown">
                 <a href="#" id="dropdownButtonMenu" class="dropBtn" onclick="toggleDropdownMenu()">
@@ -68,9 +70,7 @@
         <aside>
             <div id="asideConfig">
                 <img src="../../../assets/img/icon-cachorro.svg" alt="cachorro">
-                <h1>
-                    Animais
-                </h1>
+                <h1>Animais</h1>
             </div>
 
             <div id="asideOpt">
@@ -91,73 +91,104 @@
                     <form id="inputContainer">
                         <div>
                             <label for="nome">Nome do animal</label>
-                            <input type="text" input id="nome" placeholder="Nome do animal" required>
+                            <input type="text" id="nome" placeholder="Nome do animal" required>
                         </div>
+
                         <div>
-                            <label for="descricao">Descrição do animal</label>
-                            <textarea type="text" input class="descricao" placeholder="Texto" required></textarea>
+                            <label for="especie">Espécie</label>
+                            <input type="text" id="especie" placeholder="Ex: Gato, Cachorro" required>
                         </div>
+
                         <div>
                             <label for="raca">Raça</label>
-                            <input type="text" input id="raca" placeholder="Raça" required>
+                            <input type="text" id="raca" placeholder="Raça" required>
                         </div>
+
                         <div>
                             <label for="sexo">Sexo</label>
-                            <input type="text" input id="sexo" placeholder="Sexo" required>
+                            <input type="text" id="sexo" placeholder="Ex: Macho, Fêmea" required>
                         </div>
+
                         <div>
-                            <label for="idade">Idade</label>
-                            <input type="number" min="0" max="99" step="1" pattern="[0-9]*" inputmode="numeric" placeholder="Idade" required>
+                            <label for="idade">Idade (anos)</label>
+                            <input type="number" id="idade" min="0" max="99" step="1"
+                                inputmode="numeric" placeholder="Idade" required>
                         </div>
 
                         <div>
                             <label for="porte">Porte</label>
                             <select id="porte" name="Porte">
-                                <option value="p">Pequeno</option>
-                                <option value="m">Médio</option>
-                                <option value="g">Grande</option>
+                                <option value="Pequeno">Pequeno</option>
+                                <option value="Médio">Médio</option>
+                                <option value="Grande">Grande</option>
                             </select>
                         </div>
 
                         <div id="saudeAnimal">
-                            <label for="saude">Saúde do animal</label>
+                            <label>Saúde do animal</label>
                             <div>
                                 <div>
-                                    <input type="radio" id="saudavel" class="radio" name="saudeAnimal" value="saudavel">
+                                    <input type="radio" id="saudavel" class="radio" name="saudeAnimal" value="Saudável">
                                     <label for="saudavel">Saudável</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="tratamento" class="radio" name="saudeAnimal"
-                                        value="tratamento">
+                                    <input type="radio" id="tratamento" class="radio" name="saudeAnimal" value="Em tratamento">
                                     <label for="tratamento">Em tratamento</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="doente" class="radio" name="saudeAnimal" value="doente">
+                                    <input type="radio" id="doente" class="radio" name="saudeAnimal" value="Doente">
                                     <label for="doente">Doente</label>
                                 </div>
                             </div>
                         </div>
 
-                        <div>
-                            <label for="descricao">Mais detalhes do animal</label>
-                            <textarea type="text" input class="descricao" placeholder="Texto" required></textarea>
+                        <div id="cuidadosVet">
+                            <label>Cuidados veterinários</label>
+                            <div>
+                                <div>
+                                    <input type="checkbox" id="castrado" class="checkbox">
+                                    <label for="castrado">Castrado</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="vacinado" class="checkbox">
+                                    <label for="vacinado">Vacinado</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="vermifugado" class="checkbox">
+                                    <label for="vermifugado">Vermifugado</label>
+                                </div>
+                            </div>
                         </div>
+
                         <div>
-                            <label for="foto">Mídia</label>
+                            <label for="descricao">Descrição do animal</label>
+                            <textarea id="descricao" placeholder="Descreva o animal brevemente" required></textarea>
+                        </div>
+
+                        <div>
+                            <label for="historico">Histórico do animal</label>
+                            <textarea id="historico" placeholder="Mais detalhes sobre o histórico do animal"></textarea>
+                        </div>
+
+                        <div>
+                            <label for="foto">Foto</label>
                             <input id="foto" type="file" accept="image/*" class="inputFoto">
+                            <img id="fotoPreview" hidden alt="Preview da foto" style="margin-top:10px; width:120px; height:120px; object-fit:cover; border-radius:8px; border:1px solid #D3D3D3;">
+                            <span id="fotoNomeAtual" style="font-size:13px; color:#9B9B9B;"></span>
                         </div>
                     </form>
+
                     <div id="submitBtn">
-                        <button class="btn btnCancelar">Cancelar</button>
-                        <button class="btn btnSalvar">Cadastar</button>
+                        <button id="btnCancelar" class="btn btnCancelar">Cancelar</button>
+                        <button id="btnSalvar" class="btn btnSalvar">Cadastrar</button>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 
     <script src="../../../assets/js/modal/sairContaModal.js" data-home-url="../../../index.html"></script>
+    <script src="../../../assets/js/instituicao/animalRegistration.js"></script>
 </body>
 
 </html>

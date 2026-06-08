@@ -1,0 +1,268 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif; 
+    background-color: #FFF2D7;          
+    min-height: 100vh;
+}
+
+
+.perfil-pet-page {
+    padding: 64px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.perfil-pet-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 56px;
+    width: 100%;
+}
+
+.pet-left-sidebar {
+    flex: 0 0 380px;           
+    background-color: #FFD9AA; 
+    border-radius: 32px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.pet-foto-principal {
+    width: 100%;
+    aspect-ratio: 1.15 / 1;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+
+.pet-ong-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ong-title-inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ong-home-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.ong-title-inline h2 {
+    font-family: "Inter", sans-serif; 
+    font-size: 20px;
+    color: #4D3227;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.pet-ong-box p {
+    font-size: 13px;
+    color: #4D3227;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+
+.ong-badges-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 16px;
+    width: 100%;
+}
+
+.ong-badge-item {
+    background-color: #2ECC71; 
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.ong-badge-item img {
+    width: 28px;               
+    height: 28px;
+    background-color: #FFFFFF; 
+    border-radius: 50%;        
+    padding: 6px;              
+    object-fit: scale-down;      
+    display: block;
+    flex-shrink: 0;            
+}
+
+.btn-quero-adotar {
+    background-color: #FF8C42; 
+    color: #FFFFFF;
+    border: none;
+    height: 48px;
+    border-radius: 999px;      
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-quero-adotar:hover {
+    background-color: #e57a35;
+}
+
+.btn-quero-adotar:active {
+    transform: scale(0.98);
+}
+
+
+
+.pet-right-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+
+.pet-nome-main {
+    font-family: "Inter", sans-serif;
+    font-size: 36px;
+    color: #4D3227;
+    font-weight: 700;
+}
+
+
+.pet-tags-caracteristicas {
+    background-color: #FFD9AA; 
+    border-radius: 999px;
+    padding: 12px 0;           
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 540px;          
+}
+
+.tag-item {
+    flex: 1;                   
+    font-size: 14px;
+    color: #4D3227;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+
+.tag-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 15%;
+    height: 70%;
+    width: 2px;
+    background-color: #FFF2D7; 
+}
+
+.tag-item img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    display: block;
+}
+
+
+.pet-about-section h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    color: #4D3227;
+    font-weight: 700;
+    margin-bottom: 12px;
+
+}
+
+.pet-about-section p {
+    font-size: 15px;
+    color: #4D3227;
+    line-height: 1.6;
+    max-width: 620px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;           
+    -webkit-box-orient: vertical;  
+    overflow: hidden;               
+    text-overflow: ellipsis;         
+}
+
+.pet-health-status-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 12px;
+}
+
+.health-row-item {
+    font-size: 16px;
+    font-weight: 700;
+    color: #4D3227;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.health-row-item img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+}
+
+
+@media (max-width: 950px) {
+    .perfil-pet-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .pet-left-sidebar {
+        width: 100%;
+        flex: none;
+    }
+    .pet-tags-caracteristicas {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .perfil-pet-page {
+        padding: 32px 20px;
+    }
+    .pet-tags-caracteristicas {
+        flex-direction: column;
+        gap: 16px;
+        border-radius: 24px;
+        padding: 16px 0;
+    }
+    .tag-item:not(:last-child)::after {
+        display: none; /* Remove linhas verticais em empilhamento mobile */
+    }
+}
