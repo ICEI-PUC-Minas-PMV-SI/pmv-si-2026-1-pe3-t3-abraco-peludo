@@ -4,7 +4,6 @@ const crypto = require('crypto');
 const path = require('path');
 const jsonServer = require('json-server');
 const nodemailer = require('nodemailer');
-const cors = require('cors');
 
 const APP_URL = process.env.APP_URL || 'http://127.0.0.1:5500';
 const RESET_PATH = '/pages/login/resetPassword/resetPassword.html';
@@ -13,16 +12,6 @@ const DB_PATH = path.join(__dirname, 'src/public/data/db.json');
 const server = jsonServer.create();
 const router = jsonServer.router(DB_PATH);
 const middlewares = jsonServer.defaults();
-
-server.use(cors({
-    origin: [
-        'https://pmv-si-2026-1-pe3-t3-abraco-peludo-eight.vercel.app',
-        'http://127.0.0.1:5500',
-        'http://localhost:5500'
-    ],
-    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-}));
 
 function criarTransportador() {
     if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
