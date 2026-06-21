@@ -20,7 +20,7 @@ Os testes foram feitos utilizando o sistema em máquina local. (localhost:3000)
 
 ### Proposta
 
-A proposta deste teste é verificar o entendimento e a usabilidade do projeto desenvolvido a partir das interações de um usuário representativo do público-alvo. O teste também avalia a satisfação geral do uso pelo usuário.
+Este teste visa avaliar a usabilidade e a compreensão do projeto por meio da interação com um usuário que representa o público-alvo. Além disso, busca mensurar o nível de satisfação geral com a experiência de uso.
 
 ---
 
@@ -129,7 +129,7 @@ A proposta deste teste é verificar o entendimento e a usabilidade do projeto de
 
 ### Conclusões do Avaliador
 
-O usuário concluiu todas as atividades muito bem. Relatou questões quanto à tela inicial, considerando que, mesmo com textos informativos presentes, a home poderia ser melhorada. Nos demais fluxos, não sentiu dificuldade e concluiu todas as tarefas sem esforço ou dúvidas.
+O participante realizou todas as tarefas com excelente desempenho. A única ressalva pontuada foi em relação à tela inicial, que, segundo ele, ainda pode ser otimizada apesar dos textos explicativos. Os demais fluxos foram concluídos com facilidade, sem qualquer obstáculo ou hesitação.
 
 ### Pontos de Atenção
 
